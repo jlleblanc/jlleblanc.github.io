@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+<head>
+  <base href="http://jlleblanc.com/tutorials/25-bare-minimum-joomla-component" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="joomla, Joomla" />
+  <meta name="title" content="Bare Minimum Joomla Component" />
+  <meta name="author" content="" />
+  <meta name="description" content="Bare Minimum Mambo Component Tutorial." />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Bare Minimum Joomla Component</title>
+  <link href="/templates/blueprint/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="/media/system/js/caption.js"></script>
+
+
+<link rel="stylesheet" href="/templates/blueprint/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="/templates/blueprint/css/blueprint/print.css" type="text/css" media="print" />
+<!--[if lt IE 8]>
+  <link rel="stylesheet" href="/templates/blueprint/css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+<link rel="stylesheet" href="/templates/blueprint/css/template.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" href="/templates/blueprint/dailymessage/dailymessage.css" type="text/css" media="screen" />
+<script language="javascript" type="text/javascript" src="/templates/blueprint/dailymessage/jquery-latest.pack.js"></script>
+<script type="text/javascript" charset="utf-8">
+	jQuery.noConflict();
+</script>
+<script language="javascript" type="text/javascript" src="/templates/blueprint/dailymessage/dailymessage.js"></script>
+</head>
+
+<body>
+	<div class="container" id="top_module">
+		
+	</div>
+	<div id="logo"><img src="/templates/blueprint/img/jlleblanc.png" /></div>
+	<div class="container">
+		<div class="column span-6">
+					<div class="moduletable_menu">
+					<ul class="menu"><li class="item71"><a href="http://jlleblanc.com/"><span>home</span></a></li><li class="item51"><a href="/joomla"><span>joomla</span></a></li><li class="item61"><a href="http://www.designvsdevelop.com"><span>blog</span></a></li><li class="item75"><a href="http://www.extool.org"><span>extool</span></a></li><li class="item72"><a href="/ministries"><span>ministries</span></a></li></ul>		</div>
+			<div class="moduletable">
+					<h3>Joomla Resources</h3>
+					<ul class="menu"><li class="item52"><a href="/articles"><span>articles</span></a></li><li id="current" class="active item54"><a href="/tutorials"><span>tutorials</span></a></li><li class="item73"><a href="/podcast-suite"><span>podcast suite</span></a></li><li class="item76"><a href="/joomladay-giveaway"><span>joomladay giveaway</span></a></li></ul>		</div>
+	
+		</div>
+		<div class="column last span-18">
+			
+<div id="page">
+
+
+
+<h2 class="contentheading">
+	Bare Minimum Joomla Component</h2>
+
+
+
+<p class="buttonheading">
+	</p>
+
+
+
+
+
+
+By popular demand, here is the Bare Minimum component. This component
+has no parameters, database queries, external classes, or superfluous
+installation files.<br />
+<br />
+You can also remove the baremin.php and admin.baremin.php files, as
+well as the references in the XML file, and the component will still
+install. However, this will not be very useful, unless you remove one
+or the other to create a frontend or backend only component. <br />
+<br />
+Mambo <em>always</em> loads [<em>componentname</em>].php for the frontend and admin.[<em>componentname</em>].php
+for the backend. Other files can be included from these when a
+separation of logic is necessary. To port an existing PHP application
+to Mambo, you may wish to use this component and include the files for
+the application from baremin.php.<br />
+<br />
+<br />
+A downloadable copy of the component can be obtained <a href="http://www.jlleblanc.com/com_baremin.zip" target="_self">here</a>. The code from each file is outlined below.<br />
+<br />
+<h1>admin.baremin.php</h1><span style="color: rgb(0, 0, 255);">
+&lt;?php </span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+defined('_VALID_MOS') or die('Direct Access to this location is not allowed.');</span><br style="color: rgb(0, 0, 255);" />
+<br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+?&gt;</span><br />
+<br />
+The check to ensure the predefinition _VALID_MOS is necessary to make
+sure that visitors do not load these files directly. Otherwise,
+security breaches are possible as the visitor would not have to go through the administrator section login.<br />
+<br />
+<br />
+<h1>baremin.php</h1><span style="color: rgb(0, 0, 255);">
+&lt;?</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+defined( '_VALID_MOS' ) or die( 'Direct Access to this location is not allowed.' );</span><br style="color: rgb(0, 0, 255);" />
+<br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+?&gt;</span><br />
+<br />
+The frontend code is identical to the backend. Although the security
+risk is not as great, it would still be possible for someone to wrap
+this file in malicious code from a remote server, so the constant check
+is necessary.<br />
+<br />
+<h1>baremin.xml</h1><span style="color: rgb(0, 0, 255);">
+&lt;?xml version=&quot;1.0&quot; ?&gt;</span><br style="color: rgb(0, 0, 255);" />
+<br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+This tag identifies that this is an XML version 1.0 document, so that the parser knows what to expect.</span><br style="color: rgb(0, 0, 255);" />
+<br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;mosinstall type=&quot;component&quot;&gt;</span><br />
+<br />
+The outer &lt;mosinstall&gt; object defines the installation type as
+&quot;component&quot;, which will stop the process if someone tries to install
+the component through the module, mambot, or template installers.<br />
+<br /><span style="color: rgb(0, 0, 255);">
+&lt;name&gt;BareMin&lt;/name&gt;</span><br />
+<br />
+This name of the component should match the name found throughout the
+XML and PHP filenames. Do not use spaces or characters that are not
+legal for filenames.<br />
+<br /><span style="color: rgb(0, 0, 255);">
+&lt;creationDate&gt;4/27/2005&lt;/creationDate&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;author&gt;Joseph LeBlanc&lt;/author&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;copyright&gt;This component in released under the GNU/GPL License&lt;/copyright&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;authorEmail&gt;contact@jlleblanc.com&lt;/authorEmail&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;authorUrl&gt;www.jlleblanc.com&lt;/authorUrl&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;version&gt;1.0&lt;/version&gt;</span><br />
+<br />
+Although these properties are not absolutely necessary, they do help identify your component.<br />
+<br /><span style="color: rgb(0, 0, 255);">
+&lt;files&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;filename&gt;baremin.php&lt;/filename&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;/files&gt;</span><br />
+<br />
+The &lt;files&gt; tags enclose a list of files for the frontend. If you
+want to use subdirectories of the com_baremin directory, add the
+directory name you wish to use, followed by a slash, followed by the
+name of the file to put there.<br />
+<br /><span style="color: rgb(0, 0, 255);">
+&lt;administration&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&nbsp;&nbsp;&nbsp; &lt;menu&gt;Bare Minimum&lt;/menu&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;files&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&nbsp;&nbsp;&nbsp; &lt;filename&gt;admin.baremin.php&lt;/filename&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;/files&gt;</span><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">
+&lt;/administration&gt;</span><br />
+<br />
+The &lt;administration&gt; tags enclose the items to add to the
+&quot;Components&quot; menu and the files to use for the backend. The
+&lt;menu&gt; tag defines the title to use for the component throughout
+the backend. You are able to use spaces and special characters here,
+where you were not allowed with the &lt;name&gt; tag above. <br />
+<br /><span style="color: rgb(0, 0, 255);">
+&lt;/mosinstall&gt;</span><br />
+<br />
+This tag closes the installation object.
+
+</div>
+
+		</div>
+	</div>
+	<div class="container">
+		
+	</div>
+</body>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2258922-1";
+urchinTracker();
+</script>
+</html>
