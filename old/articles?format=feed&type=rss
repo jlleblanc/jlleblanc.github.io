@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- generator="Joomla! 1.5 - Open Source Content Management" -->
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>articles</title>
+		<description>i like code.</description>
+		<link>http://jlleblanc.com/articles</link>
+		<lastBuildDate>Mon, 03 Jun 2013 01:43:28 +0000</lastBuildDate>
+		<generator>Joomla! 1.5 - Open Source Content Management</generator>
+		<language>en-gb</language>
+		<item>
+			<title>JoomlaDay Giveaway component</title>
+			<link>http://jlleblanc.com/joomladay-giveaway</link>
+			<guid>http://jlleblanc.com/joomladay-giveaway</guid>
+			<description><![CDATA[<p>At a couple of JoomlaDays, people have commented that we should simply build a component to handle them. Well, ask and ye shall receive! You can <a href="http://jlleblanc.com//files/JoomlaDay-Giveaway-Component.zip">download the installable component here</a>, or head over to the <a href="https://github.com/jlleblanc/JoomlaDay-Giveaway-Component">Github repository</a> and fork away. I used <a href="http://www.extool.org">Extool</a> to generate the skeleton, then filled in the rest.</p>
+
+<p>The component is pretty simple: add in your attendee names and email addresses, then add in all of the items you're giving away. When you're ready to do the giveaway, go to the Swag List screen in the backend and click the -select- box to give away each item. There's also a Swag List screen for the frontend where you can show off who won what on your JoomlaDay site. You can also download a CSV export of the winners.</p>
+
+<p>This is a quick and dirty component I wrote partially at JoomlaDay NYC 2011, partially on the train ride home, then finished off at <a href="http://www.buzzonslaters.com">Buzz Bakery</a> the next day. Patches via Github are welcome, but outright forks are highly encouraged! Enjoy!</p>]]></description>
+			<author>joe@jlleblanc.com (Joe LeBlanc)</author>
+			<category>Articles</category>
+			<pubDate>Mon, 06 Dec 2010 17:00:42 +0000</pubDate>
+		</item>
+		<item>
+			<title>Podcast Suite</title>
+			<link>http://jlleblanc.com/podcast-suite</link>
+			<guid>http://jlleblanc.com/podcast-suite</guid>
+			<description><![CDATA[<p><strong>Podcast Suite has moved to <a href="http://podcastsuite.com">http://podcastsuite.com</a> and is now maintained by Cory Webb Media LLC.</strong></p>]]></description>
+			<author>joe@jlleblanc.com (Joe LeBlanc)</author>
+			<category>Articles</category>
+			<pubDate>Mon, 22 Nov 2010 19:25:45 +0000</pubDate>
+		</item>
+		<item>
+			<title>Podcast Suite, Version 1.5 Stable</title>
+			<link>http://jlleblanc.com/articles/54-podcast-suite-version-15-stable</link>
+			<guid>http://jlleblanc.com/articles/54-podcast-suite-version-15-stable</guid>
+			<description><![CDATA[<p>A stable version of Podcast Suite 1.5 is now available. Download the <a href="http://www.jlleblanc.com/com_podcast_1.5.zip">component</a>, <a href="http://www.jlleblanc.com/mod_podcast_1.5.zip">module</a>, and <a href="http://www.jlleblanc.com/plg_podcast_1.5.zip">plugin</a>. If you already have the suite installed on your site, you can use this <a href="http://www.jlleblanc.com/podcast_suite_patch_1.5_RC1-stable.zip">patch</a>.</p>
+
+<p>This version includes the following updates:</p>
+<ul>
+<li>Fixed incorrect language tag being used in the feed, <a href="http://www.jlleblanc.com/option,com_fireboard/Itemid,70/func,view/catid,11/id,3013/#3013">thanks to 'source' for finding the issue.</a></li>
+
+<li>Fixed HTTP Content-Type header issues. Podcast Suite now uses application/rss+xml exclusively. However, when the Joomla! core Page Cache plugin is enabled, the header still defaults to text/html.</li>
+
+<li>Including an extra parameter to change the title in the XSPF player. <a href="http://www.jlleblanc.com/option,com_fireboard/Itemid,70/func,view/id,2860/catid,11/">Thanks to Dallas Peters for the code.</a></li>
+
+<li>Removed the mime_magic function, it's deprecated in PHP. Certain servers return text/plain on the function regardless of the actual file type.</li>
+
+<li>Fixed the URL path to files; was causing issues on Windows. Thank you <a href="http://www.jlleblanc.com/option,com_fireboard/Itemid,70/func,view/id,2759/catid,11/#2759">Richard.</a></li>
+
+</ul>
+
+<p>If you're migrating from the Joomla! 1.0 version, also download the migrator plugin <a href="http://www.jlleblanc.com/migrate_podcast1-1.5.zip">files</a>. After installing the <a href="http://joomlacode.org/gf/project/pasamioprojects/frs/?action=FrsReleaseBrowse&frs_package_id=2588">migrator component</a> on your 1.0 site, unzip this package, then copy podcast.php into /administrator/components/com_migrator/plugins and podcast.sql into /administrator/components/com_migrator/tables before doing your migration.</p>
+
+<p>Podcast Suite 1.5 requires PHP 5, preferably 5.2.x or higher. If you get a parse error on line 70 of podcast.php after installing the component, your server is running an outdated version of PHP; ask your host about upgrading. Please also make sure you are running the <a href="http://www.joomla.org/download.html">latest copy</a> of Joomla! 1.5.x.</p>
+
+<p>Podcast Suite uses <a href="http://www.php.net/xmlwriter">XMLWriter</a> which is included in PHP core. However, it relies on libxml. Although most servers already have this ready to go, you may find that you need to have it installed.</p>]]></description>
+			<category>Articles</category>
+			<pubDate>Fri, 26 Jun 2009 13:36:35 +0000</pubDate>
+		</item>
+		<item>
+			<title>Podcast Suite, Version 1.5 Release Candidate 1</title>
+			<link>http://jlleblanc.com/articles/52-podcast-suite-version-15-release-candidate-1</link>
+			<guid>http://jlleblanc.com/articles/52-podcast-suite-version-15-release-candidate-1</guid>
+			<description><![CDATA[<p>A release candidate for Podcast Suite 1.5 is now available. Download the <a href="http://jlleblanc.com/com_podcast-1.5-RC1.zip">component</a>, <a href="http://jlleblanc.com/mod_podcast-1.5-RC1.zip">module</a>, and <a href="http://jlleblanc.com/podcast_plugin-1.5-RC1.zip">plugin</a>. If you already have the suite installed on your site, you can use this <a href="http://jlleblanc.com//podcast_suite_patch_1.5_B1-RC1.zip">patch</a>.</p>
+
+<p>This version includes several fixes that should help with feed validation. It also now includes a German language translation of the user interface.</p>
+
+<p>If you're migrating from the Joomla! 1.0 version, also download the migrator plugin <a href="http://www.jlleblanc.com/migrate_podcast1-1.5.zip">files</a>. After installing the <a href="http://joomlacode.org/gf/project/pasamioprojects/frs/?action=FrsReleaseBrowse&frs_package_id=2588">migrator component</a> on your 1.0 site, unzip this package, then copy podcast.php into /administrator/components/com_migrator/plugins and podcast.sql into /administrator/components/com_migrator/tables before doing your migration</p>
+
+<p>Podcast Suite 1.5 requires PHP 5 and our current test environment is 5.2.x. If you get a parse error on line 70 of podcast.php after installing the component, your server is running an outdated version of PHP; ask your host about upgrading. Please also make sure you are running the <a href="http://www.joomla.org/download.html">latest copy</a> of Joomla! 1.5.x.</p>
+
+<p>Podcast Suite uses <a href="http://www.php.net/xmlwriter">XMLWriter</a> which is included in PHP core. However, it relies on libxml. Although most servers already have this ready to go, you may find that you need to have it installed.</p>]]></description>
+			<category>Articles</category>
+			<pubDate>Sat, 28 Mar 2009 21:45:52 +0000</pubDate>
+		</item>
+		<item>
+			<title>Podcast Suite, Version 1.5 Beta</title>
+			<link>http://jlleblanc.com/articles/50-podcast-suite-version-15-beta</link>
+			<guid>http://jlleblanc.com/articles/50-podcast-suite-version-15-beta</guid>
+			<description><![CDATA[<p>Podcast Suite for Joomla! 1.5 is now available. Download the <a href="http://jlleblanc.com//com_podcast_1.5Beta.zip">component</a>, <a href="http://jlleblanc.com//mod_podcast_1.5Beta.zip">module</a>, and <a href="http://jlleblanc.com//podcast_plugin_1.5Beta.zip">plugin</a>.</p>
+
+<p>If you're migrating from the Joomla! 1.0 version, also download the migrator plugin <a href="http://jlleblanc.com/migrate_podcast1-1.5.zip">files</a>. After installing the <a href="http://joomlacode.org/gf/project/pasamioprojects/frs/?action=FrsReleaseBrowse&frs_package_id=2588">migrator component</a> on your 1.0 site, unzip this package, then copy podcast.php into /administrator/components/com_migrator/plugins and podcast.sql into /administrator/components/com_migrator/tables before doing your migration</p>
+
+<p>As of Joomla! 1.5.6, you may see alerts on installation of the component for languages you don't have installed. Do not be alarmed; this is a temporary issue in the Joomla! core that will be fixed soon. The suite is now internationalized and has a French language pack under development.</p>
+
+<p>Podcast Suite 1.5 requires PHP 5 and our current test environment is 5.2.x. If you get a parse error on line 70 of podcast.php after installing the component, your server is running an outdated version of PHP; ask your host about upgrading.  Please also make sure you are running the <a href="http://www.joomla.org/download.html">latest copy</a> of Joomla! 1.5.x.</p>
+
+<p>Podcast Suite uses <a href="http://www.php.net/xmlwriter">XMLWriter</a> which is included in PHP core. However, it relies on libxml. Although most servers already have this ready to go, you may find that you need to have it installed.</p>]]></description>
+			<category>Articles</category>
+			<pubDate>Fri, 15 Aug 2008 20:42:50 +0000</pubDate>
+		</item>
+		<item>
+			<title>Podcast Suite, Version 1.1 Stable</title>
+			<link>http://jlleblanc.com/articles/41-podcast-suite-version-11-stable</link>
+			<guid>http://jlleblanc.com/articles/41-podcast-suite-version-11-stable</guid>
+			<description><![CDATA[<div style="text-align: left;">Podcast Suite version 1.1 stable is now available for download: <a href="http://jlleblanc.com/com_podcast_v1.1.zip">component</a>, <a href="http://jlleblanc.com/mod_podcast_v.1.1.zip">module</a>, <a href="http://jlleblanc.com/bot_podcast_v1.1.zip">plugin</a>. This is mainly a bug fix release, with the following issues resolved:<br /><br /></div><div style="text-align: left;"><ul><li>Added support for &lt;itunes:author&gt;</li><li>Fixed the iTunes category format</li><li>Fixed player autostart issues in IE</li><li>Fixed the issue where RSS feeds were downloading instead of displaying in the browser</li><li>Enclosures can now appear in both the introtext and fulltext</li><li>Off-site links now work properly</li><li>Fixed so that filenames with parenthesis are properly handled <br /></li></ul>The following features were also added:<br /><ul><li>The module can now display pcast:// links for one-click subscriptions, as well as display an additional link to the actual feed</li><li>Quicktime is now supported for AAC playback</li><li>Category pre-selects have been added for iTunes</li><li>Feeds for separate Joomla categories are now available.</li></ul>Uninstall the old versions of all three, then reinstall the new copies.<br /></div><br /><br />
+
+Translations:<br />
+<a href="http://www.nik-o-mat.de/joomlafan/joomla-software/podcastsuite-1.1-stable---deutsch.html">German</a><br />
+<br /><br />
+
+
+webman911 has graciously written a <a href="http://forum.joomla.org/index.php/topic,138839.0.html">step-by-step tutorial</a> for using the podcasting suite!]]></description>
+			<category>Articles</category>
+			<pubDate>Wed, 06 Sep 2006 21:41:49 +0000</pubDate>
+		</item>
+		<item>
+			<title>Podcast Suite, Version 1.0 Stable</title>
+			<link>http://jlleblanc.com/articles/39-podcast-suite-version-10-stable</link>
+			<guid>http://jlleblanc.com/articles/39-podcast-suite-version-10-stable</guid>
+			<description><![CDATA[The Podcast Suite Version 1.0 is ready for download: <a href="http://jlleblanc.com/com_podcast_v1.zip">component</a>, <a href="http://jlleblanc.com/mod_podcast_v1.zip">module</a>, and <a href="http://jlleblanc.com/bot_podcast_v1.zip">plugin</a>. Thank you all for your testing, feedback, and encouragement! Here are some of the new features for version 1.0:<br /><br />
+<li>An integrated MP3 player, thanks to <a href="http://www.ericzhang.com/mp3.php">Eric Zhang's player</a></li>
+<li>ID3 tag recognition, thanks to <a href="http://phpclasses.spyral-productions.com/browse/package/1486.html">Tadeu Oliveira's library</a></li>
+<li>Adjustments to the module that let you override the link and image</li>
+<li>{player ...} can now be used to add another instance of the Flash player or download link without adding another enclosure to the RSS feed.</li>
+<br /><br />
+If you are upgrading from Beta 4, simply uninstall the old component, module, and plugin and install the new ones. Otherwise, you should backup the podcast table in your database, do the reinstallation, then renew the database with the backup.]]></description>
+			<category>Articles</category>
+			<pubDate>Sat, 13 May 2006 21:50:25 +0000</pubDate>
+		</item>
+		<item>
+			<title>Podcast Beta 4, released</title>
+			<link>http://jlleblanc.com/articles/38-podcast-beta-4-released</link>
+			<guid>http://jlleblanc.com/articles/38-podcast-beta-4-released</guid>
+			<description><![CDATA[   <p>Beta 4 of the Podcasting Suite is now available for download. Be sure to grab the latest <a href="http://jlleblanc.com/mod_podcast_b4.zip">module</a>, <a href="http://jlleblanc.com/com_podcast_b4.zip">component</a>, and <a href="http://jlleblanc.com/bot_podcast_b4.zip">bot</a>.</p>     <p>&nbsp;<strong>UPGRADE NOTICE: </strong>To upgrade the component without losing your item-specific iTunes tags, open com_podcast_b4.zip, then copy these files to administrator/components/com_podcast.php:</p>     <blockquote> uninstall.podcast.php<br />  toolbar.podcast.php<br />  toolbar.podcast.html.php<br />  podcast.xml<br />  install.podcast.php<br />  info.podcast.php<br />  admin.podcast.php<br />  admin.podcast.html.php </blockquote>     <p>&nbsp;And copy these files to components/com_podcast:</p>     <blockquote> podcast.php<br />  podcast.class.php<br />  feedcreator.class.php</blockquote> <p>&nbsp;Uninstall and reinstall the bot and module <em>only</em>.</p><p>&nbsp;The next upgrade will be easier, I promise!<br /> </p>]]></description>
+			<category>Articles</category>
+			<pubDate>Sun, 27 Nov 2005 17:47:43 +0000</pubDate>
+		</item>
+		<item>
+			<title>Podcast beta 3, released</title>
+			<link>http://jlleblanc.com/articles/34-podcast-beta-3-released</link>
+			<guid>http://jlleblanc.com/articles/34-podcast-beta-3-released</guid>
+			<description><![CDATA[
+The Podcast suite, beta 3, is now released. Download the <a href="http://jlleblanc.com/bot_podcast_b3.zip">mambot</a>, <a href="http://jlleblanc.com/mod_podcast_b3.zip">module</a>, and <a href="http://jlleblanc.com/com_podcast_b3.zip">component</a> (only the component has changed, so you can skip downloading the other two if all you want to do is switch out the old component for the new). iTunes support has been added, but due to the nature of Apple's listing policies, this functionality has not been tested. UTF-8 is now the default encoding (which is preferred by Apple).<br /><br /><span style="font-weight: bold;">Update:</span> Small patch made to the <a href="http://jlleblanc.com/com_podcast_b3.zip">component</a> to eliminate repeating iTunes image tag. (<span style="font-style: italic;">September 19th, 2005</span>)<br />
+]]></description>
+			<category>Articles</category>
+			<pubDate>Thu, 15 Sep 2005 21:34:29 +0000</pubDate>
+		</item>
+		<item>
+			<title>Updated mp3 player</title>
+			<link>http://jlleblanc.com/articles/30-updated-mp3-player</link>
+			<guid>http://jlleblanc.com/articles/30-updated-mp3-player</guid>
+			<description><![CDATA[
+An updated copy of the mp3 player has been released. There is now a <a href="http://jlleblanc.com/mod_mp3player1_1.zip">module</a> as well as a <a href="http://jlleblanc.com/mp3player1_2.zip">component</a>. You must have the component installed to use the module.<br /><br />The mp3 player is designed to pull mp3 files from the root of your Joomla installation. To use subdirectories, simply add them before the filename (example: images/stories/mymp3song.mp3 instead of just mymp3song.mp3).<br />
+]]></description>
+			<category>Articles</category>
+			<pubDate>Wed, 15 Jun 2005 10:33:13 +0000</pubDate>
+		</item>
+	</channel>
+</rss>

@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+<head>
+  <base href="" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="joomla, Joomla" />
+  <meta name="title" content="Daily Message with HTML editors & Dates" />
+  <meta name="author" content="" />
+  <meta name="description" content="i like code." />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Daily Message with HTML editors &amp; Dates</title>
+  <link href="http://jlleblanc.com/templates/blueprint/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="http://jlleblanc.com/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="http://jlleblanc.com/media/system/js/caption.js"></script>
+
+
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/css/blueprint/print.css" type="text/css" media="print" />
+<!--[if lt IE 8]>
+  <link rel="stylesheet" href="/templates/blueprint/css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/css/template.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/dailymessage/dailymessage.css" type="text/css" media="screen" />
+<script language="javascript" type="text/javascript" src="http://jlleblanc.com/templates/blueprint/dailymessage/jquery-latest.pack.js"></script>
+<script type="text/javascript" charset="utf-8">
+	jQuery.noConflict();
+</script>
+<script language="javascript" type="text/javascript" src="http://jlleblanc.com/templates/blueprint/dailymessage/dailymessage.js"></script>
+</head>
+
+<body>
+	<div class="container" id="top_module">
+		
+	</div>
+	<div id="logo"><img src="http://jlleblanc.com/templates/blueprint/img/jlleblanc.png" /></div>
+	<div class="container">
+		<div class="column span-6">
+					<div class="moduletable_menu">
+					<ul class="menu"><li class="item71"><a href="../index.html"><span>home</span></a></li><li class="item51"><a href="../joomla"><span>joomla</span></a></li><li class="item61"><a href="http://www.designvsdevelop.com"><span>blog</span></a></li><li class="item75"><a href="http://www.extool.org"><span>extool</span></a></li><li class="item72"><a href="../ministries"><span>ministries</span></a></li></ul>		</div>
+			<div class="moduletable">
+					<h3>Joomla Resources</h3>
+					<ul class="menu"><li class="item52"><a href="../articles"><span>articles</span></a></li><li id="current" class="active item54"><a href="../tutorials"><span>tutorials</span></a></li><li class="item73"><a href="../podcast-suite"><span>podcast suite</span></a></li><li class="item76"><a href="../joomladay-giveaway"><span>joomladay giveaway</span></a></li></ul>		</div>
+	
+		</div>
+		<div class="column last span-18">
+			
+<div id="page">
+
+
+
+<h2 class="contentheading">
+	Daily Message with HTML editors &amp; Dates</h2>
+
+
+
+<p class="buttonheading">
+	</p>
+
+
+
+
+
+
+<span style="font-family: verdana,arial,helvetica,sans-serif;">
+Want your component's interface to blend effortlessly with the rest of Joomla? The core developers have made it quite easy. With a few short lines of code, your component can utilize editors and the built-in calendar. When you do call these elements, they match the preferences already set by the administrator, which reduces the learning curve for users.</span>
+<p style="font-family: verdana,arial,helvetica,sans-serif;"><br />To use these features in Daily Message, we need edit only one function in the admin.dailymessage.html.php file:</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">function edit( $option, &amp;$row ) {</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 153, 0);">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;mosCommonHTML::loadCalendar();</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br />This line loads essential Javascript code used by the pop-up calendar. We reference the calendar later at the place we actually want it to appear. (The original calendar code can be found at <a href="http://www.dynarch.com/projects/calendar/">http://www.dynarch.com/projects/calendar/</a>)</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br /></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">?&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br style="color: rgb(0, 255, 0);" /><span style="color: rgb(0, 153, 0);">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot;&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif; color: rgb(0, 153, 0);">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;function submitbutton(pressbutton) {</p><p style="font-family: verdana,arial,helvetica,sans-serif; color: rgb(0, 153, 0);">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;?php getEditorContents( 'editor', 'message' ); ?&gt;</p><p style="font-family: verdana,arial,helvetica,sans-serif; color: rgb(0, 153, 0);">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;submitform( pressbutton );</p><p style="font-family: verdana,arial,helvetica,sans-serif; color: rgb(0, 153, 0);">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;}</p><p style="font-family: verdana,arial,helvetica,sans-serif; color: rgb(0, 153, 0);">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/script&gt;</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br /></p><p style="font-family: verdana,arial,helvetica,sans-serif;">Next, we begin to deal with the editor. This piece of Javascript intercepts Mambo's submitbutton() function when the form is submitted. The getEditorContents() function retrieves the contents of the editor specified in the first parameter (in this case 'editor') and copies it into the hidden form variable in the second ('message'). This code is in place for certain editors that do not continually update the hidden variable during editing (TinyMCE, for example).</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br /></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;form action=&quot;index2.php&quot; method=&quot;post&quot; name=&quot;adminForm&quot; id=&quot;adminForm&quot; class=&quot;adminForm&quot;&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;table border=&quot;0&quot; cellpadding=&quot;3&quot; cellspacing=&quot;0&quot;&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">&lt;tr&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;td&gt;Message: &lt;/td&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;td&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif; color: rgb(0, 153, 0);">&lt;? </p><p style="font-family: verdana,arial,helvetica,sans-serif; color: rgb(0, 153, 0);"><br />editorArea( 'editor',&nbsp; $row-&gt;message , 'message', '100%;', '150', '3', '30' ) ;</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br />This function is placed where we want to have the editor drawn. The first parameter gives the editor itself a name. If you are planning on using multiple HTML editors within one page, you will need to give each a unique name. The editor is initially filled with the contents of the second parameter. Next, we provide the name of a hidden variable to hold the final contents of the editor upon submission. The fourth, fifth, sixth, and seventh parameters define the width, height, number of rows, and number of columns to draw, respectively. If a percent value is chosen for width or height, the value must end with a semicolon. Otherwise, this value will be interpreted as a length in pixels.</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br />If the administrator has chosen not to use an HTML editor, the editorArea() function will draw a &lt;textarea&gt; element named with the value of the third parameter.</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br /><span style="color: rgb(0, 153, 0);">&nbsp; ?&gt;</span><span style="color: rgb(0, 0, 255);">&lt;/td&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;/tr&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">&lt;tr&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;td&gt;Date: &lt;/td&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;td&gt;</span><span style="color: rgb(0, 153, 0);">&lt;input size=&quot;30&quot; name=&quot;date&quot; id=&quot;date&quot; value=&quot;&lt;? echo $row-&gt;date; ?&gt;&quot;&gt;&lt;input name=&quot;reset&quot; type=&quot;reset&quot; class=&quot;button&quot; onClick=&quot;return showCalendar('date', 'y-mm-dd');&quot; value=&quot;...&quot;&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br />The calendar is loaded here. We start with a standard form field, giving it the name we want and setting the id property as well for Javascript interaction. Next, we draw a reset button, which is used to launch the calendar. We set the onClick property of the button to call the showCalendar() Javascript function (we implicitly loaded this with the mosCommonHTML::loadCalendar(); function call earlier). The first parameter tells the Javascript which form element to modify (defined with the 'id' property). Do remember that 'name' and 'id' serve different functions, even though we gave them the same value here. Always set 'name' to the value you want to process as a form variable and 'id' for Javascript references.</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br />The second parameter is used to dictate the date format. MySQL stores dates in year-month-day format, so we have formatted likewise to make saving easier later. If you want it to display differently, make sure that you code something to change it to the database's format when saving from the form.</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br />Finally, we set the value parameter of the button to '...'. This could be set to 'Lazy People Click Here' or 'Gimmie a Calendar', but '...' is used throughout the core Mambo components, so we set it this way for consistency. And consistency is often a good thing.</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br /><span style="color: rgb(0, 0, 255);">&lt;/td&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;/tr&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">&lt;tr&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;td&gt;Published: &lt;/td&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;td&gt;&lt;? echo mosHTML::yesnoSelectList( &quot;published&quot;, &quot;&quot;, $row-&gt;published ); ?&gt;&lt;/td&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;/tr&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br style="color: rgb(0, 0, 255);" /><span style="color: rgb(0, 0, 255);">&lt;/table&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;input type=&quot;hidden&quot; name=&quot;id&quot; value=&quot;&lt;?php echo $row-&gt;id; ?&gt;&quot; /&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;input type=&quot;hidden&quot; name=&quot;option&quot; value=&quot;&lt;?php echo $option; ?&gt;&quot; /&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;input type=&quot;hidden&quot; name=&quot;task&quot; value=&quot;&quot; /&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;/form&gt;</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><span style="color: rgb(0, 0, 255);">&lt;? }</span></p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br />You saw all of this code in the original Daily Message tutorial. (<a href="9?task=view">Right?</a>)</p><p style="font-family: verdana,arial,helvetica,sans-serif;"><br />As usual, <a href="../com_dailymessage_htmldate.zip">here is a downloadable component based on the tutorial</a>. You can safely install it alongside the original Daily Message component with no conflicts, should you care to do comparisons.</p>
+
+</div>
+
+		</div>
+	</div>
+	<div class="container">
+		
+	</div>
+</body>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2258922-1";
+urchinTracker();
+</script>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+<head>
+  <base href="" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="joomla, Joomla" />
+  <meta name="description" content="i like code." />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Tutorials</title>
+  <link href="tutorials?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="tutorials?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  <link href="http://jlleblanc.com/templates/blueprint/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="http://jlleblanc.com/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="http://jlleblanc.com/media/system/js/caption.js"></script>
+
+
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/css/blueprint/print.css" type="text/css" media="print" />
+<!--[if lt IE 8]>
+  <link rel="stylesheet" href="/templates/blueprint/css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/css/template.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/dailymessage/dailymessage.css" type="text/css" media="screen" />
+<script language="javascript" type="text/javascript" src="http://jlleblanc.com/templates/blueprint/dailymessage/jquery-latest.pack.js"></script>
+<script type="text/javascript" charset="utf-8">
+	jQuery.noConflict();
+</script>
+<script language="javascript" type="text/javascript" src="http://jlleblanc.com/templates/blueprint/dailymessage/dailymessage.js"></script>
+</head>
+
+<body>
+	<div class="container" id="top_module">
+		
+	</div>
+	<div id="logo"><img src="http://jlleblanc.com/templates/blueprint/img/jlleblanc.png" /></div>
+	<div class="container">
+		<div class="column span-6">
+					<div class="moduletable_menu">
+					<ul class="menu"><li class="item71"><a href="index.html"><span>home</span></a></li><li class="item51"><a href="joomla"><span>joomla</span></a></li><li class="item61"><a href="http://www.designvsdevelop.com"><span>blog</span></a></li><li class="item75"><a href="http://www.extool.org"><span>extool</span></a></li><li class="item72"><a href="ministries"><span>ministries</span></a></li></ul>		</div>
+			<div class="moduletable">
+					<h3>Joomla Resources</h3>
+					<ul class="menu"><li class="item52"><a href="articles"><span>articles</span></a></li><li id="current" class="active item54"><a href="tutorials"><span>tutorials</span></a></li><li class="item73"><a href="podcast-suite"><span>podcast suite</span></a></li><li class="item76"><a href="joomladay-giveaway"><span>joomladay giveaway</span></a></li></ul>		</div>
+	
+		</div>
+		<div class="column last span-18">
+			
+
+<div class="blog">
+
+	
+			<div class="leading">
+			
+
+<h2 class="contentheading">
+	The Daily Message Joomla Component Tutorial</h2>
+
+
+
+
+
+
+
+
+<div class="section">This guide should help you build a functioning component, with a complete backend. After reading through this site, you should understand how some of the core classes in Joomla function so that you can employ the best methods for building your own component. A finished, fully installable version of the Daily Message component is available by <a href="com_dailymessage.zip">clicking here</a>. This component tutorial also works for Mambo 4.5 and 4.5.1.</div>
+<p>
+	<a href="tutorials/9-comtutor-mainpage" class="readon">
+		Read more: The Daily Message Joomla Component Tutorial</a>
+</p>
+
+		</div>
+		<span class="leading_separator">&nbsp;</span>
+	
+	
+	
+					<p class="counter">
+			Page 3 of 3		</p>
+							<ul class="pagination"><li><strong><a href="tutorials" title="Start">Start</a></strong></li><li><strong><a href="tutorials?start=5" title="Prev">Prev</a></strong></li><li><strong><a href="tutorials" title="1">1</a></strong></li><li><strong><a href="tutorials?start=5" title="2">2</a></strong></li><li>3</li><li>Next</li><li>End</li></ul>			
+</div>
+
+		</div>
+	</div>
+	<div class="container">
+		
+	</div>
+</body>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2258922-1";
+urchinTracker();
+</script>
+</html>

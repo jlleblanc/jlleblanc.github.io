@@ -1,0 +1,217 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+<head>
+  <base href="" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="joomla, Joomla" />
+  <meta name="description" content="i like code." />
+  <meta name="generator" content="Joomla! 1.5 - Open Source Content Management" />
+  <title>Articles</title>
+  <link href="articles?format=feed&amp;type=rss" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+  <link href="articles?format=feed&amp;type=atom" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+  <link href="http://jlleblanc.com/templates/blueprint/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script type="text/javascript" src="http://jlleblanc.com/media/system/js/mootools.js"></script>
+  <script type="text/javascript" src="http://jlleblanc.com/media/system/js/caption.js"></script>
+
+
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/css/blueprint/screen.css" type="text/css" media="screen, projection" />
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/css/blueprint/print.css" type="text/css" media="print" />
+<!--[if lt IE 8]>
+  <link rel="stylesheet" href="/templates/blueprint/css/blueprint/ie.css" type="text/css" media="screen, projection">
+<![endif]-->
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/css/template.css" type="text/css" media="screen" />
+
+<link rel="stylesheet" href="http://jlleblanc.com/templates/blueprint/dailymessage/dailymessage.css" type="text/css" media="screen" />
+<script language="javascript" type="text/javascript" src="http://jlleblanc.com/templates/blueprint/dailymessage/jquery-latest.pack.js"></script>
+<script type="text/javascript" charset="utf-8">
+	jQuery.noConflict();
+</script>
+<script language="javascript" type="text/javascript" src="http://jlleblanc.com/templates/blueprint/dailymessage/dailymessage.js"></script>
+</head>
+
+<body>
+	<div class="container" id="top_module">
+		
+	</div>
+	<div id="logo"><img src="http://jlleblanc.com/templates/blueprint/img/jlleblanc.png" /></div>
+	<div class="container">
+		<div class="column span-6">
+					<div class="moduletable_menu">
+					<ul class="menu"><li class="item71"><a href="index.html"><span>home</span></a></li><li class="item51"><a href="joomla"><span>joomla</span></a></li><li class="item61"><a href="http://www.designvsdevelop.com"><span>blog</span></a></li><li class="item75"><a href="http://www.extool.org"><span>extool</span></a></li><li class="item72"><a href="ministries"><span>ministries</span></a></li></ul>		</div>
+			<div class="moduletable">
+					<h3>Joomla Resources</h3>
+					<ul class="menu"><li id="current" class="active item52"><a href="articles"><span>articles</span></a></li><li class="item54"><a href="tutorials"><span>tutorials</span></a></li><li class="item73"><a href="podcast-suite"><span>podcast suite</span></a></li><li class="item76"><a href="joomladay-giveaway"><span>joomladay giveaway</span></a></li></ul>		</div>
+	
+		</div>
+		<div class="column last span-18">
+			
+
+<div class="blog">
+
+	
+			<div class="leading">
+			
+
+<h2 class="contentheading">
+	Podcast Suite, Version 1.1 Stable</h2>
+
+
+
+
+
+
+
+
+<div style="text-align: left;">Podcast Suite version 1.1 stable is now available for download: <a href="com_podcast_v1.1.zip">component</a>, <a href="mod_podcast_v.1.1.zip">module</a>, <a href="bot_podcast_v1.1.zip">plugin</a>. This is mainly a bug fix release, with the following issues resolved:<br /><br /></div><div style="text-align: left;"><ul><li>Added support for &lt;itunes:author&gt;</li><li>Fixed the iTunes category format</li><li>Fixed player autostart issues in IE</li><li>Fixed the issue where RSS feeds were downloading instead of displaying in the browser</li><li>Enclosures can now appear in both the introtext and fulltext</li><li>Off-site links now work properly</li><li>Fixed so that filenames with parenthesis are properly handled <br /></li></ul>The following features were also added:<br /><ul><li>The module can now display pcast:// links for one-click subscriptions, as well as display an additional link to the actual feed</li><li>Quicktime is now supported for AAC playback</li><li>Category pre-selects have been added for iTunes</li><li>Feeds for separate Joomla categories are now available.</li></ul>Uninstall the old versions of all three, then reinstall the new copies.<br /></div><br /><br />
+
+Translations:<br />
+<a href="http://www.nik-o-mat.de/joomlafan/joomla-software/podcastsuite-1.1-stable---deutsch.html">German</a><br />
+<br /><br />
+
+
+webman911 has graciously written a <a href="http://forum.joomla.org/index.php/topic,138839.0.html">step-by-step tutorial</a> for using the podcasting suite!
+
+		</div>
+		<span class="leading_separator">&nbsp;</span>
+	
+				<div class="article_row">
+									<div class="article_column column1 cols1" >
+						
+
+<h2 class="contentheading">
+	Podcast Suite, Version 1.0 Stable</h2>
+
+
+
+
+
+
+
+
+The Podcast Suite Version 1.0 is ready for download: <a href="com_podcast_v1.zip">component</a>, <a href="mod_podcast_v1.zip">module</a>, and <a href="bot_podcast_v1.zip">plugin</a>. Thank you all for your testing, feedback, and encouragement! Here are some of the new features for version 1.0:<br /><br />
+<li>An integrated MP3 player, thanks to <a href="http://www.ericzhang.com/mp3.php">Eric Zhang's player</a></li>
+<li>ID3 tag recognition, thanks to <a href="http://phpclasses.spyral-productions.com/browse/package/1486.html">Tadeu Oliveira's library</a></li>
+<li>Adjustments to the module that let you override the link and image</li>
+<li>{player ...} can now be used to add another instance of the Flash player or download link without adding another enclosure to the RSS feed.</li>
+<br /><br />
+If you are upgrading from Beta 4, simply uninstall the old component, module, and plugin and install the new ones. Otherwise, you should backup the podcast table in your database, do the reinstallation, then renew the database with the backup.
+
+					</div>
+					<span class="article_separator">&nbsp;</span>
+								<span class="row_separator">&nbsp;</span>
+			</div>
+					<div class="article_row">
+									<div class="article_column column1 cols1" >
+						
+
+<h2 class="contentheading">
+	Podcast Beta 4, released</h2>
+
+
+
+
+
+
+
+
+   <p>Beta 4 of the Podcasting Suite is now available for download. Be sure to grab the latest <a href="mod_podcast_b4.zip">module</a>, <a href="com_podcast_b4.zip">component</a>, and <a href="bot_podcast_b4.zip">bot</a>.</p>     <p>&nbsp;<strong>UPGRADE NOTICE: </strong>To upgrade the component without losing your item-specific iTunes tags, open com_podcast_b4.zip, then copy these files to administrator/components/com_podcast.php:</p>     <blockquote> uninstall.podcast.php<br />  toolbar.podcast.php<br />  toolbar.podcast.html.php<br />  podcast.xml<br />  install.podcast.php<br />  info.podcast.php<br />  admin.podcast.php<br />  admin.podcast.html.php </blockquote>     <p>&nbsp;And copy these files to components/com_podcast:</p>     <blockquote> podcast.php<br />  podcast.class.php<br />  feedcreator.class.php</blockquote> <p>&nbsp;Uninstall and reinstall the bot and module <em>only</em>.</p><p>&nbsp;The next upgrade will be easier, I promise!<br /> </p>
+
+					</div>
+					<span class="article_separator">&nbsp;</span>
+								<span class="row_separator">&nbsp;</span>
+			</div>
+					<div class="article_row">
+									<div class="article_column column1 cols1" >
+						
+
+<h2 class="contentheading">
+	Podcast beta 3, released</h2>
+
+
+
+
+
+
+
+
+
+The Podcast suite, beta 3, is now released. Download the <a href="bot_podcast_b3.zip">mambot</a>, <a href="mod_podcast_b3.zip">module</a>, and <a href="com_podcast_b3.zip">component</a> (only the component has changed, so you can skip downloading the other two if all you want to do is switch out the old component for the new). iTunes support has been added, but due to the nature of Apple's listing policies, this functionality has not been tested. UTF-8 is now the default encoding (which is preferred by Apple).<br /><br /><span style="font-weight: bold;">Update:</span> Small patch made to the <a href="com_podcast_b3.zip">component</a> to eliminate repeating iTunes image tag. (<span style="font-style: italic;">September 19th, 2005</span>)<br />
+
+
+					</div>
+					<span class="article_separator">&nbsp;</span>
+								<span class="row_separator">&nbsp;</span>
+			</div>
+					<div class="article_row">
+									<div class="article_column column1 cols1" >
+						
+
+<h2 class="contentheading">
+	Updated mp3 player</h2>
+
+
+
+
+
+
+
+
+
+An updated copy of the mp3 player has been released. There is now a <a href="mod_mp3player1_1.zip">module</a> as well as a <a href="mp3player1_2.zip">component</a>. You must have the component installed to use the module.<br /><br />The mp3 player is designed to pull mp3 files from the root of your Joomla installation. To use subdirectories, simply add them before the filename (example: images/stories/mymp3song.mp3 instead of just mymp3song.mp3).<br />
+
+<p>
+	<a href="articles/30-updated-mp3-player" class="readon">
+		Read more: Updated mp3 player</a>
+</p>
+
+					</div>
+					<span class="article_separator">&nbsp;</span>
+								<span class="row_separator">&nbsp;</span>
+			</div>
+		
+		<div class="blog_more">
+		
+<h2>
+	More Articles...</h2>
+
+<ul>
+		<li>
+		<a class="blogsection" href="articles/29-a-flash-based-mp3-player">
+			A Flash-based mp3 player</a>
+	</li>
+		<li>
+		<a class="blogsection" href="articles/28-podcasting-for-joomla-beta-2">
+			Podcasting for Joomla - Beta 2</a>
+	</li>
+		<li>
+		<a class="blogsection" href="articles/27-podcasting-for-joomla">
+			Podcasting for Joomla</a>
+	</li>
+		<li>
+		<a class="blogsection" href="articles/11-components-vs-modules">
+			Components vs. Modules</a>
+	</li>
+	</ul>
+	</div>
+	
+					<p class="counter">
+			Page 2 of 3		</p>
+							<ul class="pagination"><li><strong><a href="articles" title="Start">Start</a></strong></li><li><strong><a href="articles" title="Prev">Prev</a></strong></li><li><strong><a href="articles" title="1">1</a></strong></li><li>2</li><li><strong><a href="articles?start=10" title="3">3</a></strong></li><li><strong><a href="articles?start=10" title="Next">Next</a></strong></li><li><strong><a href="articles?start=10" title="End">End</a></strong></li></ul>			
+</div>
+
+		</div>
+	</div>
+	<div class="container">
+		
+	</div>
+</body>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2258922-1";
+urchinTracker();
+</script>
+</html>
