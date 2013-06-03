@@ -1,0 +1,12 @@
+.source {
+	display: inline;
+}
+
+.hideSource {
+	display: none;
+}
+
+h3.dailymessage {
+	text-decoration: underline;
+	cursor: pointer;
+}

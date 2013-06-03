@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="/templates/blueprint/css/blueprint/screen.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="/templates/blueprint/css/blueprint/print.css" type="text/css" media="print" />
 <!--[if lt IE 8]>
-  <link rel="stylesheet" href="/templates/blueprint/css/blueprint/ie.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="/old/media/ie.css" type="text/css" media="screen, projection">
 <![endif]-->
 <link rel="stylesheet" href="/templates/blueprint/css/template.css" type="text/css" media="screen" />
 
@@ -34,7 +34,7 @@
 
 <body>
 	<div class="container" id="top_module">
-		
+
 	</div>
 	<div id="logo"><img src="/templates/blueprint/img/jlleblanc.png" /></div>
 	<div class="container">
@@ -44,10 +44,10 @@
 			<div class="moduletable">
 					<h3>Joomla Resources</h3>
 					<ul class="menu"><li id="current" class="active item52"><a href="/articles"><span>articles</span></a></li><li class="item54"><a href="/tutorials"><span>tutorials</span></a></li><li class="item73"><a href="/podcast-suite"><span>podcast suite</span></a></li><li class="item76"><a href="/joomladay-giveaway"><span>joomladay giveaway</span></a></li></ul>		</div>
-	
+
 		</div>
 		<div class="column last span-18">
-			
+
 <div id="page">
 
 
@@ -65,15 +65,17 @@
 
 
 
-I've integrated an mp3 player originally written by Jeroen Wijering ( <a href="http://www.jeroenwijering.com/">http://www.jeroenwijering.com/</a> ) into a Joomla component. <a href="/mp3player.zip">Click here to downoload it</a>. You can use the backend to customize your own playlist as well as adjust a few of the parameters. This development has been in conjunction with a larger project commissioned by Siobhan Ramsey: <a href="http://www.sandboxeducation.co.uk/">http://www.sandboxeducation.co.uk/</a>.<br />
- 
+I've integrated an mp3 player originally written by Jeroen Wijering ( <a href="http://www.jeroenwijering.com/">http://www.jeroenwijering.com/</a> ) into a Joomla component. <a href="/mp3player.zip">Click here to downoload it</a>. You can use the backend to customize your own playlist as well as adjust a few of the parameters. This development has been in conjunction with a larger project commissioned by Siobhan Ramsey: <a href="http://www.sandboxeducation.co.uk/">http://www.sandboxeducation.co.uk/</a>.
+
+<br />
+
 
 </div>
 
 		</div>
 	</div>
 	<div class="container">
-		
+
 	</div>
 </body>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">

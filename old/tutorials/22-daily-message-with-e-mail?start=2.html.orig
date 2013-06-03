@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="/templates/blueprint/css/blueprint/screen.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="/templates/blueprint/css/blueprint/print.css" type="text/css" media="print" />
 <!--[if lt IE 8]>
-  <link rel="stylesheet" href="/templates/blueprint/css/blueprint/ie.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="/old/media/ie.css" type="text/css" media="screen, projection">
 <![endif]-->
 <link rel="stylesheet" href="/templates/blueprint/css/template.css" type="text/css" media="screen" />
 
@@ -34,7 +34,7 @@
 
 <body>
 	<div class="container" id="top_module">
-		
+
 	</div>
 	<div id="logo"><img src="/templates/blueprint/img/jlleblanc.png" /></div>
 	<div class="container">
@@ -44,10 +44,10 @@
 			<div class="moduletable">
 					<h3>Joomla Resources</h3>
 					<ul class="menu"><li class="item52"><a href="/articles"><span>articles</span></a></li><li id="current" class="active item54"><a href="/tutorials"><span>tutorials</span></a></li><li class="item73"><a href="/podcast-suite"><span>podcast suite</span></a></li><li class="item76"><a href="/joomladay-giveaway"><span>joomladay giveaway</span></a></li></ul>		</div>
-	
+
 		</div>
 		<div class="column last span-18">
-			
+
 <div id="page">
 
 
@@ -68,25 +68,25 @@
 	<tr>
 		<th>Article Index</th>
 	</tr>
-	
+
 	<tr>
 		<td>
 		<a href="/tutorials/22-daily-message-with-e-mail" class="toclink">Daily Message with E-mail</a>
 		</td>
 	</tr>
-	
+
 			<tr>
 				<td>
 				<a href="/tutorials/22-daily-message-with-e-mail?start=1" class="toclink">Page 2</a>
 				</td>
 			</tr>
-			
+
 			<tr>
 				<td>
 				<a href="/tutorials/22-daily-message-with-e-mail?start=2" class="toclink active">Page 3</a>
 				</td>
 			</tr>
-			
+
 		<tr>
 			<td>
 				<a href="/tutorials/22-daily-message-with-e-mail?showall=1" class="toclink">All Pages</a>
@@ -100,7 +100,7 @@
 		</div>
 	</div>
 	<div class="container">
-		
+
 	</div>
 </body>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">

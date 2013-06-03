@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="/templates/blueprint/css/blueprint/screen.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="/templates/blueprint/css/blueprint/print.css" type="text/css" media="print" />
 <!--[if lt IE 8]>
-  <link rel="stylesheet" href="/templates/blueprint/css/blueprint/ie.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="/old/media/ie.css" type="text/css" media="screen, projection">
 <![endif]-->
 <link rel="stylesheet" href="/templates/blueprint/css/template.css" type="text/css" media="screen" />
 
@@ -34,7 +34,7 @@
 
 <body>
 	<div class="container" id="top_module">
-		
+
 	</div>
 	<div id="logo"><img src="/templates/blueprint/img/jlleblanc.png" /></div>
 	<div class="container">
@@ -44,10 +44,10 @@
 			<div class="moduletable">
 					<h3>Joomla Resources</h3>
 					<ul class="menu"><li id="current" class="active item52"><a href="/articles"><span>articles</span></a></li><li class="item54"><a href="/tutorials"><span>tutorials</span></a></li><li class="item73"><a href="/podcast-suite"><span>podcast suite</span></a></li><li class="item76"><a href="/joomladay-giveaway"><span>joomladay giveaway</span></a></li></ul>		</div>
-	
+
 		</div>
 		<div class="column last span-18">
-			
+
 <div id="page">
 
 
@@ -64,14 +64,15 @@
 
 
 
-   <p>Beta 4 of the Podcasting Suite is now available for download. Be sure to grab the latest <a href="/mod_podcast_b4.zip">module</a>, <a href="/com_podcast_b4.zip">component</a>, and <a href="/bot_podcast_b4.zip">bot</a>.</p>     <p>&nbsp;<strong>UPGRADE NOTICE: </strong>To upgrade the component without losing your item-specific iTunes tags, open com_podcast_b4.zip, then copy these files to administrator/components/com_podcast.php:</p>     <blockquote> uninstall.podcast.php<br />  toolbar.podcast.php<br />  toolbar.podcast.html.php<br />  podcast.xml<br />  install.podcast.php<br />  info.podcast.php<br />  admin.podcast.php<br />  admin.podcast.html.php </blockquote>     <p>&nbsp;And copy these files to components/com_podcast:</p>     <blockquote> podcast.php<br />  podcast.class.php<br />  feedcreator.class.php</blockquote> <p>&nbsp;Uninstall and reinstall the bot and module <em>only</em>.</p><p>&nbsp;The next upgrade will be easier, I promise!<br /> </p>
+   <p>Beta 4 of the Podcasting Suite is now available for download. Be sure to grab the latest <a href="/mod_podcast_b4.zip">module</a>, <a href="/com_podcast_b4.zip">component</a>, and <a href="/bot_podcast_b4.zip">bot</a>.</p>     <p>&nbsp;<strong>UPGRADE NOTICE: </strong>To upgrade the component without losing your item-specific iTunes tags, open com_podcast_b4.zip, then copy these files to administrator/components/com_podcast.php:</p>     <blockquote> uninstall.podcast.php<br />  toolbar.podcast.php<br />  toolbar.podcast.html.php<br />  podcast.xml<br />  install.podcast.php<br />  info.podcast.php<br />  admin.podcast.php<br />  admin.podcast.html.php </blockquote>     <p>&nbsp;And copy these files to components/com_podcast:</p>     <blockquote> podcast.php<br />  podcast.class.php<br />  feedcreator.class.php</blockquote> <p>&nbsp;Uninstall and reinstall the bot and module <em>only</em>.</p><p>&nbsp;The next upgrade will be easier, I promise!<br /> </p>
+
 
 </div>
 
 		</div>
 	</div>
 	<div class="container">
-		
+
 	</div>
 </body>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">

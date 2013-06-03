@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="/templates/blueprint/css/blueprint/screen.css" type="text/css" media="screen, projection" />
 <link rel="stylesheet" href="/templates/blueprint/css/blueprint/print.css" type="text/css" media="print" />
 <!--[if lt IE 8]>
-  <link rel="stylesheet" href="/templates/blueprint/css/blueprint/ie.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="/old/media/ie.css" type="text/css" media="screen, projection">
 <![endif]-->
 <link rel="stylesheet" href="/templates/blueprint/css/template.css" type="text/css" media="screen" />
 
@@ -34,7 +34,7 @@
 
 <body>
 	<div class="container" id="top_module">
-		
+
 	</div>
 	<div id="logo"><img src="/templates/blueprint/img/jlleblanc.png" /></div>
 	<div class="container">
@@ -44,10 +44,10 @@
 			<div class="moduletable">
 					<h3>Joomla Resources</h3>
 					<ul class="menu"><li id="current" class="active item52"><a href="/articles"><span>articles</span></a></li><li class="item54"><a href="/tutorials"><span>tutorials</span></a></li><li class="item73"><a href="/podcast-suite"><span>podcast suite</span></a></li><li class="item76"><a href="/joomladay-giveaway"><span>joomladay giveaway</span></a></li></ul>		</div>
-	
+
 		</div>
 		<div class="column last span-18">
-			
+
 <div id="page">
 
 
@@ -68,7 +68,9 @@ Quite
 often throughout the message boards on forums.opesourcematters.org, new Joomla users
 display confusion over modules and components. However, once this
 differentiation is made, the architecture of Joomla becomes very clear. So, what
-is the difference between a component and a module?<i>Please note: although the described use of parameters and module
+is the difference between a component and a module?
+
+<i>Please note: although the described use of parameters and module
 positions here are specific to Mambo 4.5, the concepts behind
 self-contained templates, modules, and components still apply for newer
 versions. -Joseph L. LeBlanc, 11/3/04</i>
@@ -100,7 +102,7 @@ a Joomla page actually loads
 		</div>
 	</div>
 	<div class="container">
-		
+
 	</div>
 </body>
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
