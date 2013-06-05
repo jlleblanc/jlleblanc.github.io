@@ -264,4 +264,4 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 .clearfix, .container {display:block;}
 .clear {clear:both;}
 
-.archive-message {padding: 20px; border: 1px dotted; margin-bottom: 20px; background-color: #FF0;}
+.archive-message {padding: 20px; border: 1px dotted; margin-bottom: 30px !important; background-color: #FF0;}
