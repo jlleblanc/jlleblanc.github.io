@@ -12,7 +12,7 @@
 			<title>JoomlaDay Giveaway component</title>
 			<link>http://jlleblanc.com/joomladay-giveaway</link>
 			<guid>http://jlleblanc.com/joomladay-giveaway</guid>
-			<description><![CDATA[<p>At a couple of JoomlaDays, people have commented that we should simply build a component to handle them. Well, ask and ye shall receive! You can <a href="http://jlleblanc.com//files/JoomlaDay-Giveaway-Component.zip">download the installable component here</a>, or head over to the <a href="https://github.com/jlleblanc/JoomlaDay-Giveaway-Component">Github repository</a> and fork away. I used <a href="http://www.extool.org">Extool</a> to generate the skeleton, then filled in the rest.</p>
+			<description><![CDATA[<p>At a couple of JoomlaDays, people have commented that we should simply build a component to handle them. Well, ask and ye shall receive! You can <a href="http://jlleblanc.com//files/JoomlaDay-Giveaway-Component.zip">download the installable component here</a>, or head over to the <a href="https://github.com/jlleblanc/JoomlaDay-Giveaway-Component">Github repository</a> and fork away. I used <a href="/old/extool">Extool</a> to generate the skeleton, then filled in the rest.</p>
 
 <p>The component is pretty simple: add in your attendee names and email addresses, then add in all of the items you're giving away. When you're ready to do the giveaway, go to the Swag List screen in the backend and click the -select- box to give away each item. There's also a Swag List screen for the frontend where you can show off who won what on your JoomlaDay site. You can also download a CSV export of the winners.</p>
 
