@@ -60,7 +60,7 @@ body {
   color:#8F898A;
   background:#dcedfc;
   font-size: 16px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Slab', serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-weight: 700;
   color:#222222;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Mono', monospace;
   letter-spacing: -1px;
 }
 
