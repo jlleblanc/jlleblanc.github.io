@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jlleblanc
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jlleblanc.com
+  * I am jlleblanc (https://keybase.io/jlleblanc) on keybase.
+  * I have a public key ASBcoSXfNGLH0osZx3Pwo3qrUYj7c35J-0Ceg96bIIRqpwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204a021e2b353f8821e2b08449b31a8795e2464381a3b222a484d84a14ba0365820a",
+      "host": "keybase.io",
+      "kid": "01205ca125df3462c7d28b19c773f0a37aab5188fb737e49fb409e83de9b20846aa70a",
+      "uid": "c359db4d87083c457d0467bb02e50200",
+      "username": "jlleblanc"
+    },
+    "merkle_root": {
+      "ctime": 1550156155,
+      "hash": "9a5d643a08aa321e8a5daeeb0d97bf495726b2393ec9f06af14b83ee73adac955a0d4eadd83a1f259396ab3062beb7dfe1212ecfc7f0d01bc94bbd8e7969e20c",
+      "hash_meta": "8312cfba8cd94ce74239ac49342ed07a1e07f9df1a8776961f55fe9b61769a62",
+      "seqno": 4764454
+    },
+    "service": {
+      "entropy": "41y6MN7lqgNzQ1jdTcPOFxhs",
+      "hostname": "jlleblanc.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.0.0"
+  },
+  "ctime": 1550156177,
+  "expire_in": 504576000,
+  "prev": "ff21dbd87e3d19a1fa40c8b9100d4b88f3b0e06b760a401b756e43d845dc21ff",
+  "seqno": 54,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgXKEl3zRix9KLGcdz8KN6q1GI+3N+SftAnoPemyCEaqcKp3BheWxvYWTESpcCNsQg/yHb2H49GaH6QMi5EA1LiPOw4Gt2CkAbdW5D2EXcIf/EIKcZaddPM6Zr4JJHDC1BizIPKQafSHojVAwVj3dT3yTaAgHCo3NpZ8RAnOl4c84nYiE8ssvtESAyAHt0CRTu/7hc3Fqqz1daW7tUKo3vS9Wkk3/NHukQuLCfW1aBUq6lOCqlYF1CMyXGCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBes816cM++oGlHExkrQyiToE3/zd/5jt9ZiY5A6vdQvo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jlleblanc
+
+==================================================================
