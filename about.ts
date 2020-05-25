@@ -1,3 +1,4 @@
+console.log("");
 console.log("Joseph L. LeBlanc");
 console.log("");
 console.log("Hello! I am a Software Engineering Manager. I have been coding as a hobby since I was 8 years old and professionally since 2004.");
