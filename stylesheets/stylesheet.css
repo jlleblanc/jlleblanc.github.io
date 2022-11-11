@@ -102,7 +102,7 @@ h6 {
 
 p {
   margin: 10px 0 15px 0;
-  font-size: 2em;
+  font-size: 1.7em;
 }
 
 footer p {
@@ -124,11 +124,6 @@ a {
   -o-transition: text-shadow 0.5s ease;
   -ms-transition: color 0.5s ease;
   -ms-transition: text-shadow 0.5s ease;
-}
-
-#main_content a:hover {
-  color: #0069ba;
-  text-shadow: #0090ff 0px 0px 2px;
 }
 
 footer a:hover {
@@ -301,7 +296,7 @@ Full-Width Styles
   padding-top: 40px;
 }
 
-.wow-thats-pink {
+.queer-power-pink {
   color: #F15AA3;
 }
 
