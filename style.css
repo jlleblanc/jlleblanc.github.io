@@ -1,0 +1,54 @@
+body {
+  background: linear-gradient(#23374a, #557391);
+  background-attachment: fixed;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+a, a:visited {
+  color: #F15AA3;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+main, footer {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 800px) {
+  main,
+  footer {
+    max-width: 700px;
+    margin: 0.5em auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main,
+  footer {
+    max-width: 400px;
+    margin: 1em;
+  }
+
+  .phone-number-example {
+    float: none;
+    width: auto;
+  }
+}
