@@ -26,6 +26,25 @@ a, a:visited {
   transition: color 0.5s ease;
 }
 
+img.avatar {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+section.top-section {
+  text-align: center;
+  padding-top: 1em;
+}
+
+section.top-section p {
+  font-size: 1.5em;
+  margin: 0.5em 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
 main, footer {
   max-width: 800px;
   margin: 0 auto;
