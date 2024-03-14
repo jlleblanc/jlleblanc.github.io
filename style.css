@@ -34,7 +34,7 @@ h4 {
 
 
 a, a:visited {
-  color: #F15AA3;
+  color: rgb(46, 125, 50);
   text-decoration: none;
   transition: color 0.5s ease;
 }
@@ -72,7 +72,7 @@ section.message p {
 }
 
 section button {
-  background: #F15AA3;
+  background: rgb(46, 125, 50);
   color: #fff;
   padding: 0.5em 1em;
   border: #23374a 1px solid;
