@@ -1,72 +1,324 @@
 <!DOCTYPE html>
-
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RXP0D39101"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe LeBlanc - Technical Direction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: rgb(43, 47, 49);
+            background: linear-gradient(#d8ebf3, #fff);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            text-align: left;
+        }
+        .intro-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .intro-text {
+            flex-grow: 1;
+            max-width: 35em;
+        }
+        .large-text {
+            font-size: 2em;
+            line-height: 1.4;
+            margin: 0 0 20px 0;
+        }
+        input[type="text"], input[type="email"] {
+            font-size: 1.5em;
+            padding: 15px;
+            margin: 20px 0;
+            width: calc(100% - 30px);
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .button-container {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 20px;
+        }
+        button {
+            background-color: rgb(46, 125, 50);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option {
+            background-color: white;
+            border: 1px solid rgb(46, 125, 50);
+            border-radius: 5px;
+            padding: 20px;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1.2em;
+        }
+        .checkbox {
+            margin-right: 10px;
+        }
+        label {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 1em;
+        }
+        @media (max-width: 600px) {
+            .intro-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        const clientTypes = [
+            { value: 'early_career', label: 'Early career software engineer' },
+            { value: 'leadership', label: 'Experienced engineer moving into leadership' },
+            { value: 'independent', label: 'Software engineer looking to go independent' },
+            { value: 'entrepreneur', label: 'Entrepreneur seeking technical direction' }
+        ];
 
-      gtag('config', 'G-RXP0D39101');
+        const personaQuestions = {
+            early_career: {
+                question: "What area of your career growth are you most interested in exploring?",
+                options: [
+                    { value: 'skills', label: 'Expanding technical skills' },
+                    { value: 'path', label: 'Defining career path' },
+                    { value: 'projects', label: 'Choosing impactful projects' },
+                    { value: 'networking', label: 'Building professional network' },
+                    { value: 'interviews', label: 'Improving interview performance' }
+                ]
+            },
+            leadership: {
+                question: "What aspect of transitioning to leadership are you most curious about?",
+                options: [
+                    { value: 'team_management', label: 'Effective team management' },
+                    { value: 'tech_decisions', label: 'Making high-level technical decisions' },
+                    { value: 'communication', label: 'Improving communication with non-technical stakeholders' },
+                    { value: 'mentoring', label: 'Mentoring junior engineers' },
+                    { value: 'strategy', label: 'Aligning technical strategy with business goals' }
+                ]
+            },
+            independent: {
+                question: "What's your primary concern about going independent?",
+                options: [
+                    { value: 'clients', label: 'Finding and retaining clients' },
+                    { value: 'pricing', label: 'Setting rates and pricing projects' },
+                    { value: 'skills', label: 'Staying current with technical skills' },
+                    { value: 'business', label: 'Managing business aspects (taxes, contracts, etc.)' },
+                    { value: 'work_life', label: 'Maintaining work-life balance' }
+                ]
+            },
+            entrepreneur: {
+                question: "What technical aspect of your business are you most eager to understand?",
+                options: [
+                    { value: 'mvp', label: 'Building a Minimum Viable Product (MVP)' },
+                    { value: 'tech_stack', label: 'Choosing the right technology stack' },
+                    { value: 'scaling', label: 'Scaling technology as the business grows' },
+                    { value: 'hiring', label: 'Hiring and managing technical talent' },
+                    { value: 'security', label: 'Ensuring data security and privacy' }
+                ]
+            }
+        };
+
+        const blogRecommendations = {
+            early_career: {
+                skills: "10 Essential Skills for Modern Software Engineers",
+                path: "Charting Your Path: Career Trajectories in Software Engineering",
+                projects: "How to Choose Projects That Boost Your Career",
+                networking: "Building a Strong Professional Network in Tech",
+                interviews: "Ace Your Next Technical Interview: Tips and Strategies"
+            },
+            leadership: {
+                team_management: "Effective Team Management Strategies for Tech Leaders",
+                tech_decisions: "Making High-Impact Technical Decisions: A Guide for New Leaders",
+                communication: "Bridging the Gap: Communicating Tech to Non-Technical Stakeholders",
+                mentoring: "The Art of Mentoring: Nurturing the Next Generation of Engineers",
+                strategy: "Aligning Technical Strategy with Business Goals: A Primer"
+            },
+            independent: {
+                clients: "Finding and Retaining Clients as an Independent Software Engineer",
+                pricing: "Pricing Strategies for Freelance Software Engineers",
+                skills: "Staying Relevant: Skill Development for Independent Engineers",
+                business: "The Business Side of Freelancing: Taxes, Contracts, and More",
+                work_life: "Achieving Work-Life Balance as an Independent Engineer"
+            },
+            entrepreneur: {
+                mvp: "Building Your MVP: A Guide for Non-Technical Entrepreneurs",
+                tech_stack: "Choosing the Right Technology Stack for Your Startup",
+                scaling: "Scaling Your Technology as Your Business Grows",
+                hiring: "Hiring and Managing Technical Talent: Tips for Non-Technical Founders",
+                security: "Essential Data Security and Privacy Practices for Startups"
+            }
+        };
+
+        let name = '';
+        let userType = '';
+        let interest = '';
+        let email = '';
+        let subscribeNewsletter = false;
+
+        function renderIntroduction() {
+            return `
+                <div class="intro-container">
+                    <img src="https://github.com/jlleblanc.png" alt="Joe" class="photo">
+                    <div class="intro-text">
+                        <p class="large-text">Hi, I'm Joe.</p>
+                        <p class="large-text">
+                            I provide technical direction to help guide your career or business.
+                        </p>
+                    </div>
+                </div>
+                <p class="large-text">What's your name?</p>
+                <form onsubmit="handleNameSubmit(event)">
+                    <input type="text" id="nameInput" placeholder="Enter your name" required>
+                    <div class="button-container">
+                        <button type="submit">Next</button>
+                    </div>
+                </form>
+            `;
+        }
+
+        function renderUserTypeSelection() {
+            return `
+                <div class="container">
+                    <p class="large-text">
+                        ${name.toLowerCase() === 'joe' ? "Hey, another Joe!" : `Nice to meet you, ${name}!`}
+                        Which of these best describes you?
+                    </p>
+                    <div>
+                        ${clientTypes.map(type => `
+                            <div class="option" onclick="handleUserTypeSelect('${type.value}')">
+                                ${type.label}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderPersonaQuestion() {
+            return `
+                <div class="container">
+                    <p class="large-text">${personaQuestions[userType].question}</p>
+                    <div>
+                        ${personaQuestions[userType].options.map(option => `
+                            <div class="option" onclick="handleInterestSelect('${option.value}')">
+                                ${option.label}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderEmailCollection() {
+            return `
+                <div class="container">
+                    <p class="large-text">Great choice, ${name}! To follow up with you, I'll need your email address.</p>
+                    <form onsubmit="handleEmailSubmit(event)">
+                        <input type="email" id="emailInput" placeholder="Your email address" required>
+                        <label>
+                            <input type="checkbox" id="newsletterCheckbox" class="checkbox">
+                            Subscribe to my newsletter for tech insights and career tips (I promise not to spam you)
+                        </label>
+                        <div class="button-container">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            `;
+        }
+
+        function renderThankYou() {
+            return `
+                <div class="container">
+                    <p class="large-text">Thank you for your information, ${name}!</p>
+                    <p>I'll get back to you soon with some thoughts on ${personaQuestions[userType].options.find(o => o.value === interest).label.toLowerCase()}.</p>
+                    <p>In the meantime, you might find this blog post interesting:</p>
+                    <p style="font-weight: bold;">${blogRecommendations[userType][interest]}</p>
+                    <p>I look forward to helping you with your tech journey!</p>
+                </div>
+            `;
+        }
+
+        function handleNameSubmit(event) {
+            event.preventDefault();
+            name = document.getElementById('nameInput').value;
+            if (name) {
+                render('userType');
+            }
+        }
+
+        function handleUserTypeSelect(type) {
+            userType = type;
+            render('personaQuestion');
+        }
+
+        function handleInterestSelect(interestValue) {
+            interest = interestValue;
+            render('emailCollection');
+        }
+
+        function handleEmailSubmit(event) {
+            event.preventDefault();
+            email = document.getElementById('emailInput').value;
+            subscribeNewsletter = document.getElementById('newsletterCheckbox').checked;
+            if (email) {
+                render('thankYou');
+            }
+        }
+
+        function render(stage) {
+            const app = document.getElementById('app');
+            switch (stage) {
+                case 'introduction':
+                    app.innerHTML = renderIntroduction();
+                    break;
+                case 'userType':
+                    app.innerHTML = renderUserTypeSelection();
+                    break;
+                case 'personaQuestion':
+                    app.innerHTML = renderPersonaQuestion();
+                    break;
+                case 'emailCollection':
+                    app.innerHTML = renderEmailCollection();
+                    break;
+                case 'thankYou':
+                    app.innerHTML = renderThankYou();
+                    break;
+            }
+        }
+
+        // Initial render
+        render('introduction');
     </script>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-
-    <title>Fractional Software Engineering Leadership by Joe LeBlanc</title>
-    <meta
-      name="description"
-      content="Fractional software engineering leadership by Joe LeBlanc. I help companies build and lead high-performing engineering teams."
-    />
-    <meta name="author" content="Joe LeBlanc" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Mulish:wght@900&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="normalize.css" />
-    <link rel="stylesheet" href="style.css" />
-    <script async src="https://tally.so/widgets/embed.js"></script>
-  </head>
-
-  <body>
-    <main class="roboto-regular">
-      <section class="top-section">
-        <img src="https://avatars.githubusercontent.com/u/87923?v=4" height="200" width="200" alt="A photo of Joe LeBlanc" class="avatar" />
-        <p class="mulish-header">Joe LeBlanc</p>
-      </section>
-      <section>
-        <h1 class="mulish-header">Software Engineering Leadership</h1>
-        <h2 class="caveat-signature">at human scale</h2>
-      </section>
-      <section class="message">
-        <h3>Fix the delivery, accountability, and incident response of your software engineering team</h3>
-
-        <p>
-          You've worked hard to build your startup. You have the clients you always hoped to reach. And your platform has to be reliable.
-        </p>
-        <p>
-          But your software engineering team isn't delivering at the level you hope they would. You're unsure of the state of new features. Outages are increasing and becoming more severe even though you use stable, "boring" technology.
-        </p>
-        <p>
-          You miss the early days when you could just edit the database and make your clients happy. When people ask if you're doing Agile, you say "yes," but you know that's not entirely true. Something isn't working. Shouldn't it be more flexible than this?
-        </p>
-        <p>
-          Imagine if the status of projects was easy to find. The team is consistently delivering features when they say they will. The endless stand-ups, checkins, and 1:1 meetings are off your calendar. And the platform is noticeably faster, with room for the sustaining growth you need.
-        </p>
-        <p>
-          I can help make this a reality.
-        </p>
-
-        <div class="convert mulish-header">
-          <a href="mailto:contact@jlleblanc.com">Let's work together!</a>
-        </div>
-      </section>
-    </main>
-    <footer class="roboto-regular">
-      <p>© 2002-2024 Joseph L. LeBlanc</p>
-    </footer>
-  </body>
+</body>
 </html>
