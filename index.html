@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe LeBlanc - Technical Direction</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -34,6 +35,7 @@
             height: 200px;
             border-radius: 50%;
             flex-shrink: 0;
+            box-shadow: #ccc 0 0 10px;
         }
         .intro-text {
             flex-grow: 1;
@@ -95,9 +97,16 @@
     </style>
 </head>
 <body>
+    <div id="error"></div>
     <div id="app"></div>
 
     <script>
+        const { createClient } = supabase;
+        const supabaseClient = createClient(
+            'https://hnmvfdxbiwcyjjpozplj.supabase.co',
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhubXZmZHhiaXdjeWpqcG96cGxqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA5NjA0MDEsImV4cCI6MjAyNjUzNjQwMX0.SBX8dIH_BnXtbZlO5Z7JuSUAP3c6-vyM_LWyST_E6KQ'
+        );
+
         const clientTypes = [
             { value: 'early_career', label: 'Early career software engineer' },
             { value: 'leadership', label: 'Experienced engineer moving into leadership' },
@@ -270,13 +279,42 @@
             render('emailCollection');
         }
 
-        function handleEmailSubmit(event) {
+        async function handleEmailSubmit(event) {
             event.preventDefault();
             email = document.getElementById('emailInput').value;
             subscribeNewsletter = document.getElementById('newsletterCheckbox').checked;
-            if (email) {
-                render('thankYou');
+
+
+            try {
+                let result = await supabaseClient
+                .from('inquiries')
+                .insert([
+                    {
+                        name,
+                        persona: clientTypes.find(c => c.value === userType ).label,
+                        interest: personaQuestions[userType].options.find(o => o.value === interest).label,
+                        email,
+                        newsletter: subscribeNewsletter
+                    }
+                ])
+                .then(() => {
+                    render('thankYou');
+                })
+                .catch(error => {
+                    renderError("Looks like there was an issue submitting your information. Can you please try that one more time?");
+                    console.error('Error inserting data:', error.message);
+                });
+            } catch (error) {
+                renderError("Looks like there was an issue submitting your information. Can you please try that one more time?");
+                console.error('Error inserting data:', error.message);
             }
+        }
+
+        function renderError(message) {
+            const errorElement = document.getElementById('error');
+            errorElement.innerHTML = `
+                <div style="color: red; font-weight: bold; padding: 1em; font-size: 1.4em">${message}</div>
+            `;
         }
 
         function render(stage) {
