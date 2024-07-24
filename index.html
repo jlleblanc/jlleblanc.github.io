@@ -37,7 +37,7 @@
         }
         .intro-text {
             flex-grow: 1;
-            max-width: 35em;
+            max-width: 40em;
         }
         .large-text {
             font-size: 2em;
@@ -107,13 +107,13 @@
 
         const personaQuestions = {
             early_career: {
-                question: "What area of your career growth are you most interested in exploring?",
+                question: "What area of career growth are you most interested in exploring?",
                 options: [
-                    { value: 'skills', label: 'Expanding technical skills' },
-                    { value: 'path', label: 'Defining career path' },
+                    { value: 'skills', label: 'Expanding your technical skills' },
+                    { value: 'path', label: 'Defining your career path' },
                     { value: 'projects', label: 'Choosing impactful projects' },
-                    { value: 'networking', label: 'Building professional network' },
-                    { value: 'interviews', label: 'Improving interview performance' }
+                    { value: 'networking', label: 'Building your professional network' },
+                    { value: 'interviews', label: 'Improving your interview performance' }
                 ]
             },
             leadership: {
@@ -131,8 +131,8 @@
                 options: [
                     { value: 'clients', label: 'Finding and retaining clients' },
                     { value: 'pricing', label: 'Setting rates and pricing projects' },
-                    { value: 'skills', label: 'Staying current with technical skills' },
-                    { value: 'business', label: 'Managing business aspects (taxes, contracts, etc.)' },
+                    { value: 'skills', label: 'Keeping your technical skills current' },
+                    { value: 'business', label: 'Managing a business for the first time' },
                     { value: 'work_life', label: 'Maintaining work-life balance' }
                 ]
             },
@@ -141,41 +141,10 @@
                 options: [
                     { value: 'mvp', label: 'Building a Minimum Viable Product (MVP)' },
                     { value: 'tech_stack', label: 'Choosing the right technology stack' },
-                    { value: 'scaling', label: 'Scaling technology as the business grows' },
+                    { value: 'scaling', label: 'Scaling as the business grows' },
                     { value: 'hiring', label: 'Hiring and managing technical talent' },
                     { value: 'security', label: 'Ensuring data security and privacy' }
                 ]
-            }
-        };
-
-        const blogRecommendations = {
-            early_career: {
-                skills: "10 Essential Skills for Modern Software Engineers",
-                path: "Charting Your Path: Career Trajectories in Software Engineering",
-                projects: "How to Choose Projects That Boost Your Career",
-                networking: "Building a Strong Professional Network in Tech",
-                interviews: "Ace Your Next Technical Interview: Tips and Strategies"
-            },
-            leadership: {
-                team_management: "Effective Team Management Strategies for Tech Leaders",
-                tech_decisions: "Making High-Impact Technical Decisions: A Guide for New Leaders",
-                communication: "Bridging the Gap: Communicating Tech to Non-Technical Stakeholders",
-                mentoring: "The Art of Mentoring: Nurturing the Next Generation of Engineers",
-                strategy: "Aligning Technical Strategy with Business Goals: A Primer"
-            },
-            independent: {
-                clients: "Finding and Retaining Clients as an Independent Software Engineer",
-                pricing: "Pricing Strategies for Freelance Software Engineers",
-                skills: "Staying Relevant: Skill Development for Independent Engineers",
-                business: "The Business Side of Freelancing: Taxes, Contracts, and More",
-                work_life: "Achieving Work-Life Balance as an Independent Engineer"
-            },
-            entrepreneur: {
-                mvp: "Building Your MVP: A Guide for Non-Technical Entrepreneurs",
-                tech_stack: "Choosing the Right Technology Stack for Your Startup",
-                scaling: "Scaling Your Technology as Your Business Grows",
-                hiring: "Hiring and Managing Technical Talent: Tips for Non-Technical Founders",
-                security: "Essential Data Security and Privacy Practices for Startups"
             }
         };
 
@@ -190,13 +159,13 @@
                 <div class="intro-container">
                     <img src="https://github.com/jlleblanc.png" alt="Joe" class="photo">
                     <div class="intro-text">
-                        <p class="large-text">Hi, I'm Joe.</p>
+                        <p class="large-text">Hi, I'm Joe!</p>
                         <p class="large-text">
-                            I provide technical direction to help guide your career or business.
+                            Whether you're an early career software engineer, an experienced developer moving into leadership, or an entrepreneur seeking technical direction, I'm ready to help.
                         </p>
                     </div>
                 </div>
-                <p class="large-text">What's your name?</p>
+                <p class="large-text">But first, I'd like to get to know you. What's your name?</p>
                 <form onsubmit="handleNameSubmit(event)">
                     <input type="text" id="nameInput" placeholder="Enter your name" required>
                     <div class="button-container">
@@ -260,11 +229,25 @@
         function renderThankYou() {
             return `
                 <div class="container">
-                    <p class="large-text">Thank you for your information, ${name}!</p>
-                    <p>I'll get back to you soon with some thoughts on ${personaQuestions[userType].options.find(o => o.value === interest).label.toLowerCase()}.</p>
-                    <p>In the meantime, you might find this blog post interesting:</p>
-                    <p style="font-weight: bold;">${blogRecommendations[userType][interest]}</p>
-                    <p>I look forward to helping you with your tech journey!</p>
+                    <p class="large-text">Thanks, ${name}!</p>
+                    <p>I'll get back to you soon so we can talk more about ${personaQuestions[userType].options.find(o => o.value === interest).label.toLowerCase()}.</p>
+                    <p>In the meantime, you might find these blog posts interesting:</p>
+                    <p style="font-weight: bold;">
+                        <a href="https://www.linkedin.com/pulse/creating-software-human-scale-joe-leblanc-g6tuf/" target="_blank">
+                            Creating software at human scale
+                        </a>
+                    </p>
+                    <p style="font-weight: bold;">
+                        <a href="https://www.linkedin.com/pulse/dont-automate-yourself-joe-leblanc/" target="_blank">
+                            Don't automate yourself
+                        </a>
+                    </p>
+                    <p style="font-weight: bold;">
+                        <a href="https://www.linkedin.com/pulse/dont-become-expert-invest-instead-joe-leblanc-9xmlc/" target="_blank">
+                            Don't become an expert: invest instead
+                        </a>
+                    </p>
+                    <p>Looking forward to chatting with you soon!</p>
                 </div>
             `;
         }
