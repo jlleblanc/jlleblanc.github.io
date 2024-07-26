@@ -379,6 +379,8 @@
                         persona: clientTypes.find(c => c.value === userType ).label,
                         interest: personaQuestions[userType].options.find(o => o.value === interest).label,
                         email,
+                        engagement_style: engagementStyle,
+                        pricing,
                         newsletter: subscribeNewsletter
                     }
                 ])
