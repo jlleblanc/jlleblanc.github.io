@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joe LeBlanc - Technical Direction</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <style>
         body {
@@ -40,6 +40,9 @@
         .intro-text {
             flex-grow: 1;
             max-width: 40em;
+        }
+        .hi {
+            font-weight: 900;
         }
         .large-text {
             font-size: 2em;
@@ -98,7 +101,24 @@
 </head>
 <body>
     <div id="error"></div>
-    <div id="app"></div>
+    <div id="app">
+        <div class="intro-container">
+            <img src="https://github.com/jlleblanc.png" alt="Joe" class="photo">
+            <div class="intro-text">
+                <p class="large-text hi">Hi, I'm Joe!</p>
+                <p class="large-text">
+                    Whether you're an early career software engineer, an experienced developer moving into leadership, or an entrepreneur seeking technical direction, I'm ready to help.
+                </p>
+            </div>
+        </div>
+        <p class="large-text">But first, I'd like to get to know you. What's your name?</p>
+        <form onsubmit="handleNameSubmit(event)">
+            <input type="text" id="nameInput" placeholder="Enter your name" required>
+            <div class="button-container">
+                <button type="submit">Next</button>
+            </div>
+        </form>
+    </div>
 
     <script>
         const { createClient } = supabase;
@@ -162,27 +182,6 @@
         let interest = '';
         let email = '';
         let subscribeNewsletter = false;
-
-        function renderIntroduction() {
-            return `
-                <div class="intro-container">
-                    <img src="https://github.com/jlleblanc.png" alt="Joe" class="photo">
-                    <div class="intro-text">
-                        <p class="large-text">Hi, I'm Joe!</p>
-                        <p class="large-text">
-                            Whether you're an early career software engineer, an experienced developer moving into leadership, or an entrepreneur seeking technical direction, I'm ready to help.
-                        </p>
-                    </div>
-                </div>
-                <p class="large-text">But first, I'd like to get to know you. What's your name?</p>
-                <form onsubmit="handleNameSubmit(event)">
-                    <input type="text" id="nameInput" placeholder="Enter your name" required>
-                    <div class="button-container">
-                        <button type="submit">Next</button>
-                    </div>
-                </form>
-            `;
-        }
 
         function renderUserTypeSelection() {
             return `
@@ -320,9 +319,6 @@
         function render(stage) {
             const app = document.getElementById('app');
             switch (stage) {
-                case 'introduction':
-                    app.innerHTML = renderIntroduction();
-                    break;
                 case 'userType':
                     app.innerHTML = renderUserTypeSelection();
                     break;
@@ -337,9 +333,6 @@
                     break;
             }
         }
-
-        // Initial render
-        render('introduction');
     </script>
 </body>
 </html>
