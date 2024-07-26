@@ -177,9 +177,53 @@
             }
         };
 
+        const engagementStyleQuestions = {
+            engineer: {
+                question: "When it comes to developing your career, your learning style is key. What's your preferred style of support?",
+                options: [
+                    { value: 'live', label: 'High-touch approach with scheduled sessions' },
+                    { value: 'workshops', label: 'Hands-on group workshop learning and practice' },
+                    { value: 'goals', label: 'Independent exploration, with set goals and periodic check-ins' },
+                    { value: 'blend', label: 'A mix of structure and self-guided exploration' },
+                ]
+            },
+            entrepreneur: {
+                question: "How do you ultimately see a technical advisor supporting your business?",
+                options: [
+                    { value: 'live', label: 'A hands-on, collaborative partnership with regular meetings' },
+                    { value: 'process', label: 'Developing and iterating processes' },
+                    { value: 'consulting', label: 'Occasional check-ins, be available for questions and answers' },
+                    { value: 'blend', label: 'A blend of scheduled sessions and on-demand support as needed' },
+                ]
+            }
+        };
+
+        const pricingQuestions = {
+            engineer: {
+                question: "And finally, what level of investment are you prepared to make in your career development?",
+                options: [
+                    { value: '100', label: 'At least $100 per month' },
+                    { value: '150', label: 'Between $150 and $400 per month' },
+                    { value: '500', label: 'At least $500 per month' },
+                    { value: '0', label: "I'm just exploring options for now" },
+                ]
+            },
+            entrepreneur: {
+                question: "And finally, what level of investment are you prepared to make in the technical direction for your business?",
+                options: [
+                    { value: '1000', label: 'At least $1000 per month' },
+                    { value: '2000', label: 'Between $2000 and $5000 per month' },
+                    { value: '6000', label: 'At least $6000 per month' },
+                    { value: '0', label: "I'm just exploring options for now" },
+                ]
+            }
+        };
+
         let name = '';
         let userType = '';
         let interest = '';
+        let engagementStyle = '';
+        let pricing = '';
         let email = '';
         let subscribeNewsletter = false;
 
@@ -208,6 +252,38 @@
                     <div>
                         ${personaQuestions[userType].options.map(option => `
                             <div class="option" onclick="handleInterestSelect('${option.value}')">
+                                ${option.label}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderEngagementStyle() {
+            const engagementUserType = userType === 'entrepreneur' ? 'entrepreneur' : 'engineer';
+            return `
+                <div class="container">
+                    <p class="large-text" style="margin-bottom: 20px;">${engagementStyleQuestions[engagementUserType].question}</p>
+                    <div>
+                        ${engagementStyleQuestions[engagementUserType].options.map(option => `
+                            <div class="option" onclick="handleEngagementStyleSelect('${option.value}')">
+                                ${option.label}
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderPricing() {
+            const pricingUserType = userType === 'entrepreneur' ? 'entrepreneur' : 'engineer';
+            return `
+                <div class="container">
+                    <p class="large-text" style="margin-bottom: 20px;">${pricingQuestions[pricingUserType].question}</p>
+                    <div>
+                        ${pricingQuestions[pricingUserType].options.map(option => `
+                            <div class="option" onclick="handlePricingSelect('${option.value}')">
                                 ${option.label}
                             </div>
                         `).join('')}
@@ -275,6 +351,16 @@
 
         function handleInterestSelect(interestValue) {
             interest = interestValue;
+            render('engagementStyle');
+        }
+
+        function handleEngagementStyleSelect(style) {
+            engagementStyle = style;
+            render('pricing');
+        }
+
+        function handlePricingSelect(price) {
+            pricing = price;
             render('emailCollection');
         }
 
@@ -327,6 +413,12 @@
                     break;
                 case 'emailCollection':
                     app.innerHTML = renderEmailCollection();
+                    break;
+                case 'engagementStyle':
+                    app.innerHTML = renderEngagementStyle();
+                    break;
+                case 'pricing':
+                    app.innerHTML = renderPricing();
                     break;
                 case 'thankYou':
                     app.innerHTML = renderThankYou();
