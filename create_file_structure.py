@@ -20,6 +20,7 @@ def create_file_structure(base_path="."):
         ".vercel",
         ".next",
         ".tmp",
+        "package-lock.json",
     ]
 
     for root, dirs, files in os.walk(base_path):
