@@ -12,6 +12,7 @@ def create_file_structure(base_path="."):
     file_structure = {}
     ignore_files = [
         "node_modules",
+        "out",
         ".git",
         ".vscode",
         ".github",
@@ -43,6 +44,11 @@ def create_file_structure(base_path="."):
                 or file_name.endswith(".toml")
                 or file_name.endswith(".json")
                 or file_name.endswith(".md")
+                or file_name.endswith(".js")
+                or file_name.endswith(".css")
+                or file_name.endswith(".xml")
+                or file_name.endswith(".txt")
+                or file_name.endswith(".mjs")
             ) and not is_ignored_file(relative_file_path, ignore_files):
                 try:
                     with open(file_path, "r", encoding="utf-8") as file:
