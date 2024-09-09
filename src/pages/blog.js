@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import Link from 'next/link'
+import siteConfig from '../config/siteConfig'
 
 export default function Blog() {
   const jsonLd = {
@@ -9,10 +10,10 @@ export default function Blog() {
       {
         "@type": "BlogPosting",
         "headline": "5 Tips for Scaling Your Startup's Tech Stack",
-        "url": "https://www.yourwebsite.com/blog/scaling-your-startup",
+        "url": `${siteConfig.siteUrl}/blog/scaling-your-startup`,
         "author": {
           "@type": "Person",
-          "name": "[Your Name]"
+          "name": siteConfig.name
         }
       },
       // Add more blog posts here
@@ -23,7 +24,7 @@ export default function Blog() {
     <Layout
       title="Blog - Insights on Software Engineering Leadership"
       description="Tips, insights, and thoughts on software engineering, startup challenges, and tech leadership using Next.js, Supabase, OpenAI, and Anthropic."
-      canonicalUrl="https://www.yourwebsite.com/blog"
+      canonicalUrl={`${siteConfig.siteUrl}/blog`}
       jsonLd={jsonLd}
     >
       <h1 className="text-3xl font-bold mb-4">Blog</h1>

@@ -1,40 +1,35 @@
 import Layout from '../components/Layout'
 import Link from 'next/link'
+import siteConfig from '../config/siteConfig'
 
 export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "[Your Name] - Software Engineering Leadership",
-    "description": "I help startups deliver today and plan for tomorrow. Expertise in Next.js, Supabase, OpenAI, and Anthropic.",
-    "url": "https://www.yourwebsite.com",
+    "name": `${siteConfig.name} - Software Engineering Leadership`,
+    "description": siteConfig.description,
+    "url": siteConfig.siteUrl,
     "sameAs": [
-      "https://www.linkedin.com/in/yourprofile",
-      "https://github.com/yourgithub"
+      siteConfig.socialLinks.linkedin,
+      siteConfig.socialLinks.github
     ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "[Your City]",
-      "addressRegion": "[Your State]",
-      "addressCountry": "[Your Country]"
-    },
     "founder": {
       "@type": "Person",
-      "name": "[Your Name]"
+      "name": siteConfig.name
     }
   };
 
   return (
     <Layout
-      title="Software Engineering Leadership at Human Scale"
-      description="I help startups deliver today and plan for tomorrow. Expertise in Next.js, Supabase, OpenAI, and Anthropic."
-      canonicalUrl="https://www.yourwebsite.com"
+      title={siteConfig.title}
+      description={siteConfig.description}
+      canonicalUrl={siteConfig.siteUrl}
       jsonLd={jsonLd}
     >
-      <h1 className="text-4xl font-bold mb-4">Software Engineering Leadership at Human Scale</h1>
-      <h2 className="text-2xl mb-8">I help startups deliver today and plan for tomorrow</h2>
+      <h1 className="text-4xl font-bold mb-4">{siteConfig.title}</h1>
+      <h2 className="text-2xl mb-8">{siteConfig.description}</h2>
       <p className="mb-8">
-        Hi, I&apos;m [Your Name]. I&apos;m a software engineering leader who works closely with startups to build great products. I bring years of experience to help your team move fast and plan for growth.
+        Hi, I&apos;m {siteConfig.name}. I&apos;m a software engineering leader who works closely with startups to build great products. I bring years of experience to help your team move fast and plan for growth.
       </p>
       <h3 className="text-xl font-semibold mb-4">Key Skills:</h3>
       <ul className="list-disc list-inside mb-8">

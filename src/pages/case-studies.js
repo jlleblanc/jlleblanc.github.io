@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import siteConfig from '../config/siteConfig'
 
 export default function CaseStudies() {
   const jsonLd = {
@@ -10,7 +11,7 @@ export default function CaseStudies() {
         {
           "@type": "Article",
           "position": 1,
-          "url": "https://www.yourwebsite.com/case-studies#startup-x",
+          "url": `${siteConfig.siteUrl}/case-studies#startup-x`,
           "name": "Startup X: Scaling to 1 Million Users"
         },
         // Add more case studies here
@@ -22,7 +23,7 @@ export default function CaseStudies() {
     <Layout
       title="Case Studies - Software Engineering Success Stories"
       description="Real-world examples of how I've helped startups overcome challenges and achieve success using Next.js, Supabase, OpenAI, and Anthropic."
-      canonicalUrl="https://www.yourwebsite.com/case-studies"
+      canonicalUrl={`${siteConfig.siteUrl}/case-studies`}
       jsonLd={jsonLd}
     >
       <h1 className="text-3xl font-bold mb-4">Case Studies</h1>

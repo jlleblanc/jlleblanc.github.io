@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+# Host
+Host: https://www.jlleblanc.com
+
+# Sitemaps
+Sitemap: https://www.jlleblanc.com/sitemap.xml

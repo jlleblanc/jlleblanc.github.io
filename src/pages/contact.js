@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import Layout from '../components/Layout'
+import siteConfig from '../config/siteConfig'
 
 export default function Contact() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact [Your Name] - Software Engineering Leadership",
+    "name": `Contact ${siteConfig.name} - Software Engineering Leadership`,
     "description": "Get in touch to discuss how we can work together to make your startup's software dreams a reality."
   };
 
@@ -23,7 +24,7 @@ export default function Contact() {
     <Layout
       title="Contact"
       description="Get in touch to discuss how we can work together to make your startup's software dreams a reality."
-      canonicalUrl="https://www.yourwebsite.com/contact"
+      canonicalUrl={`${siteConfig.siteUrl}/contact`}
       jsonLd={jsonLd}
     >
       <h1 className="text-3xl font-bold mb-4">Contact Me</h1>

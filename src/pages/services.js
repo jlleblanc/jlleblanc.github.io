@@ -1,5 +1,6 @@
 import Layout from '../components/Layout'
 import FAQ from '../components/FAQ'
+import siteConfig from '../config/siteConfig'
 
 export default function Services() {
   const faqs = [
@@ -20,7 +21,7 @@ export default function Services() {
     "serviceType": "Software Engineering Leadership",
     "provider": {
       "@type": "Person",
-      "name": "[Your Name]"
+      "name": siteConfig.name
     },
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -62,7 +63,7 @@ export default function Services() {
     <Layout
       title="Services - Software Engineering Leadership"
       description="Expert services in software planning, team leadership, process improvement, and AI integration for startups using Next.js, Supabase, OpenAI, and Anthropic."
-      canonicalUrl="https://www.yourwebsite.com/services"
+      canonicalUrl={`${siteConfig.siteUrl}/services`}
       jsonLd={jsonLd}
     >
       <h1 className="text-3xl font-bold mb-4">Services</h1>

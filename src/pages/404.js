@@ -1,11 +1,13 @@
 import Layout from '../components/Layout'
 import Link from 'next/link'
+import siteConfig from '../config/siteConfig'
 
 export default function Custom404() {
   return (
     <Layout
       title="404 - Page Not Found"
-      description="The page you're looking for doesn't exist. Let's get you back on track."
+      description="The page you&apos;re looking for doesn&apos;t exist. Let&apos;s get you back on track."
+      canonicalUrl={`${siteConfig.siteUrl}/404`}
     >
       <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
       <p className="mb-4">Oops! The page you&apos;re looking for doesn&apos;t exist. It might have been moved or deleted.</p>
