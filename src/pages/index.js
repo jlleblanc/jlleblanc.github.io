@@ -36,7 +36,7 @@ export default function Home() {
             I bring years of experience to help you move fast now, while planning ahead for the future.
           </p>
           <p className="mt-3">
-            Whether you&apos;re an entrepreneur seeking technical direction, an experienced developer moving into leadership, or an early career software engineer, I'm here to help.
+            Whether you&apos;re an entrepreneur seeking technical direction, an experienced developer moving into leadership, or an early career software engineer, I&apos;m here to help.
           </p>
         </div>
       </div>
