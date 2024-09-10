@@ -30,9 +30,15 @@ export default function Home() {
       <h2 className="text-3xl mb-8">Delivering today and planning for tomorrow.</h2>
       <div className="flex flex-col sm:flex-row items-center sm:items-center mb-8">
         <img src="https://github.com/jlleblanc.png" alt="Joe" className="w-36 h-36 rounded-full mb-4 sm:mb-0 sm:mr-8 border border-gray-200 shadow-sm" />
-        <p className="text-xl sm:text-left sm:self-center">
-          Hi, I&apos;m Joe. I&apos;m a software engineering leader helping startups build great products and services. I bring years of experience to help you move fast now, while planning ahead for the future.
-        </p>
+        <div className="text-xl sm:text-left sm:self-center">
+          <p>
+            Hi, I&apos;m Joe! I&apos;m a software engineering leader helping startups build great products and services.
+            I bring years of experience to help you move fast now, while planning ahead for the future.
+          </p>
+          <p className="mt-3">
+            Whether you&apos;re an entrepreneur seeking technical direction, an experienced developer moving into leadership, or an early career software engineer, I'm here to help.
+          </p>
+        </div>
       </div>
       <h3 className="text-xl font-semibold mb-4">Key Skills:</h3>
       <ul className="list-disc list-inside mb-8">
