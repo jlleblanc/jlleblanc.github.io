@@ -1,6 +1,6 @@
-# John LeBlanc's Personal Website
+# Joe LeBlanc's Personal Website
 
-This is the source code for John LeBlanc's personal website, showcasing software engineering leadership and services for startups.
+This is the source code for Joe LeBlanc's personal website, showcasing software engineering leadership and services for startups.
 
 ## Getting Started
 
