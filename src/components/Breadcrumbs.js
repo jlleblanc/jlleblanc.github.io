@@ -44,7 +44,10 @@ const Breadcrumbs = () => {
           ))}
         </ol>
       </nav>
-      <script type="application/ld+json">{JSON.stringify(breadcrumbsJsonLd)}</script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
+      />
     </>
   )
 }
