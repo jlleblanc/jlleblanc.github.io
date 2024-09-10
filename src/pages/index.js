@@ -27,10 +27,13 @@ export default function Home() {
       jsonLd={jsonLd}
     >
       <h1 className="text-4xl font-bold mb-4">{siteConfig.title}</h1>
-      <h2 className="text-2xl mb-8">{siteConfig.description}</h2>
-      <p className="mb-8">
-        Hi, I&apos;m {siteConfig.name}. I&apos;m a software engineering leader who works closely with startups to build great products. I bring years of experience to help your team move fast and plan for growth.
-      </p>
+      <h2 className="text-3xl mb-8">Delivering today and planning for tomorrow.</h2>
+      <div className="flex flex-col sm:flex-row items-center sm:items-center mb-8">
+        <img src="https://github.com/jlleblanc.png" alt="Joe" className="w-36 h-36 rounded-full mb-4 sm:mb-0 sm:mr-8 border border-gray-200 shadow-sm" />
+        <p className="text-xl sm:text-left sm:self-center">
+          Hi, I&apos;m Joe. I&apos;m a software engineering leader helping startups build great products and services. I bring years of experience to help you move fast now, while planning ahead for the future.
+        </p>
+      </div>
       <h3 className="text-xl font-semibold mb-4">Key Skills:</h3>
       <ul className="list-disc list-inside mb-8">
         <li>Next.js development</li>

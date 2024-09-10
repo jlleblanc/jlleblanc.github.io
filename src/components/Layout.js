@@ -39,8 +39,9 @@ export default function Layout({ children, title, description, canonicalUrl, jso
 
       <header className="bg-white shadow-md">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold text-gray-800">
+          <Link href="/" className="flex items-center text-xl font-bold text-gray-800">
             {siteConfig.name}
+            <img src="https://github.com/jlleblanc.png" alt="Avatar of Joe LeBlanc" className="w-6 h-6 rounded-full ml-2 border border-gray-100 shadow-lg" />
           </Link>
 
           {/* Hamburger menu for mobile */}
@@ -87,7 +88,7 @@ export default function Layout({ children, title, description, canonicalUrl, jso
 
       <footer className="bg-gray-100 py-4">
         <div className="container mx-auto px-4 text-center text-gray-600">
-          © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+          © 2002 - {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
         </div>
       </footer>
     </div>

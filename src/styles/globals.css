@@ -17,7 +17,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--foreground);
-  background: linear-gradient(to bottom, #d8ebf3, #ffffff);
+  background: linear-gradient(to bottom, #ebf5f9, #ffffff);
   min-height: 100vh;
 }
 

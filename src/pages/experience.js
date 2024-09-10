@@ -77,9 +77,9 @@ export default function Experience() {
         <p className="text-gray-600 mb-3">March 2024 - Present</p>
         <ul className="list-disc list-inside space-y-2">
           <li>Leading software development initiatives for startups</li>
-          <li>Implementing cutting-edge technologies like Next.js and Supabase</li>
+          <li>Implementing new features in Next.js, Supabase, and Express</li>
           <li>Providing strategic direction for technical projects</li>
-          <li>Mentoring and guiding development teams</li>
+          <li>Refining a lightweight, agile Software Development Life Cycle</li>
         </ul>
       </div>
 
@@ -107,7 +107,7 @@ export default function Experience() {
         <h2 className="text-2xl font-semibold mb-2">Software Engineering Manager at True Link Financial</h2>
         <p className="text-gray-600 mb-3">April 2020 - March 2022</p>
         <ul className="list-disc list-inside space-y-2">
-          <li>Managed and expanded a fintech platform serving seniors and people with disabilities</li>
+          <li>Managed a team ranging from 4-7 remote software engineers</li>
           <li>Refactored Rails and React codebase for new features</li>
           <li>Provided advisory support to the Infosec team</li>
         </ul>
@@ -128,8 +128,8 @@ export default function Experience() {
         <p className="text-gray-600 mb-3">November 2013 - June 2018</p>
         <ul className="list-disc list-inside space-y-2">
           <li>Maintained and expanded a billing and provisioning system in Rails</li>
-          <li>Worked with Redis, MySQL, JavaScript/CoffeeScript, Sentry, and Logstash</li>
-          <li>Contributed to the development of core e-commerce platform features</li>
+          <li>Worked with Redis, MySQL, JavaScript/CoffeeScript, Sentry, and Zuora</li>
+          <li>Contributed to the marketing website (Drupal) and an internal ETL tool (PHP/MySQL)</li>
         </ul>
       </div>
 
@@ -152,11 +152,11 @@ export default function Experience() {
       <div className="mt-12">
         <h2 className="text-2xl font-semibold mb-4">Publications</h2>
         <ul className="list-disc list-inside space-y-2">
-          <li>Learning Joomla! 1.5 Extension Development</li>
-          <li>Up and Running with NoSQL Databases</li>
-          <li>Up and Running with Backbone.js</li>
-          <li>Up and Running with PHP: PEAR, PECL, and Composer</li>
-          <li>Joomla! 1.7: Programming and Packaging Extensions</li>
+          <li>Learning Joomla! 1.5 Extension Development, Packt Publishing</li>
+          <li>Up and Running with NoSQL Databases, lynda.com</li>
+          <li>Up and Running with Backbone.js, lynda.com</li>
+          <li>Up and Running with PHP: PEAR, PECL, and Composer, lynda.com</li>
+          <li>Joomla! 1.7: Programming and Packaging Extensions, lynda.com</li>
         </ul>
       </div>
     </Layout>
