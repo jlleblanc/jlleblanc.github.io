@@ -1,18 +1,34 @@
-import Link from 'next/link'
+import { useState } from 'react'
 import Head from 'next/head'
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Breadcrumbs from './Breadcrumbs'
 import siteConfig from '../config/siteConfig'
 
-const Layout = ({ children, title, description, canonicalUrl, jsonLd }) => {
+export default function Layout({ children, title, description, canonicalUrl, jsonLd }) {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const router = useRouter()
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const navItems = [
+    { href: '/', label: 'Home' },
+    { href: '/services', label: 'Services' },
+    { href: '/experience', label: 'Experience' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/contact', label: 'Contact' },
+  ]
 
   return (
     <div className="min-h-screen flex flex-col">
       <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
+        <title>{title ? `${title} | ${siteConfig.name}` : siteConfig.name}</title>
+        <meta name="description" content={description || siteConfig.description} />
         <link rel="canonical" href={canonicalUrl} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
         {jsonLd && (
           <script
             type="application/ld+json"
@@ -20,33 +36,60 @@ const Layout = ({ children, title, description, canonicalUrl, jsonLd }) => {
           />
         )}
       </Head>
-      <header className="bg-gray-800 text-white p-4">
-        <nav>
-          <ul className="flex space-x-4">
-            <li><Link href="/" className={router.pathname === '/' ? 'font-bold' : ''}>Home</Link></li>
-            <li><Link href="/about" className={router.pathname === '/about' ? 'font-bold' : ''}>About</Link></li>
-            <li><Link href="/services" className={router.pathname === '/services' ? 'font-bold' : ''}>Services</Link></li>
-            <li><Link href="/experience" className={router.pathname === '/experience' ? 'font-bold' : ''}>Experience</Link></li>
-            <li><Link href="/blog" className={router.pathname === '/blog' ? 'font-bold' : ''}>Blog</Link></li>
-            <li><Link href="/contact" className={router.pathname === '/contact' ? 'font-bold' : ''}>Contact</Link></li>
+
+      <header className="bg-white shadow-md">
+        <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+          <Link href="/" className="text-xl font-bold text-gray-800">
+            {siteConfig.name}
+          </Link>
+
+          {/* Hamburger menu for mobile */}
+          <div className="md:hidden">
+            <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"} />
+              </svg>
+            </button>
+          </div>
+
+          {/* Desktop menu */}
+          <ul className="hidden md:flex space-x-4">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href} className={`text-gray-800 hover:text-blue-600 ${router.pathname === item.href ? 'font-bold' : ''}`}>
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
+
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-white py-2">
+            <ul className="flex flex-col items-center">
+              {navItems.map((item) => (
+                <li key={item.href} className="py-2">
+                  <Link href={item.href} className={`text-gray-800 hover:text-blue-600 ${router.pathname === item.href ? 'font-bold' : ''}`} onClick={toggleMenu}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </header>
+
       <main className="flex-grow container mx-auto px-4 py-8">
         <Breadcrumbs />
         {children}
       </main>
-      <footer className="bg-gray-800 text-white p-4">
-        <div className="container mx-auto">
-          <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
-          <div className="mt-2">
-            <a href={siteConfig.socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="mr-4">LinkedIn</a>
-            <a href={siteConfig.socialLinks.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
+
+      <footer className="bg-gray-100 py-4">
+        <div className="container mx-auto px-4 text-center text-gray-600">
+          © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
         </div>
       </footer>
     </div>
   )
 }
-
-export default Layout

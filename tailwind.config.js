@@ -10,6 +10,11 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'brand-blue': '#d8ebf3',
+        'brand-gray': '#2b2f31',
+      },
+      fontFamily: {
+        'roboto': ['Roboto', 'sans-serif'],
       },
     },
   },
