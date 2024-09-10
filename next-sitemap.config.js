@@ -23,7 +23,7 @@ module.exports = {
     } else if (['/about', '/services', '/contact'].includes(path)) {
       priority = 0.8;
       changefreq = 'monthly';
-    } else if (['/case-studies', '/blog'].includes(path)) {
+    } else if (['/experience', '/blog'].includes(path)) {
       priority = 0.7;
       changefreq = 'weekly';
     }
