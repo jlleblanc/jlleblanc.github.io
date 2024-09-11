@@ -27,7 +27,7 @@ export default function Home() {
       jsonLd={jsonLd}
     >
       <h1 className="text-4xl font-bold mb-4">{siteConfig.title}</h1>
-      <h2 className="text-3xl mb-8">Crucial direction at the right time.</h2>
+      <h2 className="text-3xl mb-8">Burnout-free delivery.</h2>
       <div className="flex flex-col sm:flex-row items-center sm:items-center mb-8">
         <img src="https://github.com/jlleblanc.png" alt="Joe" className="w-36 h-36 rounded-full mb-4 sm:mb-0 sm:mr-8 border border-gray-200 shadow-sm" />
         <div className="text-2xl sm:text-left sm:self-center">
@@ -39,7 +39,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <h3 className="text-2xl font-semibold mb-6">Move fast today. Scale for tomorrow.</h3>
+      <h3 className="text-2xl font-semibold mb-6">Ship fast today. Scale for tomorrow.</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-9 mb-8">
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h4 className="text-xl font-semibold mb-2">Strategic Technical Planning</h4>
