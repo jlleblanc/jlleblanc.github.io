@@ -32,7 +32,7 @@ export default function Home() {
         <img src="https://github.com/jlleblanc.png" alt="Joe" className="w-36 h-36 rounded-full mb-4 sm:mb-0 sm:mr-8 border border-gray-200 shadow-sm" />
         <div className="text-2xl sm:text-left sm:self-center">
           <p>
-            Hi, I'm Joe! I'm a hands-on software engineering leader of products, teams, and startups.
+            Hi, I&apos;m Joe! I&apos;m a hands-on software engineering leader of products, teams, and startups.
           </p>
           <p className="mt-3">
 
@@ -51,7 +51,7 @@ export default function Home() {
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h4 className="text-xl font-semibold mb-2">Leadership Development</h4>
-          <p>Nurture your team's potential and create a culture of continuous improvement.</p>
+          <p>Nurture your team&apos;s potential and create a culture of continuous improvement.</p>
         </div>
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h4 className="text-xl font-semibold mb-2">Scalable Architecture</h4>
