@@ -26,8 +26,8 @@ export default function Home() {
       canonicalUrl={siteConfig.siteUrl}
       jsonLd={jsonLd}
     >
-      <h1 className="text-4xl font-bold mb-4">{siteConfig.title}</h1>
-      <h2 className="text-3xl mb-8">Burnout-free delivery.</h2>
+      <h1 className="text-4xl font-bold mb-4">People Scaled</h1>
+      <h2 className="text-3xl mb-8">Software Engineering Leadership</h2>
       <div className="flex flex-col sm:flex-row items-center sm:items-center mb-8">
         <img src="https://github.com/jlleblanc.png" alt="Joe" className="w-36 h-36 rounded-full mb-4 sm:mb-0 sm:mr-8 border border-gray-200 shadow-sm" />
         <div className="text-2xl sm:text-left sm:self-center">
@@ -40,20 +40,20 @@ export default function Home() {
         </div>
       </div>
       <h3 className="text-2xl font-semibold mb-6">Ship fast today. Scale for tomorrow.</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-9 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow-md">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div className="bg-white p-6 rounded-lg shadow-sm">
           <h4 className="text-xl font-semibold mb-2">Strategic Technical Planning</h4>
           <p>Choose technology serving short-term needs and long-term goals.</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h4 className="text-xl font-semibold mb-2">AI-Driven Innovation</h4>
-          <p>Harness the power of OpenAI and Anthropic to give your products a competitive edge.</p>
+        <div className="bg-white p-6 rounded-lg shadow-sm">
+          <h4 className="text-xl font-semibold mb-2">Judiciously Applied Technology</h4>
+          <p>Use generative AI, cloud platforms, and new APIs when they serve your needs.</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-white p-6 rounded-lg shadow-sm">
           <h4 className="text-xl font-semibold mb-2">Leadership Development</h4>
           <p>Nurture your team&apos;s potential and create a culture of continuous improvement.</p>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
+        <div className="bg-white p-6 rounded-lg shadow-sm">
           <h4 className="text-xl font-semibold mb-2">Scalable Architecture</h4>
           <p>Build systems that grow with your business, from MVP to market leader.</p>
         </div>

@@ -21,6 +21,13 @@ body {
   min-height: 100vh;
 }
 
+h1, h2, h3 {
+  font-family: 'Mulish', sans-serif;
+}
+
+h1 {
+  text-transform: uppercase;
+}
 
 @layer utilities {
   .text-balance {
