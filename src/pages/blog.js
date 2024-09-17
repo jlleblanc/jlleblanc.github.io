@@ -9,14 +9,44 @@ export default function Blog() {
     "blogPost": [
       {
         "@type": "BlogPosting",
-        "headline": "5 Tips for Scaling Your Startup's Tech Stack",
-        "url": `${siteConfig.siteUrl}/blog/scaling-your-startup`,
+        "headline": "Always pick #1 first",
+        "url": `https://codelikeaninvestor.substack.com/p/always-pick-1-first`,
+        "abstract": "You have less time than you think. Always pick a proven winner first!",
         "author": {
           "@type": "Person",
           "name": siteConfig.name
         }
       },
-      // Add more blog posts here
+      {
+        "@type": "BlogPosting",
+        "headline": "Don't automate yourself",
+        "url": `https://www.linkedin.com/pulse/dont-automate-yourself-joe-leblanc/`,
+        "abstract": "Automation is essential for scaling. But the one thing you should not automate is yourself.",
+        "author": {
+          "@type": "Person",
+          "name": siteConfig.name
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "An office won't develop your career",
+        "url": `https://www.linkedin.com/pulse/office-wont-develop-your-career-joe-leblanc/`,
+        "abstract": "Offices won't magically grow your career. Here's what will.",
+        "author": {
+          "@type": "Person",
+          "name": siteConfig.name
+        }
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Rethinking Hackathons: 7 affordable alternatives for team learning and development",
+        "url": `https://emhub.substack.com/p/rethinking-hackathons-7-affordable`,
+        "abstract": "Hackathons drain time and resources without providing value. Try these low-cost alternatives instead.",
+        "author": {
+          "@type": "Person",
+          "name": siteConfig.name
+        }
+      },
     ]
   };
 
@@ -27,16 +57,17 @@ export default function Blog() {
       canonicalUrl={`${siteConfig.siteUrl}/blog`}
       jsonLd={jsonLd}
     >
-      <h1 className="text-3xl font-bold mb-4">Blog</h1>
+      <h1 className="text-3xl font-bold mb-4">Select blog posts</h1>
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">
-          <Link href="/blog/scaling-your-startup">
-            5 Tips for Scaling Your Startup&apos;s Tech Stack
-          </Link>
-        </h2>
-        <p>Learn how to prepare your technology for rapid growth without breaking the bank, using powerful tools like Next.js and Supabase.</p>
+        {jsonLd.blogPost.map((post, index) => (
+          <div key={index} className="mb-4">
+            <h2 className="text-2xl font-semibold mb-2">
+              <Link href={post.url}>{post.headline}</Link>
+            </h2>
+            <p>{post.abstract}</p>
+          </div>
+        ))}
       </div>
-      {/* Add more blog post previews here */}
     </Layout>
   )
 }
