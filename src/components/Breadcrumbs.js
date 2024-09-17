@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import siteConfig from '../config/siteConfig'
 
-const Breadcrumbs = () => {
+const Breadcrumbs = ({ notFound = false }) => {
   const router = useRouter()
   const pathSegments = router.asPath.split('/').filter(segment => segment !== '')
 
@@ -34,7 +34,7 @@ const Breadcrumbs = () => {
               Home
             </Link>
           </li>
-          {pathSegments.map((segment, index) => (
+          {!notFound && pathSegments.map((segment, index) => (
             <li key={index} className="flex items-center">
               <span className="mx-2">/</span>
               <Link href={`/${pathSegments.slice(0, index + 1).join('/')}`}>

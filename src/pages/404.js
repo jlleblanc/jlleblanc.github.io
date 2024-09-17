@@ -8,6 +8,7 @@ export default function Custom404() {
       title="404 - Page Not Found"
       description="The page you&apos;re looking for doesn&apos;t exist. Let&apos;s get you back on track."
       canonicalUrl={`${siteConfig.siteUrl}/404`}
+      notFound={true}
     >
       <h1 className="text-4xl font-bold mb-4">404 - Page Not Found</h1>
       <p className="mb-4">Oops! The page you&apos;re looking for doesn&apos;t exist. It might have been moved or deleted.</p>

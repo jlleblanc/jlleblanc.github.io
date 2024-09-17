@@ -5,14 +5,17 @@ import siteConfig from '../config/siteConfig'
 export default function Services() {
   const faqs = [
     {
-      question: "What technologies do you specialize in?",
-      answer: "I specialize in Next.js, Supabase, OpenAI, and Anthropic technologies, helping startups build scalable and innovative solutions."
+      question: "How can you help my startup scale?",
+      answer: "Scaling means more than just efficient algorithms and cloud platforms. You need planning, process improvement, and (most importantly) team leadership. Without these, your team will burnout. I can help you get unstuck today, while avoiding burnout in the future."
     },
     {
-      question: "How can you help my startup scale?",
-      answer: "I offer services in software planning, team leadership, process improvement, and AI integration, all tailored to help your startup grow efficiently and effectively."
+      question: "What technologies do you specialize in?",
+      answer: "I specialize in Next.js, Supabase, Vercel, OpenAI, and Anthropic. But I take care to use the right tools for the job."
     },
-    // Add more FAQs as needed
+    {
+      question: "Should I just use AI for everything?",
+      answer: "No. If a hard-coded algorithm will work better than using an LLM, don't burn your tokens: let's build it right. I can help!"
+    },
   ]
 
   const jsonLd = {
@@ -52,7 +55,7 @@ export default function Services() {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "AI Integration for Startup Products"
+            "name": "AI Integrations"
           }
         }
       ]
@@ -67,22 +70,24 @@ export default function Services() {
       jsonLd={jsonLd}
     >
       <h1 className="text-3xl font-bold mb-4">Services</h1>
+      <h2 className="text-2xl font-bold mb-4">Fractional CTO, at your service</h2>
+      <p className="mb-4">I&apos;m a seasoned software engineering leader, available for a fraction of the cost.</p>
       <ul className="mb-8">
         <li className="mb-4">
           <h3 className="text-xl font-semibold">Software Planning for Startups</h3>
-          <p>I help you map out your tech strategy, ensuring you&apos;re building the right things in the right order with technologies like Next.js and Supabase.</p>
+          <p>Map out your strategy, ensuring you&apos;re building the right thing now, while giving yourself room to grow later.</p>
         </li>
         <li className="mb-4">
           <h3 className="text-xl font-semibold">Engineering Team Leadership</h3>
-          <p>I guide your team to success, fostering a culture of innovation and continuous improvement while leveraging cutting-edge tools and practices.</p>
+          <p>Guide your team to success, creating a culture of continuous improvement while using new tools and practices.</p>
         </li>
         <li className="mb-4">
           <h3 className="text-xl font-semibold">Process Improvement for Fast-Growing Teams</h3>
-          <p>I optimize your workflows, helping your team move faster without sacrificing quality, using efficient development practices and tools.</p>
+          <p>Optimize your workflows, helping your team move faster without sacrificing quality. Release with confidence. Keep feedback loops short.</p>
         </li>
         <li className="mb-4">
-          <h3 className="text-xl font-semibold">AI Integration for Startup Products</h3>
-          <p>I help you leverage cutting-edge AI technologies like OpenAI and Anthropic to give your product a competitive edge in the market.</p>
+          <h3 className="text-xl font-semibold">AI Integrations</h3>
+          <p>Use generative AI APIs like OpenAI and Anthropic, while keeping your monthly spend under control.</p>
         </li>
       </ul>
       <FAQ faqs={faqs} />
