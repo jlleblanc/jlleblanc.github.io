@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'export',
+  basePath: '/jlleblanc.github.io',
   images: {
     unoptimized: true,
   },
