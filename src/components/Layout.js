@@ -2,10 +2,9 @@ import { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import Breadcrumbs from './Breadcrumbs'
 import siteConfig from '../config/siteConfig'
 
-export default function Layout({ children, title, description, canonicalUrl, jsonLd, notFound = false}) {
+export default function Layout({ children, title, description, canonicalUrl, jsonLd }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const router = useRouter()
 
@@ -82,7 +81,6 @@ export default function Layout({ children, title, description, canonicalUrl, jso
       </header>
 
       <main className="flex-grow container mx-auto px-4 py-8">
-        <Breadcrumbs notFound={notFound} />
         {children}
       </main>
 
