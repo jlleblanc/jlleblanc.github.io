@@ -36,12 +36,14 @@ export default function Layout({ children, title, description, canonicalUrl, jso
         )}
       </Head>
 
-      <header className="bg-white shadow-md bg-[#eff6f9]">
+      <header className="bg-white shadow-md bg-sky-50">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/" className="flex items-center text-xl font-bold text-gray-800">
-            {siteConfig.name}
-            <img src="https://github.com/jlleblanc.png" alt="Avatar of Joe LeBlanc" className="w-6 h-6 rounded-full ml-2 border border-gray-100 shadow-lg" />
-          </Link>
+          <h1>
+            <Link href="/" className="flex items-center text-xl font-bold text-gray-800">
+              {siteConfig.name}
+              <img src="https://github.com/jlleblanc.png" alt="Avatar of Joe LeBlanc" className="w-6 h-6 rounded-full ml-2 border border-gray-100 shadow-lg" />
+            </Link>
+          </h1>
 
           {/* Hamburger menu for mobile */}
           <div className="md:hidden">

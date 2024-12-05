@@ -26,36 +26,32 @@ export default function Home() {
       canonicalUrl={siteConfig.siteUrl}
       jsonLd={jsonLd}
     >
-      <h1 className="text-4xl font-bold mb-4">People Scaled</h1>
-      <h2 className="text-3xl mb-8">Software Engineering Leadership</h2>
-      <div className="flex flex-col sm:flex-row items-center sm:items-center mb-8">
-        <img src="https://github.com/jlleblanc.png" alt="Joe" className="w-36 h-36 rounded-full mb-4 sm:mb-0 sm:mr-8 border border-gray-200 shadow-sm" />
-        <div className="text-2xl sm:text-left sm:self-center">
-          <p>
-            Hi, I&apos;m Joe! I&apos;m a hands-on software engineering leader of products, teams, and startups.
-          </p>
-          <p className="mt-3">
-
-          </p>
+      <div className="container mx-auto px-4 max-w-3xl">
+      <h2 className="text-3xl font-bold mb-16 mt-8">{siteConfig.title}</h2>
+      <div className="flex flex-col sm:flex-row items-center sm:items-center mb-8 mt-8">
+          <img src="https://github.com/jlleblanc.png" alt="Joe" className="w-36 h-36 rounded-full mb-4 sm:mb-0 sm:mr-8 border border-gray-200 shadow-sm" />
+          <div className="text-xl sm:text-left sm:self-center">
+            <p>
+              I&apos;m a hands-on software engineering leader of products, teams, and startups.
+            </p>
+            <p className="mt-4">
+              Over 20 years, I&apos;ve helped companies create payment solutions, recognize sales, and keep their customers subscribed.
+            </p>
+          </div>
         </div>
-      </div>
-      <h3 className="text-2xl font-semibold mb-6">Ship fast today. Scale for tomorrow.</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow-sm">
-          <h4 className="text-xl font-semibold mb-2">Strategic Technical Planning</h4>
-          <p>Choose technology serving short-term needs and long-term goals.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-sm">
-          <h4 className="text-xl font-semibold mb-2">Judiciously Applied Technology</h4>
-          <p>Use generative AI, cloud platforms, and new APIs when they serve your needs.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-sm">
-          <h4 className="text-xl font-semibold mb-2">Leadership Development</h4>
-          <p>Nurture your team&apos;s potential and create a culture of continuous improvement.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-sm">
-          <h4 className="text-xl font-semibold mb-2">Scalable Architecture</h4>
-          <p>Build systems that grow with your business, from MVP to market leader.</p>
+        <div className="flex flex-col gap-8 mt-12">
+          {/* <div>
+            <h3 className="text-xl font-semibold mb-2">Architectural Expertise</h3>
+            <p>I keep track of the cookies, the databases, and servers, while you keep your paying customers happy.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2">Author</h3>
+            <p>Over a dozen books and video series authored, most recently <Link className="text-blue-500" href="https://www.linkedin.com/learning/supabase-essential-training/developing-application-backends-using-supabase">Supabase Essential Training</Link> on LinkedIn Learning.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-2">Leadership Development</h3>
+            <p>Nurture your team&apos;s potential and create a culture of continuous improvement.</p>
+          </div> */}
         </div>
       </div>
       <div className="text-center">
