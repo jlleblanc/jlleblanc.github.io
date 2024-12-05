@@ -37,7 +37,7 @@ export default function Layout({ children, title, description, canonicalUrl, jso
         )}
       </Head>
 
-      <header className="bg-white shadow-md">
+      <header className="bg-white shadow-md bg-[#eff6f9]">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link href="/" className="flex items-center text-xl font-bold text-gray-800 uppercase">
             People Scaled
