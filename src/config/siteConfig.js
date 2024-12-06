@@ -9,5 +9,4 @@ const siteConfig = {
   },
   email: "contact@jlleblanc.com",
 };
-
 module.exports = siteConfig;
