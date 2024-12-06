@@ -85,8 +85,8 @@ export default function Layout({ children, title, description, canonicalUrl, jso
         {children}
       </main>
 
-      <footer className="bg-gray-100 py-4">
-        <div className="container mx-auto px-4 text-center text-gray-600">
+      <footer className="bg-gray-100 py-2">
+        <div className="container mx-auto px-4 text-center text-sm text-gray-600">
           © 2002 - {new Date().getFullYear()} People Scaled LLC. All rights reserved.
         </div>
       </footer>
