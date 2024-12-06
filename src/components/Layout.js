@@ -35,7 +35,7 @@ export default function Layout({ children, title, description, canonicalUrl, jso
         )}
       </Head>
 
-      <header className="bg-white shadow-md bg-sky-50">
+      <header className="bg-white shadow-md bg-teal-50">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1>
             <Link href="/" className="flex items-center text-xl font-bold text-gray-800">

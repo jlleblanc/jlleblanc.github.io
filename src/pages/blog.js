@@ -57,13 +57,13 @@ export default function Blog() {
       canonicalUrl={`${siteConfig.siteUrl}/blog`}
       jsonLd={jsonLd}
     >
-      <h1 className="text-3xl font-bold mb-4">Select blog posts</h1>
-      <div className="mb-8">
+      <h2 className="text-3xl font-bold mb-4">Select blog posts</h2>
+      <div className="mb-8 mt-8">
         {jsonLd.blogPost.map((post, index) => (
           <div key={index} className="mb-4">
-            <h2 className="text-2xl font-semibold mb-2">
+            <h3 className="text-xl font-semibold mb-2">
               <Link href={post.url}>{post.headline}</Link>
-            </h2>
+            </h3>
             <p>{post.abstract}</p>
           </div>
         ))}

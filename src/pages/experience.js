@@ -70,10 +70,10 @@ export default function Experience() {
       canonicalUrl={`${siteConfig.siteUrl}/experience`}
       jsonLd={jsonLd}
     >
-      <h1 className="text-3xl font-bold mb-6">Professional Experience</h1>
+      <h2 className="text-3xl font-bold mb-6">Professional Experience</h2>
 
       <div className="mb-10">
-        <h2 className="text-2xl font-semibold mb-2">Software Engineering Lead at Emerge Haus</h2>
+        <h3 className="text-2xl font-semibold mb-2">Software Engineering Lead at Emerge Haus</h3>
         <p className="text-gray-600 mb-3">March 2024 - Present</p>
         <ul className="list-disc list-inside space-y-2">
           <li>Performed technical Due Diligence on a startup acquisition</li>
@@ -84,7 +84,7 @@ export default function Experience() {
       </div>
 
       <div className="mb-10">
-        <h2 className="text-2xl font-semibold mb-2">Software Engineering Manager at FORM</h2>
+        <h3 className="text-2xl font-semibold mb-2">Software Engineering Manager at FORM</h3>
         <p className="text-gray-600 mb-3">November 2022 - February 2024</p>
         <ul className="list-disc list-inside space-y-2">
           <li>Managed a remote team maintaining and extending FieldConnector, a real-time communications tool for frontline employees</li>
@@ -94,7 +94,7 @@ export default function Experience() {
       </div>
 
       <div className="mb-10">
-        <h2 className="text-2xl font-semibold mb-2">Software Engineering Manager at Transfix</h2>
+        <h3 className="text-2xl font-semibold mb-2">Software Engineering Manager at Transfix</h3>
         <p className="text-gray-600 mb-3">March 2022 - October 2022</p>
         <ul className="list-disc list-inside space-y-2">
           <li>Managed a team of 7 remote software engineers</li>
@@ -104,7 +104,7 @@ export default function Experience() {
       </div>
 
       <div className="mb-10">
-        <h2 className="text-2xl font-semibold mb-2">Software Engineering Manager at True Link Financial</h2>
+        <h3 className="text-2xl font-semibold mb-2">Software Engineering Manager at True Link Financial</h3>
         <p className="text-gray-600 mb-3">April 2020 - March 2022</p>
         <ul className="list-disc list-inside space-y-2">
           <li>Managed a team ranging from 4-7 remote software engineers</li>
@@ -114,7 +114,7 @@ export default function Experience() {
       </div>
 
       <div className="mb-10">
-        <h2 className="text-2xl font-semibold mb-2">Senior Fullstack Engineer at True Link Financial</h2>
+        <h3 className="text-2xl font-semibold mb-2">Senior Fullstack Engineer at True Link Financial</h3>
         <p className="text-gray-600 mb-3">June 2018 - April 2020</p>
         <ul className="list-disc list-inside space-y-2">
           <li>Developed and maintained key features of the fintech platform</li>
@@ -124,7 +124,7 @@ export default function Experience() {
       </div>
 
       <div className="mb-10">
-        <h2 className="text-2xl font-semibold mb-2">Software Engineer at BigCommerce</h2>
+        <h3 className="text-2xl font-semibold mb-2">Software Engineer at BigCommerce</h3>
         <p className="text-gray-600 mb-3">November 2013 - June 2018</p>
         <ul className="list-disc list-inside space-y-2">
           <li>Maintained and expanded a billing and provisioning system in Rails</li>
@@ -134,7 +134,7 @@ export default function Experience() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4">Earlier Career Highlights</h2>
+        <h3 className="text-2xl font-semibold mb-4">Earlier Career Highlights</h3>
         <ul className="list-disc list-inside space-y-3">
           <li>Programmer at Sears Holdings Corporation (2013)</li>
           <li>Author at lynda.com (2008-2013)</li>
@@ -145,12 +145,12 @@ export default function Experience() {
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4">Education</h2>
+        <h3 className="text-2xl font-semibold mb-4">Education</h3>
         <p>BS in Management Information Systems from Oral Roberts University (2000-2004)</p>
       </div>
 
       <div className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4">Publications</h2>
+        <h3 className="text-2xl font-semibold mb-4">Publications</h3>
         <ul className="list-disc list-inside space-y-2">
           <li>Learning Joomla! 1.5 Extension Development, Packt Publishing</li>
           <li>Up and Running with NoSQL Databases, lynda.com</li>

@@ -35,7 +35,7 @@ export default function Home() {
               I&apos;m a hands-on software engineering leader of products, teams, and startups.
             </p>
             <p className="mt-4">
-              Over 20 years, I&apos;ve helped companies create payment solutions, onboard new customers, and keep them subscribed.
+              Beyond product engineering and management, I&apos;ve helped companies create payment solutions, onboard new customers, and keep them subscribed.
             </p>
           </div>
         </div>
@@ -55,8 +55,8 @@ export default function Home() {
         </div>
       </div>
       <div className="text-center">
-        <Link href="/services" className="bg-blue-500 text-white font-bold py-3 px-6 rounded-full text-lg hover:bg-blue-600 transition duration-300">
-          Explore My Services
+        <Link href="/contact" className="border-2 border-emerald-800 text-emerald-800 text-grey-900 font-bold py-3 px-6 rounded-full text-xl hover:border-teal-500 transition duration-300">
+          Get In Touch
         </Link>
       </div>
     </Layout>
