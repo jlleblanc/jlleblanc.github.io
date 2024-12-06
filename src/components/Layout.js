@@ -41,7 +41,6 @@ export default function Layout({ children, title, description, canonicalUrl, jso
           <h1>
             <Link href="/" className="flex items-center text-xl font-bold text-gray-800">
               {siteConfig.name}
-              <img src="https://github.com/jlleblanc.png" alt="Avatar of Joe LeBlanc" className="w-6 h-6 rounded-full ml-2 border border-gray-100 shadow-lg" />
             </Link>
           </h1>
 
