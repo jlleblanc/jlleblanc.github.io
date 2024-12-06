@@ -35,7 +35,7 @@ export default function Home() {
               I&apos;m a hands-on software engineering leader of products, teams, and startups.
             </p>
             <p className="mt-4">
-              Over 20 years, I&apos;ve helped companies create payment solutions, recognize sales, and keep their customers subscribed.
+              Over 20 years, I&apos;ve helped companies create payment solutions, onboard new customers, and keep them subscribed.
             </p>
           </div>
         </div>

@@ -14,7 +14,6 @@ export default function Layout({ children, title, description, canonicalUrl, jso
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/services', label: 'Services' },
     { href: '/experience', label: 'Experience' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },

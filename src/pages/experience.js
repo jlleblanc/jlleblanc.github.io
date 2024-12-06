@@ -76,10 +76,10 @@ export default function Experience() {
         <h2 className="text-2xl font-semibold mb-2">Software Engineering Lead at Emerge Haus</h2>
         <p className="text-gray-600 mb-3">March 2024 - Present</p>
         <ul className="list-disc list-inside space-y-2">
-          <li>Leading software development initiatives for startups</li>
-          <li>Implementing new features in Next.js, Supabase, and Express</li>
-          <li>Providing strategic direction for technical projects</li>
-          <li>Refining a lightweight, agile Software Development Life Cycle</li>
+          <li>Performed technical Due Diligence on a startup acquisition</li>
+          <li>Led the technical GTM effort for post-acquisition integration</li>
+          <li>Implemented new features in Next.js, Supabase, and Express</li>
+          <li>Provided strategic direction for technical projects</li>
         </ul>
       </div>
 
