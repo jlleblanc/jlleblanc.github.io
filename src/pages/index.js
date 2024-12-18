@@ -41,7 +41,7 @@ export default function Home() {
         </div>
       </div>
       <div className="text-center mt-12">
-        <Link href="/contact" className="border-2 border-emerald-800 text-emerald-800 text-grey-900 font-bold py-3 px-6 rounded-full text-xl hover:border-teal-500 transition duration-300">
+        <Link href="/contact" className="border-2 border-lime-900 text-lime-900 text-lime-900 font-bold py-3 px-6 rounded-md text-xl hover:border-lime-700 hover:text-lime-700 transition duration-300">
           Get In Touch
         </Link>
       </div>
