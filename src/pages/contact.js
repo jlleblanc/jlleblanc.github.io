@@ -17,16 +17,15 @@ export default function Contact() {
       canonicalUrl={`${siteConfig.siteUrl}/contact`}
       jsonLd={jsonLd}
     >
-      <h2 className="text-3xl font-bold mb-4">Contact me</h2>
-      <p className="mb-4">Get in touch to discuss how we can make billing and support work for your startup!</p>
-      <p>
-        <Link className="text-blue-500" href="mailto:contact@jlleblanc.com?subject=I'm ready to bill my customers!">
-        contact@jlleblanc.com
-        </Link>
-      </p>
-      <p>
-
-      </p>
+      <div className="container mx-auto px-4 max-w-3xl">
+        <h2 className="text-3xl font-bold mb-4">Contact me</h2>
+        <p className="mb-4">Get in touch to discuss how we can make billing and support work for your startup!</p>
+        <p>
+          <Link className="text-blue-500" href="mailto:contact@jlleblanc.com?subject=I'm ready to bill my customers!">
+          contact@jlleblanc.com
+          </Link>
+        </p>
+      </div>
     </Layout>
   )
 }

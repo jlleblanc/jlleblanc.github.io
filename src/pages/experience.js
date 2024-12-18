@@ -70,6 +70,8 @@ export default function Experience() {
       canonicalUrl={`${siteConfig.siteUrl}/experience`}
       jsonLd={jsonLd}
     >
+    <div className="container mx-auto px-4 max-w-3xl">
+
       <h2 className="text-3xl font-bold mb-6">Professional Experience</h2>
 
       <div className="mb-10">
@@ -159,6 +161,7 @@ export default function Experience() {
           <li>Joomla! 1.7: Programming and Packaging Extensions, lynda.com</li>
         </ul>
       </div>
+    </div>
     </Layout>
   )
 }
