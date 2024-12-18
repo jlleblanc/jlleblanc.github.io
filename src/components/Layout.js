@@ -35,17 +35,17 @@ export default function Layout({ children, title, description, canonicalUrl, jso
         )}
       </Head>
 
-      <header className="bg-white shadow-md bg-teal-50">
+      <header className="bg-indigo-900 shadow-sm">
         <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
           <h1>
-            <Link href="/" className="flex items-center text-xl font-bold text-gray-800">
+            <Link href="/" className="flex items-center text-xl font-bold text-gray-100">
               {siteConfig.name}
             </Link>
           </h1>
 
           {/* Hamburger menu for mobile */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
+            <button onClick={toggleMenu} className="text-gray-100 focus:outline-none">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"} />
               </svg>
@@ -56,7 +56,7 @@ export default function Layout({ children, title, description, canonicalUrl, jso
           <ul className="hidden md:flex space-x-4">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className={`text-gray-800 hover:text-blue-600 ${router.pathname === item.href ? 'font-bold' : ''}`}>
+                <Link href={item.href} className={`text-gray-100 hover:text-lime-400 ${router.pathname === item.href ? 'font-bold' : ''}`}>
                   {item.label}
                 </Link>
               </li>
@@ -66,11 +66,11 @@ export default function Layout({ children, title, description, canonicalUrl, jso
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white py-2">
+          <div className="md:hidden bg-indigo-900 py-2">
             <ul className="flex flex-col items-center">
               {navItems.map((item) => (
                 <li key={item.href} className="py-2">
-                  <Link href={item.href} className={`text-gray-800 hover:text-blue-600 ${router.pathname === item.href ? 'font-bold' : ''}`} onClick={toggleMenu}>
+                  <Link href={item.href} className={`text-gray-100 hover:text-lime-400 ${router.pathname === item.href ? 'font-bold' : ''}`} onClick={toggleMenu}>
                     {item.label}
                   </Link>
                 </li>
