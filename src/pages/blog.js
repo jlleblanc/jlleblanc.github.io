@@ -10,7 +10,7 @@ export default function Blog() {
       {
         "@type": "BlogPosting",
         "headline": "Always pick #1 first",
-        "url": `https://codelikeaninvestor.substack.com/p/always-pick-1-first`,
+        "url": `/blog/always-pick-number-one-first`,
         "abstract": "You have less time than you think. Always pick a proven winner first!",
         "author": {
           "@type": "Person",
