@@ -15,17 +15,18 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
   color: var(--foreground);
   min-height: 100vh;
 }
 
 h1 {
   font-family: 'Mulish', sans-serif;
+  text-transform: uppercase;
 }
 
-h1 {
-  text-transform: uppercase;
+h2 {
+  font-family: 'Lora', serif;
 }
 
 @layer utilities {

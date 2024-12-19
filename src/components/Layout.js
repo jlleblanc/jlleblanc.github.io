@@ -56,7 +56,7 @@ export default function Layout({ children, title, description, canonicalUrl, jso
           <ul className="hidden md:flex space-x-4">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className={`text-gray-100 hover:text-blue-400 ${router.pathname === item.href ? 'font-bold' : ''}`}>
+                <Link href={item.href} className={`text-gray-100 hover:text-blue-300 ${router.pathname === item.href ? 'font-bold' : ''}`}>
                   {item.label}
                 </Link>
               </li>
@@ -70,7 +70,7 @@ export default function Layout({ children, title, description, canonicalUrl, jso
             <ul className="flex flex-col items-center">
               {navItems.map((item) => (
                 <li key={item.href} className="py-2">
-                  <Link href={item.href} className={`text-gray-100 hover:text-blue-400 ${router.pathname === item.href ? 'font-bold' : ''}`} onClick={toggleMenu}>
+                  <Link href={item.href} className={`text-gray-100 hover:text-blue-300 ${router.pathname === item.href ? 'font-bold' : ''}`} onClick={toggleMenu}>
                     {item.label}
                   </Link>
                 </li>
