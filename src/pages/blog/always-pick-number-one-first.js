@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="space-y-4">
           <p>Imagine starting your next side project on a Saturday morning. You have a cup of coffee in hand, some music or background noise is on, and your terminal shell is ready to go. You have been hearing about these four frameworks that seem like potential contenders:</p>
 
-          <ul className="list-disc list-inside space-y-2">
+          <ul className="list-disc list-inside space-y-4">
             <li>Framework 1: maintained by a FAANG/MANGA company. It is well-documented, widely used, and has a good selection of plugins and extensions. There are some performance issues when you try to do certain things, and some leading engineers are very vocal about just how much they despise this framework.</li>
 
             <li>Framework 2: maintained by a company widely-known in the tech industry. It is also well documented, although not quite as widely used as Framework 1. Also doesn&apos;t have the performance issues of Framework 1 because of the way the internals are written. Some of the leading engineers who despise Framework 1 use this instead.</li>

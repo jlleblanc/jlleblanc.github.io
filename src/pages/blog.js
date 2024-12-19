@@ -61,8 +61,8 @@ export default function Blog() {
         <h2 className="text-xl font-bold mb-4">Select blog posts</h2>
         <div className="mb-8 mt-8">
           {jsonLd.blogPost.map((post, index) => (
-            <div key={index} className="mb-4">
-              <h3 className="text-md font-semibold mb-2">
+            <div key={index} className="mb-6">
+              <h3 className="text-lg font-semibold mb-2 text-blue-500">
                 <Link href={post.url}>{post.headline}</Link>
               </h3>
               <p>{post.abstract}</p>
