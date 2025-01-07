@@ -45,6 +45,37 @@ export default function Home() {
           Get In Touch
         </Link>
       </div>
+      <div className="md:mt-20 mt-12 container mx-auto px-4 max-w-3xl">
+        <div className="flex flex-col md:flex-row md:items-start md:gap-8">
+          <div className="md:flex-1">
+            <h2 className="text-3xl font-bold">Subscribe to my newsletter</h2>
+            <p className="text-lg mt-4">
+              Code Like an Investor is a newsletter about choosing the right technology for your next startup or side project.
+            </p>
+          </div>
+
+          <div className="mt-4 md:mt-0 md:flex-1">
+            <form
+              action="https://buttondown.com/api/emails/embed-subscribe/jlleblanc"
+              method="post"
+              target="popupwindow"
+              onsubmit="window.open('https://buttondown.com/jlleblanc?tag=website', 'popupwindow')"
+              className="embeddable-buttondown-form"
+            >
+              <label htmlFor="bd-email" className="text-lg sr-only">Enter your email</label>
+              <div className="flex items-center">
+                <input type="email" name="email" id="bd-email" className="border border-gray-200 rounded-md p-2 w-full" placeholder="Enter your email" />
+              </div>
+              <div className="flex items-center mt-2">
+                <input type="submit" value="Subscribe" className="bg-lime-900 text-white rounded-md p-2 px-4" />
+              </div>
+              <p className="text-sm mt-2">
+                <a href="https://buttondown.com/refer/jlleblanc" target="_blank" className="text-lime-900">Powered by Buttondown.</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
     </Layout>
   )
 }
