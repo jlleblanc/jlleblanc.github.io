@@ -19,12 +19,7 @@ export default function Contact() {
     >
       <div className="container mx-auto px-4 max-w-3xl">
         <h2 className="text-xl font-bold mb-4">Contact me</h2>
-        <p className="mb-4">Get in touch to discuss how we can make billing and revenue work for you!</p>
-        <p>
-          <Link className="text-blue-500" href="mailto:contact@jlleblanc.com?subject=I'm ready to bill my customers!">
-          contact@jlleblanc.com
-          </Link>
-        </p>
+        <p className="mb-4 text-lg">Let&apos;s build together! Send me an email at <Link className="text-blue-500" href="mailto:contact@jlleblanc.com?subject=I'm ready to bill my customers!">contact@jlleblanc.com</Link>. </p>
       </div>
     </Layout>
   )
