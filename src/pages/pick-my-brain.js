@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import Link from 'next/link'
 import siteConfig from '../config/siteConfig'
 
 export default function About() {
@@ -38,6 +39,12 @@ export default function About() {
         <p className="mb-4">
           I look forward to chatting with you!
         </p>
+        <div className="mt-8 p-4 border border-lime-400 bg-lime-50 rounded">
+          <p className="mb-2 font-semibold">Ready to make it actionable?</p>
+          <p>
+            Skip the inbox ping-pong and <Link href="/onboard" className="text-lime-800 underline">plan our first sprint</Link> by selecting concrete tasks. I will send a tailored one-week plan.
+          </p>
+        </div>
       </div>
     </Layout>
   )

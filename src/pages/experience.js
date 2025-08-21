@@ -1,4 +1,5 @@
 import Layout from '../components/Layout'
+import Link from 'next/link'
 import siteConfig from '../config/siteConfig'
 
 export default function Experience() {
@@ -161,6 +162,10 @@ export default function Experience() {
           <li>Up and Running with Backbone.js, lynda.com</li>
           <li>Up and Running with PHP: PEAR, PECL, and Composer, lynda.com</li>
         </ul>
+      </div>
+
+      <div className="mt-12 text-center">
+        <Link href="/onboard" className="inline-block bg-lime-700 hover:bg-lime-800 text-white font-bold py-3 px-8 rounded-md text-lg transition duration-300">Start with a one-week plan</Link>
       </div>
     </div>
     </Layout>
