@@ -74,7 +74,7 @@ export default function Home() {
             </div>
 
             <div className="flex items-center gap-4">
-              <a href="#pricing" className="hidden md:block bg-lime-700 dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-full text-sm font-bold hover:bg-lime-800 dark:hover:bg-slate-200 transition-colors shadow-lg shadow-lime-500/10">
+              <a href="#pricing" className="hidden md:block bg-lime-700 dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-lime-800 dark:hover:bg-slate-200 transition-colors shadow-lg shadow-lime-500/10">
                 View Plans
               </a>
 
@@ -119,10 +119,10 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a href="#pricing" className="px-8 py-4 bg-lime-700 dark:bg-white text-white dark:text-black rounded-full font-bold text-lg hover:bg-lime-800 dark:hover:bg-slate-200 transition-all flex items-center gap-2 shadow-xl hover:translate-y-[-2px]">
+              <a href="#pricing" className="px-8 py-4 bg-lime-700 dark:bg-white text-white dark:text-black rounded-xl font-bold text-lg hover:bg-lime-800 dark:hover:bg-slate-200 transition-all flex items-center gap-2 shadow-xl hover:translate-y-[-2px]">
                 View Strategy Plans <ArrowRight size={20} />
               </a>
-              <a href="#bridge" className="px-8 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-full font-medium hover:border-slate-400 dark:hover:border-slate-500 transition-all">
+              <a href="#bridge" className="px-8 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-lg font-medium hover:border-slate-400 dark:hover:border-slate-500 transition-all">
                 How &quot;The Bridge&quot; Works
               </a>
             </div>
@@ -167,7 +167,7 @@ export default function Home() {
                                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Build</h3>
                                 <div className="text-xs font-mono text-slate-500 uppercase tracking-wide mb-4">Months 1-3</div>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-                                    We move fast. I choose the stack (Next.js/Supabase), set up CI/CD, and ship the MVP. No technical debt, just scalable foundations.
+                                    We move fast. I choose a modern stack (e.g., Next.js/Supabase), set up CI/CD, and ship the MVP. No technical debt, just scalable foundations.
                                 </p>
                                 <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
                                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-lime-600"/> Core MVP Features</li>
@@ -489,7 +489,7 @@ export default function Home() {
                     <input type="email" name="email" id="bd-email" className="border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white rounded-md p-2 w-full" placeholder="Enter your email" />
                   </div>
                   <div className="flex items-center mt-2">
-                    <input type="submit" value="Subscribe" className="bg-lime-700 hover:bg-lime-800 text-white rounded-md p-2 px-4 cursor-pointer transition-colors" />
+                    <input type="submit" value="Subscribe" className="bg-lime-700 dark:bg-white text-white dark:text-black px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-lime-800 dark:hover:bg-slate-200 transition-colors shadow-lg shadow-lime-500/10" />
                   </div>
                   <p className="text-sm mt-2">
                     <a href="https://buttondown.com/refer/jlleblanc" target="_blank" rel="noopener noreferrer" className="text-lime-700 dark:text-lime-400">Powered by Buttondown.</a>
