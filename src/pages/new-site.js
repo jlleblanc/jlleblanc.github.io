@@ -67,8 +67,8 @@ export default function Home() {
             </Link>
 
             <div className="hidden md:flex gap-8 text-sm font-medium text-slate-600 dark:text-slate-400">
-              <a href="#bridge" className="hover:text-lime-700 dark:hover:text-white transition-colors">The Bridge Model</a>
-              <a href="#comparison" className="hover:text-lime-700 dark:hover:text-white transition-colors">Why Me?</a>
+              <a href="#bridge" className="hover:text-lime-700 dark:hover:text-white transition-colors">Method</a>
+              <a href="#comparison" className="hover:text-lime-700 dark:hover:text-white transition-colors">Compare</a>
               <a href="#growth" className="hover:text-lime-700 dark:hover:text-white transition-colors">Growth Stack</a>
               <a href="#pricing" className="hover:text-lime-700 dark:hover:text-white transition-colors">Pricing</a>
             </div>
@@ -87,8 +87,8 @@ export default function Home() {
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 p-6 flex flex-col gap-4">
-              <a href="#bridge" className="text-slate-600 dark:text-slate-300" onClick={() => setIsMenuOpen(false)}>The Bridge Model</a>
-              <a href="#comparison" className="text-slate-600 dark:text-slate-300" onClick={() => setIsMenuOpen(false)}>Why Me?</a>
+              <a href="#bridge" className="text-slate-600 dark:text-slate-300" onClick={() => setIsMenuOpen(false)}>Method</a>
+              <a href="#comparison" className="text-slate-600 dark:text-slate-300" onClick={() => setIsMenuOpen(false)}>Compare</a>
               <a href="#growth" className="text-slate-600 dark:text-slate-300" onClick={() => setIsMenuOpen(false)}>Growth Stack</a>
               <a href="#pricing" className="text-slate-600 dark:text-slate-300" onClick={() => setIsMenuOpen(false)}>Pricing</a>
             </div>
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center relative z-10">
            
             <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
-              Don&apos;t give away 30% equity.<br /><br className="md:hidden" />
+              Don't give away <span className="bg-yellow-300/50 dark:bg-yellow-500 px-1 rounded inline-block">half</span> your equity.<br /><br className="md:hidden" />
               <span className="text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-lime-700 to-cyan-600 dark:from-lime-400 dark:to-cyan-300">Rent a Founding Engineer</span>
             </h1>
 
@@ -123,7 +123,7 @@ export default function Home() {
                 View Strategy Plans <ArrowRight size={20} />
               </a>
               <a href="#bridge" className="px-8 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white rounded-lg font-medium hover:border-slate-400 dark:hover:border-slate-500 transition-all">
-                How &quot;The Bridge&quot; Works
+                The Fractional Method
               </a>
             </div>
 
@@ -144,11 +144,10 @@ export default function Home() {
         <section id="bridge" className="py-24 bg-white dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">The &quot;Bridge&quot; Strategy</h2>
-                    <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-[2]">
-                        Most agencies lock you in. <br />
-                        My goal is to replace myself. <br />
-                        Here&apos;s how we&apos;ll do it.
+                    <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Countdown to handoff.</h2>
+                    <p className="text-left text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-[1.3]">
+                        Freelancers go MIA. Agencies rack up billable hours. And cutting in a technical co-founder is a gamble, assuming you can even find one.<br /><br />
+                        There&apos;s a better way. And it scales with your startup.
                     </p>
                 </div>
 
@@ -167,10 +166,10 @@ export default function Home() {
                                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Build</h3>
                                 <div className="text-xs font-mono text-slate-500 uppercase tracking-wide mb-4">Months 1-3</div>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-                                    We move fast. I choose a modern stack (e.g., Next.js/Supabase), set up CI/CD, and ship the MVP. No technical debt, just scalable foundations.
+                                    Move fast. We choose a modern stack (e.g., Next.js/Supabase), set up our deployment pipeline, and ship the MVP. No technical debt, just scalable foundations.
                                 </p>
                                 <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-lime-600"/> Core MVP Features</li>
+                                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-lime-600"/> Core Features</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-lime-600"/> Auth & Payments</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-lime-600"/> Security Best Practices</li>
                                 </ul>
@@ -187,10 +186,10 @@ export default function Home() {
                                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Iterate</h3>
                                 <div className="text-xs font-mono text-slate-500 uppercase tracking-wide mb-4">Months 4-6</div>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
-                                    We find Product-Market Fit. I instrument PostHog, run A/B tests, and pivot based on real user data. This is where we prove value to investors.
+                                    Ruthlessly refine. Product analytics are operating (e.g. PostHog), A/B tests are running, and pivots are made based on real user data. You walk into investor negotiations with confidence.
                                 </p>
                                 <ul className="space-y-2 text-sm text-slate-500 dark:text-slate-400">
-                                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-cyan-500"/> PostHog Analytics</li>
+                                    <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-cyan-500"/> Test hypotheses</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-cyan-500"/> Feature Flagging</li>
                                     <li className="flex items-center gap-2"><CheckCircle2 size={14} className="text-cyan-500"/> Investor Data Room</li>
                                 </ul>
@@ -224,9 +223,9 @@ export default function Home() {
         {/* COMPARISON - Why Me? */}
         <section id="comparison" className="py-24 px-6 bg-slate-50 dark:bg-slate-900/50 transition-colors duration-300">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center">Scale up without burning your runway.</h2>
+                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center">Scale up without burning through your runway.</h2>
                 
-                <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12 md:text-center">Compare the Fractional Founding Engineer approach to freelancers and development agencies.</p>
+                <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-12 md:text-center">Compare the Fractional method to freelancers and agencies.</p>
 
                 {/* Desktop Table - hidden on mobile */}
                 <div className="hidden md:block">
@@ -236,7 +235,7 @@ export default function Home() {
                                 <th className="py-4 px-6 text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider"></th>
                                 <th className="py-4 px-6 text-sm font-bold text-slate-500 dark:text-slate-400 w-1/4">Freelancer</th>
                                 <th className="py-4 px-6 text-sm font-bold text-slate-500 dark:text-slate-400 w-1/4">Dev Agency</th>
-                                <th className="py-4 px-6 text-lg font-bold text-lime-700 dark:text-lime-400 w-1/3 bg-lime-50/50 dark:bg-lime-900/10 border-t-2 border-lime-600">Founding Engineer</th>
+                                <th className="py-4 px-6 text-lg font-bold text-lime-700 dark:text-lime-400 w-1/3 bg-lime-50/50 dark:bg-lime-900/10 border-t-2 border-lime-600">Fractional</th>
                             </tr>
                         </thead>
                         <tbody className="text-slate-600 dark:text-slate-300">
@@ -258,6 +257,12 @@ export default function Home() {
                                 <td className="py-4 px-6">Extra Charge</td>
                                 <td className="py-4 px-6 font-bold text-slate-900 dark:text-white bg-lime-50/50 dark:bg-lime-900/10">Built-in</td>
                             </tr>
+                            <tr className="border-b border-slate-200 dark:border-slate-800">
+                                <td className="py-4 px-6 font-bold">Investor Data Room</td>
+                                <td className="py-4 px-6">Thinks it&rsquo;s a data center</td>
+                                <td className="py-4 px-6">Hasn&apos;t done it before</td>
+                                <td className="py-4 px-6 font-bold text-slate-900 dark:text-white bg-lime-50/50 dark:bg-lime-900/10">Ongoing</td>
+                            </tr>
                             <tr className="border-b-0">
                                 <td className="py-4 px-6 font-bold">Hiring Support</td>
                                 <td className="py-4 px-6 text-slate-400"><X size={16}/></td>
@@ -274,6 +279,7 @@ export default function Home() {
                     { label: "Goal", freelancer: "Finish Tickets", agency: "Bill Hours", me: "Launch" },
                     { label: "Tech Stack", freelancer: "Whatever you ask", agency: "Whatever they know", me: "Strategic Selection" },
                     { label: "Analytics", freelancer: "None", agency: "Extra Charge", me: "Built-in" },
+                    { label: "Investor Data Room", freelancer: "(thinks it's a data center)", agency: "\"Never heard of it\"", me: "Ongoing" }, 
                     { label: "Hiring Support", freelancer: null, agency: null, me: "Included" },
                   ].map((row, i) => (
                     <div key={i} className="bg-white dark:bg-black border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden">
@@ -298,7 +304,7 @@ export default function Home() {
                           )}
                         </div>
                         <div className="flex justify-between items-center px-4 py-3 bg-lime-50 dark:bg-lime-900/20">
-                          <span className="text-sm font-bold text-lime-700 dark:text-lime-400">Founding Engineer</span>
+                          <span className="text-sm font-bold text-lime-700 dark:text-lime-400">Fractional</span>
                           <span className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-1 text-right">
                             {row.label === "Hiring Support" && <CheckCircle2 size={14} className="text-emerald-600" />}
                             {row.me}
@@ -316,7 +322,7 @@ export default function Home() {
            <div className="max-w-6xl mx-auto">
              <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
                 <div>
-                   <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">The Investor-Ready Stack</h2>
+                   <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">The Investor-Ready Stack [REPLACE]</h2>
                    <p className="text-slate-600 dark:text-slate-400">
                      I don&apos;t just build features. I build data rooms.
                    </p>
@@ -341,50 +347,73 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
              <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Pricing</h2>
-              <p className="text-slate-600 dark:text-slate-400">Choose the speed of your execution.</p>
+              <p className="text-slate-600 dark:text-slate-400 text-xl">Plans for every step from idea to exit.</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              
-              {/* Tier 1 - Audit */}
+            <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
               <div className="bg-white dark:bg-black border border-slate-200 dark:border-slate-800 p-8 rounded-3xl relative hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Code Audit</h3>
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Consultation</h3>
                 <p className="text-slate-500 text-xs font-mono uppercase tracking-wide mb-6">One-time</p>
-                <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">$995</div>
-                <p className="text-slate-500 text-sm mb-8">One-time deep dive into your codebase or architecture plan.</p>
+                <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">$495</div>
+                <p className="text-slate-500 text-sm mb-8">Choose a topic or task to dive into.</p>
                 
                 <ul className="space-y-4 mb-8">
                   <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
-                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Deep Codebase Review
+                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Pre-session research
                   </li>
                   <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
-                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Security Analysis
+                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> 60 min session
                   </li>
                   <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
-                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> 60 min Strategy Call
+                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Follow-up action plan
                   </li>
                 </ul>
                 <button className="w-full py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
-                  Book Audit
+                  Book Consultation
+                </button>
+              </div>
+
+
+              {/* Tier 1 - Audit */}
+              <div className="bg-white dark:bg-black border border-slate-200 dark:border-slate-800 p-8 rounded-3xl relative hover:border-slate-300 dark:hover:border-slate-700 transition-colors">
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Roadmap</h3>
+                <p className="text-slate-500 text-xs font-mono uppercase tracking-wide mb-6">One-time</p>
+                <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">$995</div>
+                <p className="text-slate-500 text-sm mb-8">Turn your vision into an actionable plan.</p>
+                
+                <ul className="space-y-4 mb-8">
+                  <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
+                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Delivered in Notion
+                  </li>
+                  <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
+                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> 60 min review session
+                  </li>
+                  <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
+                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Cost goes towards your first month's subscription
+                  </li>
+                </ul>
+                <button className="w-full py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                  Book Roadmap
                 </button>
               </div>
 
               {/* Tier 2 - The Builder */}
               <div className="bg-white dark:bg-black border border-slate-200 dark:border-slate-800 p-8 rounded-3xl relative hover:border-lime-500/50 transition-colors">
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">The Builder</h3>
-                <p className="text-slate-500 text-xs font-mono uppercase tracking-wide mb-6">Monthly Subscription</p>
+                <p className="text-slate-500 text-xs font-mono uppercase tracking-wide mb-6">Build it together</p>
                 <div className="text-3xl font-bold text-slate-900 dark:text-white mb-2">$6,950<span className="text-lg text-slate-500 font-normal">/mo</span></div>
-                <p className="text-slate-500 text-sm mb-8">For startups that have a roadmap and just need execution power.</p>
+                <p className="text-slate-500 text-sm mb-8">For solo founders with a roadmap.</p>
                 
                 <ul className="space-y-4 mb-8">
                   <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
-                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> <span className="font-bold">One active request</span>
+                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> <span className="font-bold">Async support</span>
                   </li>
                   <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
-                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> 2-3 day turnaround
+                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> One active task
                   </li>
                   <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
-                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Direct Slack Access
+                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> 2-3 day task turnaround
                   </li>
                   <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
                     <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Pause anytime
@@ -398,7 +427,7 @@ export default function Home() {
               {/* Tier 3 - Founding Engineer (The Winner) */}
               <div className="bg-lime-900 dark:bg-lime-950/30 border border-lime-600 p-8 rounded-3xl relative shadow-2xl shadow-lime-500/20 transform scale-105 z-10">
                 <div className="absolute top-0 right-0 bg-lime-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">
-                  BEST VALUE
+                  HAVE IT ALL
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Founding Engineer</h3>
                 <p className="text-lime-200 text-xs font-mono uppercase tracking-wide mb-6">Fractional CTO Partner</p>
@@ -406,17 +435,15 @@ export default function Home() {
                 <p className="text-slate-300 text-sm mb-8">For early-stage founders who need strategy, architecture, and hiring support.</p>
                 
                 <ul className="space-y-4 mb-8">
+
                   <li className="flex gap-3 text-white text-sm">
-                    <CheckCircle2 className="text-lime-400 shrink-0" size={18} /> <span className="font-bold">Execution + Strategy</span>
-                  </li>
-                  <li className="flex gap-3 text-slate-300 text-sm">
-                    <CheckCircle2 className="text-lime-500 shrink-0" size={18} /> Weekly Strategy Sync
+                    <CheckCircle2 className="text-lime-400 shrink-0" size={18} /> <span className="font-bold">Weekly Strategy Sync</span>
                   </li>
                   <li className="flex gap-3 text-slate-300 text-sm">
                     <CheckCircle2 className="text-lime-500 shrink-0" size={18} /> <span className="text-lime-200">Hiring Support & Interviews</span>
                   </li>
                   <li className="flex gap-3 text-slate-300 text-sm">
-                    <CheckCircle2 className="text-lime-500 shrink-0" size={18} /> Investor Data Room Prep
+                    <CheckCircle2 className="text-lime-500 shrink-0" size={18} /> Investor Data Room
                   </li>
                   <li className="flex gap-3 text-slate-300 text-sm">
                     <CheckCircle2 className="text-lime-500 shrink-0" size={18} /> Priority Queue
@@ -427,9 +454,6 @@ export default function Home() {
                 </button>
               </div>
 
-            </div>
-            <div className="text-center mt-12 text-slate-500 text-sm">
-              Not sure which one fits? <a href="mailto:joe@jlleblanc.com" className="text-lime-700 dark:text-lime-400 underline">Book a 15-min intro call.</a>
             </div>
           </div>
         </section>
