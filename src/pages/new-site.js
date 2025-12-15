@@ -105,7 +105,7 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center relative z-10">
            
             <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.1]">
-              Don't give away <span className="bg-yellow-300/50 dark:bg-yellow-500 px-1 rounded inline-block">half</span> your equity.<br /><br className="md:hidden" />
+              Don&apos;t give away <span className="bg-yellow-300/50 dark:bg-yellow-500 px-1 rounded inline-block">half</span> your equity.<br /><br className="md:hidden" />
               <span className="text-4xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-lime-700 to-cyan-600 dark:from-lime-400 dark:to-cyan-300">Rent a Founding Engineer</span>
             </h1>
 
@@ -318,28 +318,76 @@ export default function Home() {
         </section>
 
         {/* Growth Stack - Condensed */}
-        <section id="growth" className="py-20 px-6 bg-white dark:bg-black transition-colors duration-300 border-t border-slate-200 dark:border-slate-800">
-           <div className="max-w-6xl mx-auto">
-             <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-                <div>
-                   <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">The Investor-Ready Stack [REPLACE]</h2>
-                   <p className="text-slate-600 dark:text-slate-400">
-                     I don&apos;t just build features. I build data rooms.
-                   </p>
+        <section id="growth" className="py-20 bg-gray-900 text-white relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
+                <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+                <div className="absolute top-1/2 right-0 w-64 h-64 bg-purple-500 rounded-full blur-3xl"></div>
+            </div>
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 className="text-3xl md:text-4xl font-bold mb-6">The Growth Stack<br/><span className="text-blue-400">(Hint: it&apos;s not code)</span></h2>
+                        <div className="space-y-8">
+                            <div className="flex gap-4">
+                                <div className="flex-shrink-0 h-12 w-12 rounded bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+                                    <i data-lucide="eye" className="text-blue-400 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold mb-2">TODO</h4>
+                                    <p className="text-gray-400 leading-relaxed">TODO</p>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-4">
+                                <div className="flex-shrink-0 h-12 w-12 rounded bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+                                    <i data-lucide="hammer" className="text-blue-400 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold mb-2">TODO</h4>
+                                    <p className="text-gray-400 leading-relaxed">TODO</p>
+                                </div>
+                            </div>
+
+                            <div className="flex gap-4">
+                                <div className="flex-shrink-0 h-12 w-12 rounded bg-blue-500/10 flex items-center justify-center border border-blue-500/20">
+                                    <i data-lucide="trending-up" className="text-blue-400 w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold mb-2">TODO</h4>
+                                    <p className="text-gray-400 leading-relaxed">TODO</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    {/* <div className="bg-gray-800 p-8 rounded-lg border border-gray-700 shadow-2xl">
+                        <div className="flex items-center gap-2 mb-6 pb-4 border-b border-gray-700">
+                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span className="text-gray-500 font-mono text-sm ml-2">philosophy.md</span>
+                        </div>
+                        <div className="font-mono text-sm md:text-base text-gray-300 space-y-4">
+                            <p><span className="text-purple-400">const</span> <span className="text-blue-400">goal</span> = <span className="text-green-300">"Build a Company"</span>;</p>
+                            <p>
+                                <span className="text-gray-500">// Instead of:</span><br/>
+                                <span className="text-red-400">founder.giveEquity(50%);</span><br/>
+                                <span className="text-red-400">developer.buildInSecret();</span>
+                            </p>
+                            <p>
+                                <span className="text-gray-500">// We do:</span><br/>
+                                <span className="text-blue-400">while</span> (<span className="text-yellow-300">!product.isSuccessful</span>) {'{'}<br/>
+                                &nbsp;&nbsp;<span className="text-blue-400">await</span> builder.code();<br/>
+                                &nbsp;&nbsp;<span className="text-blue-400">await</span> founder.sell();<br/>
+                                &nbsp;&nbsp;builder.teach(founder);<br/>
+                                {'}'}
+                            </p>
+                            <p><span className="text-gray-500">// Result: Control remains with the founder.</span></p>
+                        </div>
+                    </div> */}
                 </div>
-                <div className="flex gap-4">
-                   <div className="bg-slate-100 dark:bg-slate-900 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
-                      <BarChart3 size={16} className="text-orange-500"/> Product Analytics
-                   </div>
-                   <div className="bg-slate-100 dark:bg-slate-900 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
-                      <Split size={16} className="text-blue-500"/> Feature Flags
-                   </div>
-                   <div className="bg-slate-100 dark:bg-slate-900 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-bold text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800">
-                      <ShieldCheck size={16} className="text-green-500"/> SOC2 Ready
-                   </div>
-                </div>
-             </div>
-           </div>
+            </div>
         </section>
 
         {/* PRICING - The Pivot */}
@@ -390,7 +438,7 @@ export default function Home() {
                     <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> 60 min review session
                   </li>
                   <li className="flex gap-3 text-slate-600 dark:text-slate-300 text-sm">
-                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Cost goes towards your first month's subscription
+                    <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Cost goes towards your first month&apos;s subscription
                   </li>
                 </ul>
                 <button className="w-full py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
@@ -427,7 +475,7 @@ export default function Home() {
               {/* Tier 3 - Founding Engineer (The Winner) */}
               <div className="bg-lime-900 dark:bg-lime-950/30 border border-lime-600 p-8 rounded-3xl relative shadow-2xl shadow-lime-500/20 transform scale-105 z-10">
                 <div className="absolute top-0 right-0 bg-lime-600 text-white text-xs font-bold px-3 py-1 rounded-bl-xl rounded-tr-2xl">
-                  HAVE IT ALL
+                  INVESTOR-READY
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Founding Engineer</h3>
                 <p className="text-lime-200 text-xs font-mono uppercase tracking-wide mb-6">Fractional CTO Partner</p>
@@ -464,12 +512,12 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 text-center">Common Questions</h2>
             <div className="space-y-4">
               {[
-                { q: "What is the difference between 'Builder' and 'Founding Engineer'?", a: "The Builder plan is for execution—you have a roadmap, I build it. The Founding Engineer plan is for strategy + execution. I help define the roadmap, set the architecture, prepare for investors, and handle hiring." },
-                { q: "Do I own the Intellectual Property (IP)?", a: "Yes, 100%. You own every line of code, every design asset, and every account. I work in your GitHub repository and your cloud accounts from Day 1." },
-                { q: "What is your tech stack?", a: "I specialize in the 'Modern Growth Stack': Next.js (App Router), Supabase (Postgres), Tailwind CSS, and PostHog for analytics. This stack allows for rapid iteration and scalability from Day 0 to Series A." },
-                { q: "How does the 'Hiring Support' work?", a: "When you reach ~$20k MRR or close your Seed round, I write the job descriptions, screen candidates, and conduct technical interviews to find your first full-time engineer. I then onboard them to the codebase so you have a seamless transition." },
-                { q: "Can I pause my subscription?", a: "Yes. If you are waiting on user feedback or investor diligence, you can pause the subscription. You only pay for the days the 'shop is open'. Unused days are banked for future use." },
-                 { q: "Why don't you charge equity?", a: "I prefer cash flow over lottery tickets. This is better for you because you keep 100% of your company. You get the seniority of a co-founder without the permanent dilution." }
+                { q: "What is the difference between 'Builder' and 'Founding Engineer'?", a: "The Builder plan is for execution—you have a roadmap ready to go, we use it to build together. The Founding Engineer plan includes more of what you need around funding events: investor data room and weekly sync meetings. It's also for when you are ready to start bringing on full-time engineers." },
+                { q: "Do I own the Intellectual Property (IP)?", a: "Yes, 100%. You own every line of code, every design asset, and every account. We work together in your GitHub repository and your cloud accounts." },
+                { q: "What is your tech stack?", a: "It changes. Currently, I use Next.js, Supabase, Tailwind CSS, and PostHog. This toolset is modern, flexible, and scalable. But I am also always looking at new tools and frameworks to deliver meaningful value faster." },
+                { q: "How does the 'Hiring Support' work?", a: "As your startup grows, you will need to hire full-time engineers. I can help you with that. I write the job descriptions, screen candidates, and conduct technical interviews to find your first full-time engineer. I then onboard them to the codebase so you have a seamless transition." },
+                { q: "Can I pause my subscription?", a: "Yes. You can pause the Builder subscription at any time. Sometimes you're waiting on investor diligence. Other times, you may need to wait a week or two on user feedback to see how a feature is received." },
+                 { q: "Why don't you charge equity?", a: "In an equity-based model, we decide how much time we are willing to spend on building the startup before we raise a round of funding. This can often translate into lost momentum, delays in generating revenue, and a higher risk of failure. Instead, I charge a subscription to my services, which forces us to be efficient and focused. This is better for you, because you get the seniority of a co-founder without the permanent dilution." }
               ].map((faq, i) => (
                 <div key={i} className="border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-black overflow-hidden transition-colors">
                   <button 
