@@ -492,7 +492,11 @@ export default function Home() {
                     <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Follow-up action plan
                   </li>
                 </ul>
-                <button className="w-full py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+
+                <button 
+                  className="w-full py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                  onClick={() => window.open('https://book.stripe.com/aFacN59xF2aTfO1fZe8og01', '_blank')}
+                >
                   Book Consultation
                 </button>
               </div>
@@ -516,7 +520,9 @@ export default function Home() {
                     <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Cost goes towards your first month&apos;s subscription
                   </li>
                 </ul>
-                <button className="w-full py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+                <button className="w-full py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                  onClick={() => window.open('https://buy.stripe.com/5kQ9ATcJRcPxcBP4gw8og02', '_blank')}
+                >
                   Book Roadmap
                 </button>
               </div>
@@ -542,7 +548,9 @@ export default function Home() {
                     <CheckCircle2 className="text-lime-700 dark:text-lime-500 shrink-0" size={18} /> Pause anytime
                   </li>
                 </ul>
-                <button className="w-full py-3 rounded-xl bg-slate-900 dark:bg-slate-800 text-white font-bold hover:bg-slate-700 dark:hover:bg-slate-700 transition-colors">
+                <button className="w-full py-3 rounded-xl bg-slate-900 dark:bg-slate-800 text-white font-bold hover:bg-slate-700 dark:hover:bg-slate-700 transition-colors"
+                  onClick={() => window.open('https://buy.stripe.com/6oU3cvcJRdTB31f28o8og03', '_blank')}
+                >
                   Subscribe
                 </button>
               </div>
@@ -554,7 +562,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Founding Engineer</h3>
                 <p className="text-lime-200 text-xs font-mono uppercase tracking-wide mb-6">Fractional CTO Partner</p>
-                <div className="text-3xl font-bold text-white mb-2">$11,500<span className="text-lg text-slate-400 font-normal">/mo</span></div>
+                <div className="text-3xl font-bold text-white mb-2">$12,500<span className="text-lg text-slate-400 font-normal">/mo</span></div>
                 <p className="text-slate-300 text-sm mb-8">For early-stage founders who need strategy, architecture, and hiring support.</p>
 
                 <ul className="space-y-4 mb-8">
@@ -572,12 +580,19 @@ export default function Home() {
                     <CheckCircle2 className="text-lime-500 shrink-0" size={18} /> Priority Queue
                   </li>
                 </ul>
-                <button className="w-full py-3 rounded-xl bg-white text-black font-bold hover:bg-lime-50 transition-colors shadow-lg">
-                  Apply for Partner Spot
+                <button className="w-full py-3 rounded-xl bg-white text-black font-bold hover:bg-lime-50 transition-colors shadow-lg"
+                  onClick={() => window.open('https://buy.stripe.com/aFafZh5hpeXF8lzcN28og04', '_blank')}
+                >
+                  Subscribe
                 </button>
               </div>
 
             </div>
+
+            <div className="mt-12 text-center">
+              Not sure which plan is right for you? <a href="contact@jlleblanc.com" className="text-lime-600 dark:text-lime-400 font-bold">Schedule a call</a> to learn more.
+            </div>
+
           </div>
         </section>
 
