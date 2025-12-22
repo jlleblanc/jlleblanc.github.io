@@ -493,7 +493,7 @@ export default function Home() {
                   </li>
                 </ul>
 
-                <button 
+                <button
                   className="w-full py-3 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
                   onClick={() => window.open('https://book.stripe.com/aFacN59xF2aTfO1fZe8og01', '_blank')}
                 >
@@ -607,7 +607,7 @@ export default function Home() {
                 { q: "What is your tech stack?", a: "It changes. Currently, I use Next.js, Supabase, Tailwind CSS, and PostHog. This toolset is modern, flexible, and scalable. But I am also always looking at new tools and frameworks to deliver meaningful value faster." },
                 { q: "How does the 'Hiring Support' work?", a: "As your startup grows, you will need to hire full-time engineers. I can help you with that. I write the job descriptions, screen candidates, and conduct technical interviews to find your first full-time engineer. I then onboard them to the codebase so you have a seamless transition." },
                 { q: "Can I pause my subscription?", a: "Yes. You can pause the Builder subscription at any time. Sometimes you're waiting on investor diligence. Other times, you may need to wait a week or two on user feedback to see how a feature is received." },
-                { q: "Why don't you charge equity?", a: "In an equity-based model, we build until we are forced to raise a round of funding. This can often translate into lost momentum, delays in generating revenue, and burnout. Instead, I charge a subscription to my services, which forces us to stay focused. This is better for you, because you launch faster, get the seniority of a co-founder, and maintain ownership." }
+                { q: "Why don't you charge equity?", a: "In an equity-based model, you give me half of your company, we build at a frenzied pace, we burnout, and then we raise a round of funding. Instead, I charge a subscription to my services. This forces us to stay focused on building what matters. This is better for you, because you launch faster, get the seniority of a co-founder, and maintain ownership." }
               ].map((faq, i) => (
                 <div key={i} className="border border-slate-200 dark:border-slate-800 rounded-xl bg-slate-50 dark:bg-black overflow-hidden transition-colors">
                   <button
