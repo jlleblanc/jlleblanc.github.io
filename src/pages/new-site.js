@@ -590,7 +590,7 @@ export default function Home() {
             </div>
 
             <div className="mt-12 text-center">
-              Not sure which plan is right for you? <a href="contact@jlleblanc.com" className="text-lime-600 dark:text-lime-400 font-bold">Schedule a call</a> to learn more.
+              Not sure which plan is right for you? <a href="mailto:contact@jlleblanc.com" className="text-lime-600 dark:text-lime-400 font-bold">Schedule a call</a> to learn more.
             </div>
 
           </div>
