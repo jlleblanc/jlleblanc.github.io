@@ -106,7 +106,8 @@ export default function Home() {
           <div className="max-w-5xl mx-auto text-center relative z-10">
 
             <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-slate-900 dark:text-white mb-8 leading-[1.3]">
-              Don&apos;t give away <span className="bg-yellow-300/50 dark:bg-yellow-500 px-1 rounded inline-block">half</span> your equity.<br />
+              Turn your <span className="bg-yellow-300/50 dark:bg-yellow-500 px-1 rounded inline-block">idea</span> into a <br />
+              digital business. <br />
               <span className="text-2xl md:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-lime-700 to-cyan-600 dark:from-lime-400 dark:to-cyan-300 uppercase">Rent a Founding Engineer</span>
             </h1>
 
@@ -119,8 +120,7 @@ export default function Home() {
             </div>
 
             <p className="text-left md:text-center text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Take your early-stage startup from <strong>Day 0 to Series A</strong>.
-              I&apos;ll set the architecture and deliver the MVP. Then we&apos;ll hire your team.
+              Whether you&apos;re a creator, an expert, or a founder, you deserve a digital foundation that scales with your business from from Day 0.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -635,7 +635,7 @@ export default function Home() {
               <div className="md:flex-1">
                 <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Subscribe to my newsletter</h2>
                 <p className="text-lg mt-4 text-slate-600 dark:text-slate-400">
-                  Code Like an Investor is a newsletter about choosing the right technology for your next startup or side project.
+                  The Brunch Buffet is a newsletter about Brunch: a Supabase-powered event sourcing framework I am currently developing.
                 </p>
               </div>
 
