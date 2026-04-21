@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {
+      "name": "schedule-consultation",
+      "type": "skill-md",
+      "description": "Collect project context from a prospective client and route them to the right Joe LeBlanc service tier, producing a ready-to-send intake email.",
+      "url": "/.well-known/agent-skills/schedule-consultation/SKILL.md",
+      "digest": "sha256:dfd6480b97ec0c0087a0f78da24739a7e148c7088fa53246aa875a1686b9b40f"
+    },
+    {
+      "name": "evaluate-startup-tech",
+      "type": "skill-md",
+      "description": "Assess a startup's technical situation across stack, team, and growth stage, then map findings to concrete next steps and the appropriate Joe LeBlanc engagement type.",
+      "url": "/.well-known/agent-skills/evaluate-startup-tech/SKILL.md",
+      "digest": "sha256:8e8c7eb85bed456fb594ac49da65ed696f24f8fc5b3d161319ad3c9a39e61e3f"
+    }
+  ]
+}
