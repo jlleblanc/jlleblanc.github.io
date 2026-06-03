@@ -1,168 +1,127 @@
 import Layout from '../components/Layout'
+import FeedPost from '../components/FeedPost'
 import siteConfig from '../config/siteConfig'
+
+const roles = [
+  {
+    title: 'Software Engineering Lead at Emerge Haus',
+    period: 'March 2024 – Present',
+    bullets: [
+      'Technical due diligence on a startup acquisition',
+      'Led technical GTM for post-acquisition integration',
+      'Implemented features in Next.js, Supabase, and Express',
+      'Strategic direction for technical projects',
+    ],
+  },
+  {
+    title: 'Software Engineering Manager at FORM',
+    period: 'Nov 2022 – Feb 2024',
+    bullets: [
+      'Managed remote team on FieldConnector, a real-time comms tool for frontline employees',
+      'Django/Python, React Native, PostgreSQL',
+      'Improved development processes and team productivity',
+    ],
+  },
+  {
+    title: 'Software Engineering Manager at Transfix',
+    period: 'Mar 2022 – Oct 2022',
+    bullets: [
+      'Managed 7 remote software engineers',
+      'Improved Fleet Management System (Rails, React, PostgreSQL)',
+      'Story point estimation and regular retrospectives',
+    ],
+  },
+  {
+    title: 'Software Engineering Manager at True Link Financial',
+    period: 'Apr 2020 – Mar 2022',
+    bullets: [
+      'Managed team of 4–7 remote engineers',
+      'Refactored Rails and React codebase for new features',
+      'Advisory support to Infosec team',
+    ],
+  },
+  {
+    title: 'Senior Fullstack Engineer at True Link Financial',
+    period: 'Jun 2018 – Apr 2020',
+    bullets: [
+      'Developed and maintained key fintech platform features',
+      'Cross-functional collaboration on new product features',
+      'Architectural decisions and code quality improvements',
+    ],
+  },
+  {
+    title: 'Software Engineer at BigCommerce',
+    period: 'Nov 2013 – Jun 2018',
+    bullets: [
+      'Billing and provisioning system in Rails',
+      'Redis, MySQL, JavaScript/CoffeeScript, Sentry, Zuora',
+      'Marketing website (Drupal) and internal ETL (PHP/MySQL)',
+    ],
+  },
+]
 
 export default function Experience() {
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "Organization",
-          "name": "Emerge Haus",
-          "description": "Software Engineering Lead",
-          "startDate": "2024-03"
-        }
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: roles.map((role, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Organization',
+        name: role.title.split(' at ')[1] || role.title,
+        description: role.title,
       },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "Organization",
-          "name": "FORM",
-          "description": "Software Engineering Manager",
-          "startDate": "2022-11",
-          "endDate": "2024-02"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "Organization",
-          "name": "Transfix",
-          "description": "Software Engineering Manager",
-          "startDate": "2022-03",
-          "endDate": "2022-10"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "Organization",
-          "name": "True Link Financial",
-          "description": "Software Engineering Manager",
-          "startDate": "2020-04",
-          "endDate": "2022-03"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 5,
-        "item": {
-          "@type": "Organization",
-          "name": "BigCommerce",
-          "description": "Software Engineer",
-          "startDate": "2013-11",
-          "endDate": "2018-06"
-        }
-      }
-    ]
-  };
+    })),
+  }
 
   return (
     <Layout
-      title="Experience - Software Engineering Leadership"
-      description="Comprehensive overview of Joe LeBlanc's professional experience in software engineering leadership and development."
+      title="Experience"
+      description="Professional experience in software engineering leadership and development."
       canonicalUrl={`${siteConfig.siteUrl}/experience`}
       jsonLd={jsonLd}
+      feedTitle="Experience"
     >
-    <div className="container mx-auto px-4 max-w-3xl">
+      {roles.map((role) => (
+        <FeedPost key={role.title} label={role.period}>
+          <h3 className="text-[17px] font-bold text-slate-900 dark:text-white mb-2">
+            {role.title}
+          </h3>
+          <ul className="text-[15px] text-slate-700 dark:text-slate-300 space-y-1.5 list-none p-0 m-0">
+            {role.bullets.map((item) => (
+              <li key={item}>→ {item}</li>
+            ))}
+          </ul>
+        </FeedPost>
+      ))}
 
-      <h2 className="text-xl font-bold mb-6">Professional Experience</h2>
-
-      <div className="mb-10">
-        <h3 className="text-md font-semibold mb-2">Software Engineering Lead at Emerge Haus</h3>
-        <p className="text-gray-600 mb-3">March 2024 - Present</p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Performed technical Due Diligence on a startup acquisition</li>
-          <li>Led the technical GTM effort for post-acquisition integration</li>
-          <li>Implemented new features in Next.js, Supabase, and Express</li>
-          <li>Provided strategic direction for technical projects</li>
+      <FeedPost label="Earlier">
+        <ul className="text-[15px] text-slate-700 dark:text-slate-300 space-y-1.5 list-none p-0 m-0">
+          <li>→ Programmer at Sears Holdings Corporation (2013)</li>
+          <li>→ Author at lynda.com (2008–2013)</li>
+          <li>→ Programmer at Cory Webb Media (2011–2013)</li>
+          <li>→ Self-employed Joomla Developer (2006–2011)</li>
+          <li>→ Programmer at The Bivings Group (2005–2006)</li>
         </ul>
-      </div>
+      </FeedPost>
 
-      <div className="mb-10">
-        <h3 className="text-md font-semibold mb-2">Software Engineering Manager at FORM</h3>
-        <p className="text-gray-600 mb-3">November 2022 - February 2024</p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Managed a remote team maintaining and extending FieldConnector, a real-time communications tool for frontline employees</li>
-          <li>Worked with Django/Python, React Native, and PostgreSQL</li>
-          <li>Improved development processes and team productivity</li>
+      <FeedPost label="Education">
+        <p className="text-[15px] text-slate-800 dark:text-slate-200">
+          BS in Management Information Systems — Oral Roberts University (2000–2004)
+        </p>
+      </FeedPost>
+
+      <FeedPost label="Publications">
+        <ul className="text-[15px] text-slate-700 dark:text-slate-300 space-y-1.5 list-none p-0 m-0">
+          <li>→ Supabase Essential Training, LinkedIn Learning</li>
+          <li>→ Up and Running with NoSQL Databases, lynda.com</li>
+          <li>→ Learning Joomla! 1.5 Extension Development, Packt</li>
+          <li>→ Joomla! 1.7: Programming and Packaging Extensions, lynda.com</li>
+          <li>→ Up and Running with Backbone.js, lynda.com</li>
+          <li>→ Up and Running with PHP: PEAR, PECL, and Composer, lynda.com</li>
         </ul>
-      </div>
-
-      <div className="mb-10">
-        <h3 className="text-md font-semibold mb-2">Software Engineering Manager at Transfix</h3>
-        <p className="text-gray-600 mb-3">March 2022 - October 2022</p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Managed a team of 7 remote software engineers</li>
-          <li>Improved a Fleet Management System (FMS) using Rails, React, and PostgreSQL</li>
-          <li>Implemented story point estimation and conducted regular retrospectives</li>
-        </ul>
-      </div>
-
-      <div className="mb-10">
-        <h3 className="text-md font-semibold mb-2">Software Engineering Manager at True Link Financial</h3>
-        <p className="text-gray-600 mb-3">April 2020 - March 2022</p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Managed a team ranging from 4-7 remote software engineers</li>
-          <li>Refactored Rails and React codebase for new features</li>
-          <li>Provided advisory support to the Infosec team</li>
-        </ul>
-      </div>
-
-      <div className="mb-10">
-        <h3 className="text-md font-semibold mb-2">Senior Fullstack Engineer at True Link Financial</h3>
-        <p className="text-gray-600 mb-3">June 2018 - April 2020</p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Developed and maintained key features of the fintech platform</li>
-          <li>Collaborated with cross-functional teams to implement new product features</li>
-          <li>Contributed to architectural decisions and code quality improvements</li>
-        </ul>
-      </div>
-
-      <div className="mb-10">
-        <h3 className="text-md font-semibold mb-2">Software Engineer at BigCommerce</h3>
-        <p className="text-gray-600 mb-3">November 2013 - June 2018</p>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Maintained and expanded a billing and provisioning system in Rails</li>
-          <li>Worked with Redis, MySQL, JavaScript/CoffeeScript, Sentry, and Zuora</li>
-          <li>Contributed to the marketing website (Drupal) and an internal ETL tool (PHP/MySQL)</li>
-        </ul>
-      </div>
-
-      <div className="mt-12">
-        <h3 className="text-md font-semibold mb-4">Earlier Career Highlights</h3>
-        <ul className="list-disc list-inside space-y-3">
-          <li>Programmer at Sears Holdings Corporation (2013)</li>
-          <li>Author at lynda.com (2008-2013)</li>
-          <li>Programmer at Cory Webb Media, LLC (2011-2013)</li>
-          <li>Self-Employed Joomla Developer (2006-2011)</li>
-          <li>Programmer at The Bivings Group (2005-2006)</li>
-        </ul>
-      </div>
-
-      <div className="mt-12">
-        <h3 className="text-md font-semibold mb-4">Education</h3>
-        <p>BS in Management Information Systems from Oral Roberts University (2000-2004)</p>
-      </div>
-
-      <div className="mt-12">
-        <h3 className="text-md font-semibold mb-4">Publications</h3>
-        <ul className="list-disc list-inside space-y-2">
-          <li>Supabase Essential Training, LinkedIn Learning</li>
-          <li>Up and Running with NoSQL Databases, lynda.com</li>
-          <li>Learning Joomla! 1.5 Extension Development, Packt Publishing</li>
-          <li>Joomla! 1.7: Programming and Packaging Extensions, lynda.com</li>
-          <li>Up and Running with Backbone.js, lynda.com</li>
-          <li>Up and Running with PHP: PEAR, PECL, and Composer, lynda.com</li>
-        </ul>
-      </div>
-    </div>
+      </FeedPost>
     </Layout>
   )
 }

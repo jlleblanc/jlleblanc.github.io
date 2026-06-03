@@ -26,3 +26,16 @@ h2 {
     text-wrap: balance;
   }
 }
+
+/* Microblog feed */
+.feed-post:last-of-type {
+  border-bottom: none;
+}
+
+.feed-post-body a {
+  @apply text-lime-700 dark:text-lime-500 hover:underline;
+}
+
+.feed-post-body strong {
+  @apply font-semibold text-slate-900 dark:text-white;
+}
