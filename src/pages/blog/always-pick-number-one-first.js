@@ -1,27 +1,29 @@
 import Layout from '../../components/Layout'
+import FeedPost from '../../components/FeedPost'
 import siteConfig from '../../config/siteConfig'
+import Link from 'next/link'
 
-export default function Contact() {
+export default function AlwaysPickNumberOneFirst() {
   return (
     <Layout
       title="Always pick #1 first"
       description="You have less time than you think. Always pick a proven winner first!"
       canonicalUrl={`${siteConfig.siteUrl}/blog/always-pick-number-one-first`}
+      feedTitle="Always pick #1 first"
     >
-      <div className="container mx-auto px-4 max-w-3xl">
-        <h2 className="text-xl font-bold mb-4">Always pick #1 first</h2>
+      <FeedPost label="Article · 5 min read">
+        <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-4">
+          Always pick #1 first
+        </h2>
 
-        <div className="space-y-4">
+        <div className="space-y-4 text-[15px] leading-relaxed text-slate-800 dark:text-slate-200">
           <p>Imagine starting your next side project on a Saturday morning. You have a cup of coffee in hand, some music or background noise is on, and your terminal shell is ready to go. You have been hearing about these four frameworks that seem like potential contenders:</p>
 
-          <ul className="list-disc list-inside space-y-4">
-            <li>Framework 1: maintained by a FAANG/MANGA company. It is well-documented, widely used, and has a good selection of plugins and extensions. There are some performance issues when you try to do certain things, and some leading engineers are very vocal about just how much they despise this framework.</li>
-
-            <li>Framework 2: maintained by a company widely-known in the tech industry. It is also well documented, although not quite as widely used as Framework 1. Also doesn&apos;t have the performance issues of Framework 1 because of the way the internals are written. Some of the leading engineers who despise Framework 1 use this instead.</li>
-
-            <li>Framework 3: similar to Framework 2, but uses a different coding paradigm. Has a lot of contributors on GitHub, but not backed by any major companies.</li>
-
-            <li>Framework 4: works almost exactly like Framework 1, but is not one-to-one compatible. Started by a group of engineers who are opposed to the ethics of the company behind Framework 1. Documentation is fine, although still WIP.</li>
+          <ul className="space-y-3 pl-0 list-none">
+            <li><strong>Framework 1:</strong> maintained by a FAANG/MANGA company. It is well-documented, widely used, and has a good selection of plugins and extensions. There are some performance issues when you try to do certain things, and some leading engineers are very vocal about just how much they despise this framework.</li>
+            <li><strong>Framework 2:</strong> maintained by a company widely-known in the tech industry. It is also well documented, although not quite as widely used as Framework 1. Also doesn&apos;t have the performance issues of Framework 1 because of the way the internals are written. Some of the leading engineers who despise Framework 1 use this instead.</li>
+            <li><strong>Framework 3:</strong> similar to Framework 2, but uses a different coding paradigm. Has a lot of contributors on GitHub, but not backed by any major companies.</li>
+            <li><strong>Framework 4:</strong> works almost exactly like Framework 1, but is not one-to-one compatible. Started by a group of engineers who are opposed to the ethics of the company behind Framework 1. Documentation is fine, although still WIP.</li>
           </ul>
 
           <p>Even though you have not used any frameworks like these before, you are certain that something like Framework 1 is what you need for this project. But given the negative things you have heard about Framework 1, you start with Framework 4. After 45 minutes, you still have not gotten past the todo list example in any meaningful way.</p>
@@ -42,9 +44,13 @@ export default function Contact() {
 
           <p>Consider another scenario: you are in another interview, but you picked Framework 1 for your project. You are able to demonstrate your expertise with it and can confidently talk about how to avoid the pitfalls around it. The company you are interviewing at uses Framework 3, but knows that only 10% of engineers out there have any sort of experience with it. They are more than willing to hire you because you can speak to your experience with Framework 1 very confidently. With this, they know you can pick up Framework 3 quickly.</p>
 
-          <p>Your side project time is limited. Do not waste it on technology that will not yield a return. Always pick #1 first.</p>
+          <p className="font-semibold">Your side project time is limited. Do not waste it on technology that will not yield a return. Always pick #1 first.</p>
         </div>
-      </div>
+
+        <Link href="/blog" className="mt-6 inline-block text-sm font-medium text-lime-700 dark:text-lime-500 hover:underline">
+          ← Back to blog
+        </Link>
+      </FeedPost>
     </Layout>
   )
 }
