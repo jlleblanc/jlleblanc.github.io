@@ -1,124 +1,246 @@
-.roboto-regular {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+/*
+ * The palette from the original jlleblanc.com: Tailwind's slate scale for the
+ * page and text, with lime for the accent. Buttons use lime-700 on white text;
+ * lime-500 is the decorative highlight (avatar ring and selection).
+ */
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #475569;
+  --border: #e2e8f0;
+  --accent: #4d7c0f;
+  --accent-dark: #3f6212;
+  --accent-bright: #84cc16;
+  --slate-400: oklch(70.4% 0.04 256.788);
+  --slate-500: oklch(55.4% 0.046 257.417);
+  --slate-900: oklch(20.8% 0.042 265.755);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --font-display: ui-serif, Georgia, Cambria, "Times New Roman", serif;
 }
 
-.caveat-signature {
-  font-family: "Caveat", cursive;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border: 0 solid;
+  margin: 0;
+  padding: 0;
 }
 
-.mulish-header {
-  font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: linear-gradient(#d8ebf3, #fff);
-  background-attachment: fixed;
-  color: rgb(43, 47, 49);
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
 
 h1 {
-  font-size: 2.5em;
-  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-size: inherit;
+  font-weight: inherit;
 }
 
-h2 {
-  font-size: 2.2em;
-  font-weight: 300;
-  line-height: 0%;
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
-h3 {
-  font-weight: normal;
-  font-size: 1.5em;
-}
-
-a, a:visited {
-  color: rgb(46, 125, 50);
-  text-decoration: none;
-  transition: color 0.5s ease;
-}
-
-img.avatar {
-  border-radius: 50%;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
+img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
-section.top-section {
+::selection {
+  background-color: rgb(132 204 22 / 0.3);
+  color: var(--foreground);
+}
+
+.page {
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+}
+
+main {
+  margin-inline: auto;
+  display: flex;
+  width: 100%;
+  max-width: 42rem;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 1.5rem;
+}
+
+.blocks > * + * {
+  margin-top: 3.5rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding-top: 1em;
 }
 
-section.top-section p {
-  font-size: 1.5em;
-  margin: 0.5em 0;
+.hero img {
+  width: 8rem;
+  height: 8rem;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  border: 2px solid rgb(132 204 22 / 0.2);
+  background-color: var(--muted);
+  object-fit: cover;
+  box-shadow:
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
-section.message {
-  background: rgba(255, 255, 255, 0.1);
-  padding-top: 1em;
-  border-radius: 5px;
-  margin: 1em 0;
+.hero h1 {
+  margin-top: 1.5rem;
+  font-size: 2.25rem;
+  line-height: calc(2.5 / 2.25);
+  font-weight: 600;
+  letter-spacing: -0.025em;
 }
 
-section.message p {
-  margin: 0.5em 0;
-  font-size: 1.1em;
-  line-height: 1.4em;
+.hero-body {
+  margin-top: 1.25rem;
+  max-width: 36rem;
+  font-size: 1.125rem;
+  line-height: 1.625;
+  color: var(--muted-foreground);
 }
 
-.convert a {
-  background: rgb(46, 125, 50);
-  color: #fff;
-  padding: 0.5em 1em;
-  border: #23374a 1px solid;
-  text-shadow: #23374a 1px 1px 1px;
-  border-radius: 5px;
-  font-size: 1.5em;
-  cursor: pointer;
-  transition: background 0.5s ease;
+.hero-body > * + * {
+  margin-top: 1rem;
 }
 
-div.convert {
+.hero-body a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  transition:
+    color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    text-decoration-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-body a:hover {
+  color: var(--accent-dark);
+  text-decoration-color: currentColor;
+}
+
+.hero-action {
+  margin-top: 1.75rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--accent);
+  padding: 0.625rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: calc(1.25 / 0.875);
+  font-weight: 700;
+  color: #ffffff;
+  transition:
+    color 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover {
+  background-color: var(--accent-dark);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-dark);
+  outline-offset: 2px;
+}
+
+/* The not-found and error messages use a slightly smaller heading. */
+.message h1 {
+  margin-top: 0;
+  font-size: 1.875rem;
+  line-height: calc(2.25 / 1.875);
+}
+
+.message .hero-body {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--card);
+  padding-block: 3rem;
   text-align: center;
-  margin: 1em 0;
-  padding: 2em 0;
 }
 
-main, footer {
-  max-width: 800px;
-  margin: 0 auto;
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
+.social a {
+  color: var(--slate-400);
+  transition: color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-@media screen and (max-width: 800px) {
-  main,
-  footer {
-    max-width: 700px;
-    margin: 0.5em auto;
+.social a:hover {
+  color: var(--slate-900);
+}
+
+.social svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.copyright {
+  font-size: 0.875rem;
+  line-height: calc(1.25 / 0.875);
+  color: var(--slate-500);
+}
+
+@media (width >= 40rem) {
+  main {
+    padding-block: 7rem;
   }
-}
 
-@media screen and (max-width: 480px) {
-  main,
-  footer {
-    max-width: 400px;
-    margin: 1em;
+  .hero h1 {
+    font-size: 3rem;
+    line-height: 1;
   }
 
-  .phone-number-example {
-    float: none;
-    width: auto;
+  .hero-body {
+    font-size: 1.25rem;
+  }
+
+  .message h1 {
+    font-size: 2.25rem;
+    line-height: calc(2.5 / 2.25);
+  }
+
+  .message .hero-body {
+    font-size: 1.125rem;
   }
 }

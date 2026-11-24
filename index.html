@@ -1,432 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joe LeBlanc - Technical Direction</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: rgb(43, 47, 49);
-            background: linear-gradient(#d8ebf3, #fff);
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            width: 100%;
-            max-width: 800px;
-            text-align: left;
-        }
-        .intro-container {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        .photo {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            flex-shrink: 0;
-            box-shadow: #ccc 0 0 10px;
-        }
-        .intro-text {
-            flex-grow: 1;
-            max-width: 40em;
-        }
-        .hi {
-            font-weight: 900;
-        }
-        .large-text {
-            font-size: 2em;
-            line-height: 1.4;
-            margin: 0 0 20px 0;
-        }
-        input[type="text"], input[type="email"] {
-            font-size: 1.5em;
-            padding: 15px;
-            margin: 20px 0;
-            width: calc(100% - 30px);
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .button-container {
-            display: flex;
-            justify-content: flex-start;
-            margin-top: 20px;
-        }
-        button {
-            background-color: rgb(46, 125, 50);
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.5em;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .option {
-            background-color: white;
-            border: 1px solid rgb(46, 125, 50);
-            border-radius: 5px;
-            padding: 20px;
-            margin: 15px 0;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            font-size: 1.2em;
-        }
-        .checkbox {
-            margin-right: 10px;
-        }
-        label {
-            display: flex;
-            align-items: center;
-            margin-top: 10px;
-            font-size: 1em;
-        }
-        @media (max-width: 600px) {
-            .intro-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div id="error"></div>
-    <div id="app">
-        <div class="intro-container">
-            <img src="https://github.com/jlleblanc.png" alt="Joe" class="photo">
-            <div class="intro-text">
-                <p class="large-text hi">Hi, I'm Joe!</p>
-                <p class="large-text">
-                    Whether you're an early career software engineer, an experienced developer moving into leadership, or an entrepreneur seeking technical direction, I'm ready to help.
-                </p>
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#fafaf9" />
+    <title>Joe LeBlanc</title>
+    <link rel="canonical" href="https://jlleblanc.com/" />
+    <meta
+      name="description"
+      content="Joe LeBlanc builds software and the teams that ship it. Find his work at People Scaled."
+    />
+    <meta property="og:title" content="Joe LeBlanc" />
+    <meta
+      property="og:description"
+      content="Joe LeBlanc builds software and the teams that ship it. Find his work at People Scaled."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jlleblanc.com/" />
+    <meta property="og:site_name" content="Joe LeBlanc" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Joe LeBlanc" />
+    <meta
+      name="twitter:description"
+      content="Joe LeBlanc builds software and the teams that ship it. Find his work at People Scaled."
+    />
+    <link rel="preload" as="image" href="https://github.com/jlleblanc.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <main>
+        <div class="blocks">
+          <section class="hero">
+            <img
+              src="https://github.com/jlleblanc.png"
+              alt="Joe LeBlanc"
+              width="128"
+              height="128"
+            />
+            <h1>Joe LeBlanc</h1>
+            <div class="hero-body">
+              <p>
+              I coach early-stage founders in building software without AI fatigue. Find me at <a href="https://peoplescaled.com">People Scaled</a>.
+              </p>
             </div>
+          </section>
         </div>
-        <p class="large-text">But first, I'd like to get to know you. What's your name?</p>
-        <form onsubmit="handleNameSubmit(event)">
-            <input type="text" id="nameInput" placeholder="Enter your name" required>
-            <div class="button-container">
-                <button type="submit">Next</button>
-            </div>
-        </form>
+      </main>
+
+      <footer>
+        <div class="social">
+          <a href="mailto:contact@jlleblanc.com" aria-label="Email">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="m3 7 9 6 9-6"></path>
+            </svg>
+          </a>
+          <a href="https://github.com/jlleblanc" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              ></path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/jlleblanc" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <p class="copyright">
+          © 2002 - 2026 People Scaled LLC. All rights reserved.
+        </p>
+      </footer>
     </div>
-
-    <script>
-        const { createClient } = supabase;
-        const supabaseClient = createClient(
-            'https://hnmvfdxbiwcyjjpozplj.supabase.co',
-            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhubXZmZHhiaXdjeWpqcG96cGxqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA5NjA0MDEsImV4cCI6MjAyNjUzNjQwMX0.SBX8dIH_BnXtbZlO5Z7JuSUAP3c6-vyM_LWyST_E6KQ'
-        );
-
-        const clientTypes = [
-            { value: 'early_career', label: 'Early career software engineer' },
-            { value: 'leadership', label: 'Experienced engineer moving into leadership' },
-            { value: 'independent', label: 'Software engineer looking to go independent' },
-            { value: 'entrepreneur', label: 'Entrepreneur seeking technical direction' }
-        ];
-
-        const personaQuestions = {
-            early_career: {
-                question: "What area of career growth are you most interested in exploring?",
-                options: [
-                    { value: 'skills', label: 'Expanding your technical skills' },
-                    { value: 'path', label: 'Defining your career path' },
-                    { value: 'projects', label: 'Choosing impactful projects' },
-                    { value: 'networking', label: 'Building your professional network' },
-                    { value: 'interviews', label: 'Improving your interview performance' }
-                ]
-            },
-            leadership: {
-                question: "What aspect of transitioning to leadership are you most curious about?",
-                options: [
-                    { value: 'team_management', label: 'Effective team management' },
-                    { value: 'tech_decisions', label: 'Making high-level technical decisions' },
-                    { value: 'communication', label: 'Improving communication with non-technical stakeholders' },
-                    { value: 'mentoring', label: 'Mentoring junior engineers' },
-                    { value: 'strategy', label: 'Aligning technical strategy with business goals' }
-                ]
-            },
-            independent: {
-                question: "What's your primary concern about going independent?",
-                options: [
-                    { value: 'clients', label: 'Finding and retaining clients' },
-                    { value: 'pricing', label: 'Setting rates and pricing projects' },
-                    { value: 'skills', label: 'Keeping your technical skills current' },
-                    { value: 'business', label: 'Managing a business for the first time' },
-                    { value: 'work_life', label: 'Maintaining work-life balance' }
-                ]
-            },
-            entrepreneur: {
-                question: "What technical aspect of your business are you most eager to understand?",
-                options: [
-                    { value: 'mvp', label: 'Building a Minimum Viable Product (MVP)' },
-                    { value: 'tech_stack', label: 'Choosing the right technology stack' },
-                    { value: 'scaling', label: 'Scaling as the business grows' },
-                    { value: 'hiring', label: 'Hiring and managing technical talent' },
-                    { value: 'security', label: 'Ensuring data security and privacy' }
-                ]
-            }
-        };
-
-        const engagementStyleQuestions = {
-            engineer: {
-                question: "When it comes to developing your career, your learning style is key. What's your preferred style of support?",
-                options: [
-                    { value: 'live', label: 'High-touch approach with scheduled sessions' },
-                    { value: 'workshops', label: 'Hands-on group workshop learning and practice' },
-                    { value: 'goals', label: 'Independent exploration, with set goals and periodic check-ins' },
-                    { value: 'blend', label: 'A mix of structure and self-guided exploration' },
-                ]
-            },
-            entrepreneur: {
-                question: "How do you ultimately see a technical advisor supporting your business?",
-                options: [
-                    { value: 'live', label: 'A hands-on, collaborative partnership with regular meetings' },
-                    { value: 'process', label: 'Developing and iterating processes' },
-                    { value: 'consulting', label: 'Occasional check-ins, be available for questions and answers' },
-                    { value: 'blend', label: 'A blend of scheduled sessions and on-demand support as needed' },
-                ]
-            }
-        };
-
-        const pricingQuestions = {
-            engineer: {
-                question: "And finally, what level of investment are you prepared to make in your career development?",
-                options: [
-                    { value: '100', label: 'At least $100 per month' },
-                    { value: '150', label: 'Between $150 and $400 per month' },
-                    { value: '500', label: 'At least $500 per month' },
-                    { value: '0', label: "I'm just exploring options for now" },
-                ]
-            },
-            entrepreneur: {
-                question: "And finally, what level of investment are you prepared to make in the technical direction for your business?",
-                options: [
-                    { value: '1000', label: 'At least $1000 per month' },
-                    { value: '2000', label: 'Between $2000 and $5000 per month' },
-                    { value: '6000', label: 'At least $6000 per month' },
-                    { value: '0', label: "I'm just exploring options for now" },
-                ]
-            }
-        };
-
-        let name = '';
-        let userType = '';
-        let interest = '';
-        let engagementStyle = '';
-        let pricing = '';
-        let email = '';
-        let subscribeNewsletter = false;
-
-        function renderUserTypeSelection() {
-            return `
-                <div class="container">
-                    <p class="large-text">
-                        ${name.toLowerCase() === 'joe' ? "Hey, another Joe!" : `Nice to meet you, ${name}!`}
-                        Which of these best describes you?
-                    </p>
-                    <div>
-                        ${clientTypes.map(type => `
-                            <div class="option" onclick="handleUserTypeSelect('${type.value}')">
-                                ${type.label}
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
-        }
-
-        function renderPersonaQuestion() {
-            return `
-                <div class="container">
-                    <p class="large-text">${personaQuestions[userType].question}</p>
-                    <div>
-                        ${personaQuestions[userType].options.map(option => `
-                            <div class="option" onclick="handleInterestSelect('${option.value}')">
-                                ${option.label}
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
-        }
-
-        function renderEngagementStyle() {
-            const engagementUserType = userType === 'entrepreneur' ? 'entrepreneur' : 'engineer';
-            return `
-                <div class="container">
-                    <p class="large-text" style="margin-bottom: 20px;">${engagementStyleQuestions[engagementUserType].question}</p>
-                    <div>
-                        ${engagementStyleQuestions[engagementUserType].options.map(option => `
-                            <div class="option" onclick="handleEngagementStyleSelect('${option.value}')">
-                                ${option.label}
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
-        }
-
-        function renderPricing() {
-            const pricingUserType = userType === 'entrepreneur' ? 'entrepreneur' : 'engineer';
-            return `
-                <div class="container">
-                    <p class="large-text" style="margin-bottom: 20px;">${pricingQuestions[pricingUserType].question}</p>
-                    <div>
-                        ${pricingQuestions[pricingUserType].options.map(option => `
-                            <div class="option" onclick="handlePricingSelect('${option.value}')">
-                                ${option.label}
-                            </div>
-                        `).join('')}
-                    </div>
-                </div>
-            `;
-        }
-
-        function renderEmailCollection() {
-            return `
-                <div class="container">
-                    <p class="large-text">Sounds good, ${name}! To follow up with you, I'll need your email address.</p>
-                    <form onsubmit="handleEmailSubmit(event)">
-                        <input type="email" id="emailInput" placeholder="Your email address" required>
-                        <label>
-                            <input type="checkbox" id="newsletterCheckbox" class="checkbox">
-                            Subscribe to my newsletter for tech insights and career tips (I promise not to spam you)
-                        </label>
-                        <div class="button-container">
-                            <button type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-            `;
-        }
-
-        function renderThankYou() {
-            return `
-                <div class="container">
-                    <p class="large-text">Thanks, ${name}!</p>
-                    <p>I'll get back to you soon so we can talk more about ${personaQuestions[userType].options.find(o => o.value === interest).label.toLowerCase()}.</p>
-                    <p>In the meantime, you might find these blog posts interesting:</p>
-                    <p style="font-weight: bold;">
-                        <a href="https://www.linkedin.com/pulse/creating-software-human-scale-joe-leblanc-g6tuf/" target="_blank">
-                            Creating software at human scale
-                        </a>
-                    </p>
-                    <p style="font-weight: bold;">
-                        <a href="https://www.linkedin.com/pulse/dont-automate-yourself-joe-leblanc/" target="_blank">
-                            Don't automate yourself
-                        </a>
-                    </p>
-                    <p style="font-weight: bold;">
-                        <a href="https://www.linkedin.com/pulse/dont-become-expert-invest-instead-joe-leblanc-9xmlc/" target="_blank">
-                            Don't become an expert: invest instead
-                        </a>
-                    </p>
-                    <p>Looking forward to chatting with you soon!</p>
-                </div>
-            `;
-        }
-
-        function handleNameSubmit(event) {
-            event.preventDefault();
-            name = document.getElementById('nameInput').value;
-            if (name) {
-                render('userType');
-            }
-        }
-
-        function handleUserTypeSelect(type) {
-            userType = type;
-            render('personaQuestion');
-        }
-
-        function handleInterestSelect(interestValue) {
-            interest = interestValue;
-            render('engagementStyle');
-        }
-
-        function handleEngagementStyleSelect(style) {
-            engagementStyle = style;
-            render('pricing');
-        }
-
-        function handlePricingSelect(price) {
-            pricing = price;
-            render('emailCollection');
-        }
-
-        async function handleEmailSubmit(event) {
-            event.preventDefault();
-            email = document.getElementById('emailInput').value;
-            subscribeNewsletter = document.getElementById('newsletterCheckbox').checked;
-
-
-            try {
-                let result = await supabaseClient
-                .from('inquiries')
-                .insert([
-                    {
-                        name,
-                        persona: clientTypes.find(c => c.value === userType ).label,
-                        interest: personaQuestions[userType].options.find(o => o.value === interest).label,
-                        email,
-                        engagement_style: engagementStyle,
-                        pricing,
-                        newsletter: subscribeNewsletter
-                    }
-                ])
-                .then(() => {
-                    render('thankYou');
-                })
-                .catch(error => {
-                    renderError("Looks like there was an issue submitting your information. Can you please try that one more time?");
-                    console.error('Error inserting data:', error.message);
-                });
-            } catch (error) {
-                renderError("Looks like there was an issue submitting your information. Can you please try that one more time?");
-                console.error('Error inserting data:', error.message);
-            }
-        }
-
-        function renderError(message) {
-            const errorElement = document.getElementById('error');
-            errorElement.innerHTML = `
-                <div style="color: red; font-weight: bold; padding: 1em; font-size: 1.4em">${message}</div>
-            `;
-        }
-
-        function render(stage) {
-            const app = document.getElementById('app');
-            switch (stage) {
-                case 'userType':
-                    app.innerHTML = renderUserTypeSelection();
-                    break;
-                case 'personaQuestion':
-                    app.innerHTML = renderPersonaQuestion();
-                    break;
-                case 'emailCollection':
-                    app.innerHTML = renderEmailCollection();
-                    break;
-                case 'engagementStyle':
-                    app.innerHTML = renderEngagementStyle();
-                    break;
-                case 'pricing':
-                    app.innerHTML = renderPricing();
-                    break;
-                case 'thankYou':
-                    app.innerHTML = renderThankYou();
-                    break;
-            }
-        }
-    </script>
-</body>
+  </body>
 </html>
